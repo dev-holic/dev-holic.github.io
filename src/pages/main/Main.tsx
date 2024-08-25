@@ -1,34 +1,49 @@
-import { useState } from 'react';
-import reactLogo from './react.svg';
-import viteLogo from '/vite.svg';
+import { useEffect, useRef } from 'react';
 import styles from './Main.module.scss';
 
 export function Main() {
-  const [count, setCount] = useState(0);
+  const textRef = useRef<HTMLHeadingElement>(null);
+  const positionRef = useRef(0);
+  const staticPositionRef = useRef<{ windowWidth: number; textWidth: number }>();
+
+  useEffect(() => {
+    const wheelListener = (e: WheelEvent) => {
+      if (!textRef.current) {
+        return;
+      }
+      if (!staticPositionRef.current) {
+        staticPositionRef.current = {
+          windowWidth: window.innerWidth,
+          textWidth: textRef.current.scrollWidth,
+        };
+      }
+
+      if (
+        positionRef.current + e.deltaY >
+        staticPositionRef.current.textWidth - staticPositionRef.current.windowWidth
+      ) {
+        return;
+      }
+
+      textRef.current.style.transform = `translateX(-${(positionRef.current += e.deltaY)}px)`;
+    };
+
+    window.addEventListener('wheel', wheelListener, { passive: true });
+
+    return () => {
+      window.removeEventListener('wheel', wheelListener);
+    };
+  }, []);
 
   return (
     <>
-      <div>
-        <a href='https://vitejs.dev' target='_blank'>
-          <img src={viteLogo} className={styles['logo']} alt='Vite logo' />
-        </a>
-        <a href='https://react.dev' target='_blank'>
-          <img
-            src={reactLogo}
-            className={`${styles['logo']} ${styles['react']}`}
-            alt='React logo'
-          />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className={styles['card']}>
-        <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className={styles['read-the-docs']}>Click on the Vite and React logos to learn more</p>
-      <h1 className='text-3xl font-bold underline'>Hello world!</h1>
+      <main className='h-full overflow-hidden bg-black text-white'>
+        <div className='h-full'>
+          <h1 ref={textRef} className={`${styles.text} flex items-center whitespace-nowrap p-10`}>
+            안녕하세요?안녕하세요?안녕하세요?안녕하세요?안녕하세요?안녕하세요?안녕하세요?안녕하세요?안녕하세요?안녕하세요?
+          </h1>
+        </div>
+      </main>
     </>
   );
 }
