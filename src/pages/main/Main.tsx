@@ -40,7 +40,7 @@ export function Main() {
       <main className='h-full overflow-hidden bg-black text-white'>
         <div className='h-full'>
           <h1 ref={textRef} className={`${styles.text} flex items-center whitespace-nowrap p-10`}>
-            안녕하세요?안녕하세요?안녕하세요?안녕하세요?안녕하세요?안녕하세요?안녕하세요?안녕하세요?안녕하세요?안녕하세요?
+            {'안녕하세요?'.repeat(10)}
           </h1>
         </div>
       </main>
