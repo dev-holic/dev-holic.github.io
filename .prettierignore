@@ -1,0 +1,9 @@
+build/*
+public/*
+documents/*
+node_modules/*
+*.yml
+*.json
+*.md
+.dockerignore
+src/ui/common/animated_svg/*
