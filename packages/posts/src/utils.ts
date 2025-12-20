@@ -8,7 +8,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const contentDir = path.join(__dirname, 'content');
 
-export async function getAllPosts(): Promise<PostMetadata[]> {
+export async function getAllPosts(includeContent: boolean = false): Promise<PostMetadata[]> {
   // Ensure the directory exists
   if (!fs.existsSync(contentDir)) {
     return [];
@@ -20,7 +20,7 @@ export async function getAllPosts(): Promise<PostMetadata[]> {
     .map((file) => {
       const filePath = path.join(contentDir, file);
       const fileContent = fs.readFileSync(filePath, 'utf-8');
-      const { data } = matter(fileContent);
+      const { data, content } = matter(fileContent);
       const fileName = file.replace('.md', '');
 
       return {
@@ -30,6 +30,7 @@ export async function getAllPosts(): Promise<PostMetadata[]> {
         date: data.date instanceof Date ? data.date.toISOString().split('T')[0] : (data.date || ''),
         tags: data.tags || [],
         summary: data.summary || '',
+        content: includeContent ? content : undefined,
       };
     });
 

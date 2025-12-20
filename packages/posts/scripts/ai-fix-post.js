@@ -43,14 +43,28 @@ async function processPost(filePath) {
 
     console.log(`[${fileName}] 🤖 Processing with Gemini... (Missing Meta: ${isMetadataMissing}, Dangerous Tags: ${hasDangerousTags})`);
 
+    const guidePath = path.join(__dirname, '../POST_PROCESS_GUIDE.md');
+    let guideContent = '';
+    try {
+        guideContent = fs.readFileSync(guidePath, 'utf8');
+    } catch (e) {
+        console.warn("⚠️ Could not read POST_PROCESS_GUIDE.md. Proceeding without it.");
+    }
+
     const prompt = `
     You are an expert Markdown and SEO editor. I will provide you with a markdown file content.
+
+    Please strictly follow the guidelines in the "POST PROCESS GUIDE" below:
+
+    --- POST PROCESS GUIDE ---
+    ${guideContent}
+    --------------------------
     
     Your task is to:
     1. Analyze the content.
     2. If the Frontmatter (YAML metadata) is missing 'title', 'summary', or 'tags', generate appropriate ones based on the content.
-       - title: Concise and engaging.
-       - summary: A single sentence summary.
+       - title: Concise and engaging. MUST be in Korean (Hangul).
+       - summary: A single sentence summary. MUST be in Korean (Hangul).
        - tags: A list of 3-5 relevant tags.
        - date: Keep existing or use today's date (${new Date().toISOString().split('T')[0]}) if missing.
     3. Scan the body text (prose) for any text that looks like a React component or HTML tag (e.g., <Suspense>, <MyComponent>) that is NOT inside a code block or inline code backticks.

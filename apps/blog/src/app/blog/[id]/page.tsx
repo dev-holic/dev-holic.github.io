@@ -18,16 +18,18 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
   }
 
   return (
-    <div className="p-8 max-w-4xl mx-auto">
-      <Link href="/" className="text-blue-500 hover:underline mb-4 inline-block">&larr; Back to List</Link>
-      <header className="mb-8">
-        <h1 className="text-4xl font-bold mb-4 text-gray-900 dark:text-gray-100">{post.metadata.title}</h1>
-        <div className="text-gray-500 dark:text-gray-400">
+    <div className='mx-auto p-8'>
+      <Link href='/' className='mb-4 inline-block text-blue-500 hover:underline'>
+        &larr; Back to List
+      </Link>
+      <header className='mb-8'>
+        <h1 className='mb-4 text-4xl font-bold text-gray-900 dark:text-gray-100'>
+          {post.metadata.title}
+        </h1>
+        <div className='text-gray-500 dark:text-gray-400'>
           {post.metadata.date}
           {post.metadata.tags && (
-            <span className="ml-2">
-              • {post.metadata.tags.map(tag => `#${tag}`).join(' ')}
-            </span>
+            <span className='ml-2'>• {post.metadata.tags.map((tag) => `#${tag}`).join(' ')}</span>
           )}
         </div>
       </header>

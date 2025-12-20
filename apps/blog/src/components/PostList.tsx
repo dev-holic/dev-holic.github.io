@@ -1,4 +1,8 @@
+'use client';
+
+import { useState, useMemo } from 'react';
 import Link from 'next/link';
+import { useSearchParams, useRouter } from 'next/navigation';
 import { PostMetadata } from '@dev-holic/posts';
 
 interface PostListProps {
@@ -6,32 +10,151 @@ interface PostListProps {
 }
 
 export function PostList({ posts }: PostListProps) {
+  const searchParams = useSearchParams();
+  const selectedTag = searchParams.get('tag');
+  const router = useRouter();
+  const [searchQuery, setSearchQuery] = useState('');
+
+  // Filter and Sort posts
+  const filteredPosts = useMemo(() => {
+    let result = posts;
+
+    // 1. Tag Filtering
+    if (selectedTag) {
+      result = result.filter(post => post.tags?.includes(selectedTag));
+    }
+
+    // 2. Search Filtering & Sorting
+    if (searchQuery.trim()) {
+      const query = searchQuery.toLowerCase();
+      
+      // Calculate scores
+      const scoredPosts = result.map(post => {
+        let score = 0;
+        const titleLower = post.title.toLowerCase();
+        const contentLower = post.content?.toLowerCase() || '';
+        const tagsLower = post.tags?.map(t => t.toLowerCase()) || [];
+
+        // Priority 1: Tag Match (Highest weight)
+        if (tagsLower.some(tag => tag.includes(query))) {
+            score += 100;
+        }
+
+        // Priority 2: Title Match
+        if (titleLower.includes(query)) {
+            score += 50;
+        }
+
+        // Priority 3: Content Match
+        if (contentLower.includes(query)) {
+            score += 10;
+        }
+
+        return { post, score };
+      });
+
+      // Filter out non-matches and sort
+      result = scoredPosts
+        .filter(item => item.score > 0)
+        .sort((a, b) => {
+            if (a.score !== b.score) {
+                return b.score - a.score; // Higher score first
+            }
+            // Tie-breaker: Date descending
+            return new Date(b.post.date).getTime() - new Date(a.post.date).getTime();
+        })
+        .map(item => item.post);
+    }
+
+    return result;
+  }, [posts, selectedTag, searchQuery]);
+
+  const handleTagClick = (tag: string) => {
+    if (selectedTag === tag) {
+      router.push('/');
+    } else {
+      router.push(`/?tag=${encodeURIComponent(tag)}`);
+    }
+  };
+
   return (
-    <div className="p-8 max-w-4xl mx-auto">
-      <h1 className="text-3xl font-bold mb-8 text-gray-900 dark:text-gray-100">Blog Posts</h1>
-      <ul className="space-y-6">
-        {posts.map((post) => (
-          <li key={post.id} className="border-b border-gray-200 dark:border-gray-700 pb-6">
+    <div className="p-4 md:p-8">
+      <div className="flex flex-col gap-6 mb-8">
+          {/* Header & Title */}
+          <div className="flex items-center gap-4">
+              <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100">
+                  {selectedTag ? `#${selectedTag}` : 'Blog Posts'}
+              </h1>
+          </div>
+
+          {/* Search Input */}
+          <div className="relative">
+              <input
+                  type="text"
+                  placeholder="Search posts (tags, title, content)..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full px-4 py-2 pl-10 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-shadow text-gray-900 dark:text-gray-100 placeholder-gray-400"
+              />
+              <svg
+                  className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+              >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+          </div>
+      </div>
+
+      <ul className="space-y-8">
+        {filteredPosts.map((post) => (
+          <li key={post.id} className="border-b border-gray-200 dark:border-gray-700 pb-8 last:border-0">
             <Link
               href={`/blog/${post.id}`}
-              className="text-2xl font-semibold text-blue-600 dark:text-blue-400 hover:underline block mb-2"
+              className="group block"
             >
-              {post.title}
+              <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors mb-2">
+                {post.title}
+              </h2>
             </Link>
-            <div className="text-sm text-gray-500 dark:text-gray-400 mb-2">
-              {post.date}
+            
+            <div className="text-sm text-gray-500 dark:text-gray-400 mb-3 flex flex-wrap items-center gap-3">
+              <time>{post.date}</time>
               {post.tags && post.tags.length > 0 && (
-                <span className="ml-2">
-                  • {post.tags.map(tag => `#${tag}`).join(' ')}
-                </span>
+                <div className="flex items-center gap-2">
+                  <span className="w-1 h-1 bg-gray-400 rounded-full"></span>
+                  {post.tags.map(tag => (
+                    <button
+                      key={tag}
+                      onClick={(e) => {
+                          e.preventDefault(); 
+                          handleTagClick(tag);
+                      }}
+                      className={`hover:text-blue-500 hover:underline transition-colors ${
+                        selectedTag === tag ? 'text-blue-600 font-semibold' : ''
+                      }`}
+                    >
+                      #{tag}
+                    </button>
+                  ))}
+                </div>
               )}
             </div>
-            <p className="text-gray-700 dark:text-gray-300">
+            
+            <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
               {post.summary}
             </p>
           </li>
         ))}
       </ul>
+
+      {filteredPosts.length === 0 && (
+        <div className="text-center py-12 text-gray-500 dark:text-gray-400 bg-gray-50 dark:bg-gray-800/50 rounded-lg">
+          No posts found matching <span className="font-semibold text-gray-900 dark:text-gray-100">"{searchQuery}"</span>
+          {selectedTag && <> with tag <span className="font-semibold text-gray-900 dark:text-gray-100">#{selectedTag}</span></>}
+        </div>
+      )}
     </div>
   );
 }

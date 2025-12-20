@@ -1,8 +1,6 @@
 ---
-title: 'Datadog vs Sentry: Which Monitoring Tool is Right for Your Team?'
-summary: >-
-  A detailed comparison of Datadog and Sentry, exploring their strengths and
-  weaknesses to help you choose the best monitoring tool for your team's needs.
+title: "Datadog vs Sentry: 우리 팀에 맞는 모니터링 툴은 무엇일까?"
+summary: "Datadog과 Sentry의 특징과 장단점을 비교하여 팀의 상황에 맞는 최적의 모니터링 도구를 선택하는 방법을 알아봅니다."
 tags:
   - Datadog
   - Sentry
