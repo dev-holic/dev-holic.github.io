@@ -2,6 +2,7 @@ import './globals.scss';
 import type { Metadata } from 'next';
 import { getAllPosts } from '@dev-holic/posts';
 import { Sidebar } from '../components/Sidebar';
+import { Suspense } from 'react';
 
 export const metadata: Metadata = {
   title: 'Dev-Holic Blog',
@@ -26,7 +27,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <main className="flex-1 overflow-y-auto h-full w-full">
             {children}
           </main>
-          <Sidebar tags={tags} />
+          <Suspense fallback={null}>
+            <Sidebar tags={tags} />
+          </Suspense>
         </div>
       </body>
     </html>
