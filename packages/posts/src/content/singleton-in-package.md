@@ -1,3 +1,15 @@
+---
+title: 'NPM 패키지 분리 환경에서 싱글톤(Singleton) 유지하기: globalThis와 Symbol.for의 활용'
+summary: 물리적으로 분리된 번들 환경에서 globalThis와 Symbol.for를 활용하여 싱글톤 인스턴스를 안전하게 공유하는 방법을 설명합니다.
+tags:
+  - NPM
+  - Singleton
+  - globalThis
+  - Symbol.for
+  - JavaScript
+date: 2025-12-20T00:00:00.000Z
+---
+
 # [Architecture] NPM 패키지 분리 환경에서 싱글톤(Singleton) 유지하기: globalThis와 Symbol.for의 활용
 
 최근 사내 패키지 배포 구조를 개선하면서 마주친 문제와 그 해결 과정을 공유합니다.
@@ -99,7 +111,7 @@ export namespace SingletonRegistry {
         throw new Error(`Singleton ${name} is not registered`);
       }
       
-      // 인스턴스 생성 후 전역 맵에 저장 -> 다른 번들에서도 이 인스턴스를 보게 됨
+      // 인스턴스 생성 후 전역 맵에 저장 -> 다른 번들에서도 이 인스턴스를 보게 됨 
       singletons.set(name, new constructor());
     }
 
