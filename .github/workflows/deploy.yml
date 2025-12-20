@@ -12,19 +12,25 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 10
+
       - name: Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 22.x
+          cache: 'pnpm'
 
       - name: Install Dependencies
-        run: npm install
+        run: pnpm install
 
       - name: Build Docs
-        run: npm run build
+        run: pnpm build
 
       - name: Deploy Docs
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GH_ACTIONS_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: ./apps/blog/out
