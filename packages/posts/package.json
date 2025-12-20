@@ -6,7 +6,10 @@
   "types": "./src/index.ts",
   "scripts": {
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "type-check": "tsc --noEmit"
+    "new-post": "node scripts/create-post.js",
+    "validate-posts": "node scripts/validate-and-fix.js",
+    "fix-posts": "node scripts/validate-and-fix.js --fix",
+    "ai-fix-posts": "node scripts/ai-fix-post.js"
   },
   "peerDependencies": {
     "react": "^18.2.0",
@@ -20,6 +23,7 @@
     "remark-gfm": "^4.0.0"
   },
   "devDependencies": {
+    "@google/generative-ai": "^0.24.1",
     "@types/node": "^20.11.24",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",

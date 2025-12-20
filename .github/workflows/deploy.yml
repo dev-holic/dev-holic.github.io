@@ -7,10 +7,14 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
 
       - name: Install pnpm
         uses: pnpm/action-setup@v3
@@ -25,6 +29,45 @@ jobs:
 
       - name: Install Dependencies
         run: pnpm install
+
+      - name: Check and Fix Posts (AI Powered)
+        id: check_fix
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          # 1. Get changed markdown files in packages/posts/src/content/
+          # We use git diff to find files changed in the last commit
+          CHANGED_FILES=$(git diff --name-only HEAD^ HEAD | grep 'packages/posts/src/content/.*\.md$' || true)
+
+          if [ -z "$CHANGED_FILES" ]; then
+            echo "No markdown files changed. Skipping fix."
+          else
+            echo "Found changed markdown files: $CHANGED_FILES"
+            
+            # 2. Run fix script ONLY on changed files
+            # Use AI script if API key is present, otherwise fallback to simple regex fix
+            if [ -n "$GEMINI_API_KEY" ]; then
+              echo "Gemini API Key found. Running smart fix..."
+              pnpm --filter @dev-holic/posts ai-fix-posts $CHANGED_FILES
+            else
+              echo "Gemini API Key NOT found. Running basic regex fix..."
+              pnpm --filter @dev-holic/posts fix-posts $CHANGED_FILES
+            fi
+            
+            # 3. Commit changes if any
+            if [[ `git status --porcelain` ]]; then
+              echo "Changes detected. Committing and pushing..."
+              git config --global user.name 'github-actions[bot]'
+              git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+              git add packages/posts/src/content/*.md
+              git commit -m "chore: auto-fix post format and metadata [skip ci]"
+              git push
+              echo "pushed=true" >> $GITHUB_OUTPUT
+            else
+              echo "No changes detected."
+              echo "pushed=false" >> $GITHUB_OUTPUT
+            fi
+          fi
 
       - name: Build Docs
         run: pnpm build
