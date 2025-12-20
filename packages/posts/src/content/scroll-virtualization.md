@@ -1,3 +1,15 @@
+---
+title: '가상화(Virtualization) 도입, 과연 정답일까? (feat. content-visibility)'
+summary: '가상화의 성능상 이점과 UX상의 단점을 살펴보고, content-visibility를 이용한 대안을 제시합니다.'
+tags:
+  - virtualization
+  - performance
+  - css
+  - content-visibility
+  - frontend
+date: 2025-12-20T00:00:00.000Z
+---
+
 # 무조건적인 가상화(Virtualization) 도입, 과연 정답일까? (feat. content-visibility)
 
 프론트엔드 개발자라면 긴 리스트를 다룰 때 습관적으로 **"가상화(Virtualization)를 도입해야겠다"**고 생각합니다. `react-window`나 `tanstack-virtual` 같은 라이브러리를 설치하는 것이 일종의 'Best Practice'처럼 여겨지죠.
@@ -63,3 +75,5 @@
   content-visibility: auto;
   contain-intrinsic-size: 100px; /* 아이템의 예상 높이 */
 }
+
+```
