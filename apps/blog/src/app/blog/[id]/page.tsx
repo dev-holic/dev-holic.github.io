@@ -33,7 +33,7 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
           )}
         </div>
       </header>
-      <PostViewer content={post.content} />
+      <PostViewer content={post.content} postId={post.metadata.id} />
     </div>
   );
 }

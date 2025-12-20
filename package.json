@@ -2,10 +2,10 @@
   "name": "dev-holic-monorepo",
   "private": true,
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "copy-assets": "node packages/posts/scripts/copy-assets.js",
+    "build": "pnpm run copy-assets && turbo run build",
+    "dev": "pnpm run copy-assets && turbo run dev"
   },
   "devDependencies": {
     "turbo": "latest",
