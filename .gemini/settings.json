@@ -1,0 +1,5 @@
+{
+    "tools": {
+        "allowed":  ["run_shell_command(git)", "run_shell_command(pnpm)", "run_shell_command(turbo)"]
+    }
+}

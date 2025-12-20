@@ -6,15 +6,11 @@ export const metadata: Metadata = {
   description: 'Dev-Holic Blog',
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-      <body>{children}</body>
+    <html lang='en'>
+      <link rel='icon' type='image/svg+xml' href='/vite.svg' />
+      <body className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">{children}</body>
     </html>
   );
 }
