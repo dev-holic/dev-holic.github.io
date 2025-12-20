@@ -1,3 +1,17 @@
+---
+title: 'Biome: ESLint와 Prettier를 대체할 수 있을까?'
+summary: >-
+  Biome은 ESLint와 Prettier를 대체할 수 있는 웹 프로젝트를 위한 고성능 툴체인으로, 코드 포매팅과 린팅을 통합적으로 제공하며
+  빠른 속도와 안정성을 제공합니다.
+tags:
+  - Biome
+  - ESLint
+  - Prettier
+  - 린팅
+  - 포매팅
+date: 2024-12-01T00:00:00.000Z
+---
+
 # Biome 가 EsLint와 Prettier를 대체할 수 있을까?
 
 **Date:** 2024.12.01  
