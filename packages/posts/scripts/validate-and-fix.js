@@ -75,34 +75,40 @@ if (filesToProcess.length === 0) {
 
 filesToProcess.forEach(filePath => {
   const file = path.basename(filePath);
-  const content = fs.readFileSync(filePath, 'utf8');
-  const parsed = matter(content);
-  const { data, content: markdownBody } = parsed;
-  let fileChanged = false;
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    const parsed = matter(content);
+    const { data, content: markdownBody } = parsed;
+    let fileChanged = false;
 
-  // 1. Check Frontmatter
-  const requiredFields = ['title', 'date', 'summary'];
-  const missingFields = requiredFields.filter(field => !data[field]);
+    // 1. Check Frontmatter
+    const requiredFields = ['title', 'date', 'summary'];
+    const missingFields = requiredFields.filter(field => !data[field]);
 
-  if (missingFields.length > 0) {
-    console.error(`[${file}] ❌ Missing frontmatter fields: ${missingFields.join(', ')}`);
-    hasError = true;
-  }
-
-  // 2. Check & Fix Dangerous Tags
-  const newBody = escapeDangerousTags(markdownBody);
-  
-  if (newBody !== markdownBody) {
-    if (shouldFix) {
-      const newContent = matter.stringify(newBody, data);
-      fs.writeFileSync(filePath, newContent);
-      console.log(`[${file}] ✅ Auto-fixed unescaped tags.`);
-      fileChanged = true;
-      fixedCount++;
-    } else {
-      console.error(`[${file}] ❌ Potential unescaped React component or HTML tag found. Run with --fix to resolve.`);
+    if (missingFields.length > 0) {
+      console.error(`[${file}] ❌ Missing frontmatter fields: ${missingFields.join(', ')}`);
       hasError = true;
     }
+
+    // 2. Check & Fix Dangerous Tags
+    const newBody = escapeDangerousTags(markdownBody);
+    
+    if (newBody !== markdownBody) {
+      if (shouldFix) {
+        // stringify ensures proper quoting for YAML values
+        const newContent = matter.stringify(newBody, data);
+        fs.writeFileSync(filePath, newContent);
+        console.log(`[${file}] ✅ Auto-fixed unescaped tags.`);
+        fileChanged = true;
+        fixedCount++;
+      } else {
+        console.error(`[${file}] ❌ Potential unescaped React component or HTML tag found. Run with --fix to resolve.`);
+        hasError = true;
+      }
+    }
+  } catch (err) {
+    console.error(`[${file}] ❌ Failed to process: ${err.message}`);
+    hasError = true;
   }
 });
 

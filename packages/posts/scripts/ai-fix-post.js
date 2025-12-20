@@ -58,6 +58,9 @@ async function processPost(filePath) {
     5. Return the COMPLETELY valid markdown file with the updated frontmatter and corrected body.
     
     IMPORTANT:
+    - **YAML SYNTAX RULE**: If the 'title' or 'summary' contains a colon (:), you MUST wrap the value in double quotes. 
+      - BAD: title: My Project: The Beginning
+      - GOOD: title: "My Project: The Beginning"
     - Do NOT wrap the output in a markdown code block (like \`\`\`markdown ... \`\`\`). Just return the raw markdown content.
     - Preserve the original content logic and structure. Only fix metadata and escape tags.
     
@@ -80,6 +83,15 @@ async function processPost(filePath) {
     if (!newContent.startsWith('---')) {
         console.error(`[${fileName}] ❌ AI response format error (no frontmatter). Skipping.`);
         return;
+    }
+
+    // Safety Step: Normalize via gray-matter to ensure valid YAML
+    try {
+        const parsed = matter(newContent);
+        // stringify ensures that keys/values with special chars are properly quoted
+        newContent = matter.stringify(parsed.content, parsed.data);
+    } catch (err) {
+        console.warn(`[${fileName}] ⚠️ AI generated potentially invalid YAML (${err.message}). Trying to save anyway, but manual check recommended.`);
     }
 
     fs.writeFileSync(filePath, newContent);
