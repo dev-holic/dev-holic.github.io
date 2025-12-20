@@ -14,7 +14,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          fetch-depth: 2
+          fetch-depth: 0
 
       - name: Install pnpm
         uses: pnpm/action-setup@v3
@@ -35,9 +35,22 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
-          # 1. Get changed markdown files in packages/posts/src/content/
-          # We use git diff to find files changed in the last commit
-          CHANGED_FILES=$(git diff --name-only HEAD^ HEAD | grep 'packages/posts/src/content/.*\.md$' || true)
+          # Debugging info
+          echo "GITHUB_EVENT_BEFORE: ${{ github.event.before }}"
+          echo "GITHUB_SHA: ${{ github.sha }}"
+          
+          # Determine the comparison range
+          BASE_COMMIT=${{ github.event.before }}
+          
+          # Handle new branches or force pushes where 'before' might be 0000...
+          if [ -z "$BASE_COMMIT" ] || [ "$BASE_COMMIT" == "0000000000000000000000000000000000000000" ]; then
+            BASE_COMMIT="HEAD^"
+          fi
+          
+          echo "Comparing changes from $BASE_COMMIT to ${{ github.sha }}"
+          
+          # Get changed markdown files
+          CHANGED_FILES=$(git diff --name-only $BASE_COMMIT ${{ github.sha }} | grep 'packages/posts/src/content/.*\.md$' || true)
 
           if [ -z "$CHANGED_FILES" ]; then
             echo "No markdown files changed. Skipping fix."
