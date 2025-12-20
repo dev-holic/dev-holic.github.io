@@ -9,7 +9,7 @@ tags:
   - Prettier
   - 린팅
   - 포매팅
-date: 2025-12-20T00:00:00.000Z
+date: "2025-12-20"
 ---
 
 # Biome 가 EsLint와 Prettier를 대체할 수 있을까?

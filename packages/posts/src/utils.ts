@@ -27,7 +27,7 @@ export async function getAllPosts(): Promise<PostMetadata[]> {
         ...data,
         id: fileName,
         title: data.title || fileName,
-        date: data.date instanceof Date ? data.date.toISOString() : (data.date || ''),
+        date: data.date instanceof Date ? data.date.toISOString().split('T')[0] : (data.date || ''),
         tags: data.tags || [],
         summary: data.summary || '',
       };
@@ -52,7 +52,7 @@ export async function getPostById(id: string): Promise<Post | null> {
       ...data,
       id,
       title: data.title || id,
-      date: data.date instanceof Date ? data.date.toISOString() : (data.date || ''),
+      date: data.date instanceof Date ? data.date.toISOString().split('T')[0] : (data.date || ''),
       tags: data.tags || [],
       summary: data.summary || '',
     },
