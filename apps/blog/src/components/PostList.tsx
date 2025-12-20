@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, Suspense } from 'react';
 import Link from 'next/link';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { PostMetadata } from '@dev-holic/posts';
@@ -9,7 +9,7 @@ interface PostListProps {
   posts: PostMetadata[];
 }
 
-export function PostList({ posts }: PostListProps) {
+function PostListContent({ posts }: PostListProps) {
   const searchParams = useSearchParams();
   const selectedTag = searchParams.get('tag');
   const router = useRouter();
@@ -156,5 +156,13 @@ export function PostList({ posts }: PostListProps) {
         </div>
       )}
     </div>
+  );
+}
+
+export function PostList(props: PostListProps) {
+  return (
+    <Suspense fallback={<div>Loading posts...</div>}>
+      <PostListContent {...props} />
+    </Suspense>
   );
 }

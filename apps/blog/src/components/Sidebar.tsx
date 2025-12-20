@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, Suspense } from 'react';
 import Link from 'next/link';
 import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 
@@ -8,7 +8,7 @@ interface SidebarProps {
   tags: string[];
 }
 
-export function Sidebar({ tags }: SidebarProps) {
+function SidebarContent({ tags }: SidebarProps) {
   const [isOpen, setIsOpen] = useState(true);
   const searchParams = useSearchParams();
   const selectedTag = searchParams.get('tag');
@@ -101,5 +101,13 @@ export function Sidebar({ tags }: SidebarProps) {
         />
       )}
     </>
+  );
+}
+
+export function Sidebar(props: SidebarProps) {
+  return (
+    <Suspense fallback={null}>
+      <SidebarContent {...props} />
+    </Suspense>
   );
 }
