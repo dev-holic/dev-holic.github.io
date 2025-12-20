@@ -24,12 +24,12 @@ export async function getAllPosts(): Promise<PostMetadata[]> {
       const fileName = file.replace('.md', '');
 
       return {
+        ...data,
         id: fileName,
         title: data.title || fileName,
-        date: data.date || '',
+        date: data.date instanceof Date ? data.date.toISOString() : (data.date || ''),
         tags: data.tags || [],
         summary: data.summary || '',
-        ...data,
       };
     });
 
@@ -49,12 +49,12 @@ export async function getPostById(id: string): Promise<Post | null> {
 
   return {
     metadata: {
+      ...data,
       id,
       title: data.title || id,
-      date: data.date || '',
+      date: data.date instanceof Date ? data.date.toISOString() : (data.date || ''),
       tags: data.tags || [],
       summary: data.summary || '',
-      ...data,
     },
     content,
   };
