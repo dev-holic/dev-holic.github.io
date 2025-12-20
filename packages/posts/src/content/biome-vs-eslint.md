@@ -1,3 +1,10 @@
+---
+title: Biome: ESLint와 Prettier를 대체할 수 있을까? 성능 비교 분석
+summary: Biome은 Rust 기반의 빠른 웹 개발 툴체인으로, ESLint와 Prettier를 대체할 수 있는지 성능을 비교 분석합니다.
+tags: [Biome, ESLint, Prettier, 린팅, 포매팅]
+date: 2024-12-01
+---
+
 # Biome 가 EsLint와 Prettier를 대체할 수 있을까?
 
 **Date:** 2024.12.01  
