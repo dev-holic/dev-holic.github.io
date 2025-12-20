@@ -1,8 +1,15 @@
 ---
-title: "Datadog vs Sentry: 우리 팀에 맞는 모니터링 툴은 무엇일까?"
-date: 2025-12-21
-categories: [DevOps, Monitoring, Frontend]
-tags: [Datadog, Sentry, Observability, APM, RUM]
+title: 'Datadog vs Sentry: Which Monitoring Tool is Right for Your Team?'
+summary: >-
+  A detailed comparison of Datadog and Sentry, exploring their strengths and
+  weaknesses to help you choose the best monitoring tool for your team's needs.
+tags:
+  - Datadog
+  - Sentry
+  - Monitoring
+  - APM
+  - RUM
+date: 2025-12-21T00:00:00.000Z
 ---
 
 개발팀이 성장하고 서비스 규모가 커지면 필연적으로 **'모니터링(Monitoring)'**에 대한 니즈가 발생합니다. 시장에는 수많은 툴이 있지만, 가장 대표적인 두 가지를 꼽자면 단연 **Datadog(데이터독)**과 **Sentry(센트리)**일 것입니다.
