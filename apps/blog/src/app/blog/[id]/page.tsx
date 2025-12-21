@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { getPostById, getAllPosts, PostViewer } from '@dev-holic/posts';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
+import Comments from '@/components/Comments';
 
 export async function generateStaticParams() {
   const posts = await getAllPosts();
@@ -70,6 +71,7 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
         </div>
       </header>
       <PostViewer content={post.content} postId={post.metadata.id} />
+      <Comments />
     </div>
   );
 }
