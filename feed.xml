@@ -4,9 +4,9 @@
         <description><![CDATA[Dev Holic Blog Posts]]></description>
         <link>https://dev-holic.github.io</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 21 Dec 2025 13:27:13 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 21 Dec 2025 13:43:15 GMT</lastBuildDate>
         <atom:link href="https://dev-holic.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Sun, 21 Dec 2025 13:27:13 GMT</pubDate>
+        <pubDate>Sun, 21 Dec 2025 13:43:15 GMT</pubDate>
         <copyright><![CDATA[2025 Dev Holic]]></copyright>
         <language><![CDATA[ko]]></language>
         <item>
@@ -21,6 +21,13 @@
             <description><![CDATA[Giscus는 GitHub Discussions API를 활용하여 광고 없이 깔끔한 디자인과 마크다운을 지원하는 무료 댓글 시스템으로, 개발 블로그에 쉽게 적용할 수 있습니다.]]></description>
             <link>https://dev-holic.github.io/blog/giscus</link>
             <guid isPermaLink="false">https://dev-holic.github.io/blog/giscus</guid>
+            <pubDate>Sun, 21 Dec 2025 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[GitHub Actions로 나만의 뉴스 브리핑 봇 만들기 (서버비 0원)]]></title>
+            <description><![CDATA[GitHub Actions의 Cron 스케줄러를 활용해 RSS 피드를 주기적으로 크롤링하고, 새로운 소식을 슬랙으로 전송하는 봇을 만드는 과정을 소개합니다.]]></description>
+            <link>https://dev-holic.github.io/blog/rss-news-bot-automation</link>
+            <guid isPermaLink="false">https://dev-holic.github.io/blog/rss-news-bot-automation</guid>
             <pubDate>Sun, 21 Dec 2025 00:00:00 GMT</pubDate>
         </item>
         <item>

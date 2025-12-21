@@ -5,12 +5,12 @@
 9:I[97990,["/_next/static/chunks/28ff6a04602448ba.js","/_next/static/chunks/64c697a3cb51cd07.js"],"MetadataBoundary"]
 b:I[60740,[],"default"]
 :HL["/_next/static/chunks/abdb394ac1358659.css","style"]
-0:{"P":null,"b":"yx8YUX__cxlbsvUkAHFS7","c":["",""],"q":"","i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/abdb394ac1358659.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/c6311bd1204a06f2.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/5ec360913fe0c25f.js","async":true,"nonce":"$undefined"}]],"$L2"]}],{"children":[["$","$1","c",{"children":["$L3",[["$","script","script-0",{"src":"/_next/static/chunks/c8696c5ee1a86c19.js","async":true,"nonce":"$undefined"}]],["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],{},null,false,false]},null,false,false],["$","$1","h",{"children":[null,["$","$L7",null,{"children":"$L8"}],["$","div",null,{"hidden":true,"children":["$","$L9",null,{"children":["$","$5",null,{"name":"Next.Metadata","children":"$La"}]}]}],null]}],false]],"m":"$undefined","G":["$b",[]],"S":true}
+0:{"P":null,"b":"l9WMpvVEo9D4rh68iRgvx","c":["",""],"q":"","i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/abdb394ac1358659.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/c6311bd1204a06f2.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/5ec360913fe0c25f.js","async":true,"nonce":"$undefined"}]],"$L2"]}],{"children":[["$","$1","c",{"children":["$L3",[["$","script","script-0",{"src":"/_next/static/chunks/c8696c5ee1a86c19.js","async":true,"nonce":"$undefined"}]],["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],{},null,false,false]},null,false,false],["$","$1","h",{"children":[null,["$","$L7",null,{"children":"$L8"}],["$","div",null,{"hidden":true,"children":["$","$L9",null,{"children":["$","$5",null,{"name":"Next.Metadata","children":"$La"}]}]}],null]}],false]],"m":"$undefined","G":["$b",[]],"S":true}
 c:I[27531,["/_next/static/chunks/28ff6a04602448ba.js","/_next/static/chunks/64c697a3cb51cd07.js"],"default"]
 d:I[44600,["/_next/static/chunks/28ff6a04602448ba.js","/_next/static/chunks/64c697a3cb51cd07.js"],"default"]
 e:I[71695,["/_next/static/chunks/c6311bd1204a06f2.js","/_next/static/chunks/5ec360913fe0c25f.js"],"Sidebar"]
 f:I[91320,["/_next/static/chunks/c6311bd1204a06f2.js","/_next/static/chunks/5ec360913fe0c25f.js","/_next/static/chunks/c8696c5ee1a86c19.js"],"PostList"]
-2:["$","html",null,{"lang":"en","children":[["$","link",null,{"rel":"icon","type":"image/svg+xml","href":"/vite.svg"}],["$","meta",null,{"name":"google-site-verification","content":"sXxEHSK4sTx3BrDha-kpJpFaszf3wxeSU5ojx8sqq1A"}],["$","body",null,{"className":"bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"name\":\"Dev-Holic Blog\",\"url\":\"https://dev-holic.github.io\"}"}}],["$","div",null,{"className":"relative mx-auto flex h-screen w-full max-w-7xl flex-col overflow-hidden md:flex-row","children":[["$","main",null,{"className":"h-full w-full flex-1 overflow-y-auto","children":["$","$Lc",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Ld",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","$Le",null,{"tags":["AI","APM","App Router","Blog","CLI","Datadog","FP","Gemini","Giscus","GitHub Discussions","JavaScript","Monitoring","NPM","Next.js","OOP","RSS","RUM","React Query","Sentry","Singleton","Structure","Symbol.for","Test","Tip","architecture","content-visibility","css","frontend","globalThis","javascript","performance","virtualization","개발","개발 블로그","댓글 시스템","무료","터미널"]}]]}]]}]]}]
+2:["$","html",null,{"lang":"en","children":[["$","link",null,{"rel":"icon","type":"image/svg+xml","href":"/vite.svg"}],["$","meta",null,{"name":"google-site-verification","content":"sXxEHSK4sTx3BrDha-kpJpFaszf3wxeSU5ojx8sqq1A"}],["$","body",null,{"className":"bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"name\":\"Dev-Holic Blog\",\"url\":\"https://dev-holic.github.io\"}"}}],["$","div",null,{"className":"relative mx-auto flex h-screen w-full max-w-7xl flex-col overflow-hidden md:flex-row","children":[["$","main",null,{"className":"h-full w-full flex-1 overflow-y-auto","children":["$","$Lc",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Ld",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","$Le",null,{"tags":["AI","APM","App Router","Automation","Blog","CLI","Datadog","FP","Gemini","Giscus","GitHub Actions","GitHub Discussions","JavaScript","Monitoring","NPM","Next.js","Node.js","OOP","RSS","RUM","React Query","Sentry","Singleton","Slack Bot","Structure","Symbol.for","Test","Tip","architecture","content-visibility","css","frontend","globalThis","javascript","performance","virtualization","개발","개발 블로그","댓글 시스템","무료","터미널"]}]]}]]}]]}]
 10:T14d5,
 # 🚀 Gemini CLI 완벽 가이드
 
@@ -255,7 +255,137 @@ export default function Giscus() {
 **마무리하며**
 
 Giscus는 GitHub 아이디만 있다면 누구나 쉽게 댓글을 남길 수 있고, 개발자 입장에서는 DB 관리 부담 없이 무료로 사용할 수 있는 최고의 솔루션입니다. 지금 바로 적용해 보세요!
-12:T139e,
+12:T1460,
+# GitHub Actions로 나만의 뉴스 브리핑 봇 만들기 (서버비 0원)
+
+개발자라면 누구나 "최신 기술 트렌드를 놓치고 싶지 않다"는 욕망이 있습니다. 저 역시 여러 기술 블로그와 뉴스 사이트의 RSS를 구독하고 있습니다. 하지만 바쁜 일상 속에서 매번 RSS 리더기를 켜서 확인하는 것은 꽤나 번거로운 일입니다.
+
+**"내가 가장 자주 보는 곳인 슬랙(Slack)으로, 새로운 뉴스가 뜰 때마다 알아서 배달해 준다면 어떨까?"**
+
+이 아이디어를 실현하기 위해 별도의 서버 구축 없이, **GitHub Actions**만으로 동작하는 뉴스 브리핑 봇을 만들어 보았습니다.
+
+---
+
+## 1. 아키텍처 설계: 서버 없이 어떻게?
+
+봇을 운영하려면 보통 24시간 돌아가는 서버가 필요하다고 생각하기 쉽습니다. 하지만 우리가 필요한 건 "1시간에 한 번" 정도의 주기적인 실행입니다. 이럴 때 **GitHub Actions**의 **Schedule(Cron)** 기능이 완벽한 대안이 됩니다.
+
+### 핵심 도전 과제: "상태(State)" 저장
+GitHub Actions는 실행될 때마다 환경이 초기화되는 "Stateless"한 특성을 가집니다. 즉, **"어디까지 뉴스를 읽었는지"** 기억할 방법이 필요합니다. 이를 위해 데이터베이스를 쓴다면 배보다 배꼽이 더 커지겠죠.
+
+### 해결책: Git 저장소를 DB로 활용하기
+저는 **파일 시스템(JSON)에 마지막 실행 시간을 기록하고, 이를 다시 Git에 커밋(Commit)하는 방식**을 선택했습니다.
+
+1.  **Read:** `history.json` 파일을 읽어 마지막 실행 시간을 확인합니다.
+2.  **Fetch:** RSS 피드에서 뉴스들을 가져옵니다.
+3.  **Filter:** 마지막 실행 시간 이후에 발행된 글만 필터링합니다.
+4.  **Notify:** 새로운 글을 슬랙으로 전송합니다.
+5.  **Write & Commit:** 현재 시간을 `history.json`에 업데이트하고 저장소에 Push 합니다.
+
+---
+
+## 2. 구현하기 (Node.js)
+
+### 패키지 구조
+프로젝트의 모노레포 구조 내에 `packages/news-bot`이라는 별도 패키지를 만들었습니다.
+필요한 라이브러리는 다음과 같습니다.
+*   `rss-parser`: RSS XML 파싱
+*   `axios`: 슬랙 웹훅 전송
+*   `dayjs`: 날짜 계산
+
+### 핵심 로직 (`index.ts`)
+
+```typescript
+// 핵심 로직 요약
+async function main() {
+  // 1. 마지막 실행 시간 로드
+  const history = await getHistory(); // history.json 읽기
+  const lastRun = dayjs(history.lastRun);
+
+  // 2. RSS 피드 순회
+  for (const feed of feeds) {
+    const parsedFeed = await parser.parseURL(feed.url);
+    
+    // 3. 새로운 글 필터링
+    const newItems = parsedFeed.items.filter(item => {
+      return dayjs(item.pubDate).isAfter(lastRun);
+    });
+
+    // 4. 슬랙 전송
+    for (const item of newItems) {
+      await sendToSlack(feed.title, item);
+    }
+  }
+
+  // 5. 상태 업데이트
+  await saveHistory({ lastRun: dayjs().toISOString() });
+}
+```
+
+---
+
+## 3. GitHub Actions 설정 (Cron)
+
+이제 이 스크립트를 주기적으로 실행해 줄 워크플로우(`news-bot.yml`)를 작성합니다.
+
+```yaml
+name: News Bot
+
+on:
+  schedule:
+    - cron: '0 * * * *' # 매 시간 정각마다 실행
+  workflow_dispatch: # 수동 실행 가능
+
+jobs:
+  run-news-bot:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # 저장소에 커밋하기 위해 쓰기 권한 필요
+
+    steps:
+      # ... (Node.js 설정 및 의존성 설치) ...
+
+      - name: Run News Bot
+        env:
+          # GitHub Secrets & Variables 활용
+          RSS_FEED_LIST: ${{ vars.RSS_FEED_LIST }}
+          SLACK_RSS_WEBHOOK_URL: ${{ secrets.SLACK_RSS_WEBHOOK_URL }}
+        run: |
+          pnpm --filter @dev-holic/news-bot start
+
+      - name: Commit and Push History
+        run: |
+          git config user.name "News Bot"
+          git config user.email "bot@dev-holic.com"
+          
+          # history.json이 변경되었을 때만 커밋
+          if [[ -n $(git status --porcelain packages/news-bot/history.json) ]]; then
+            git add packages/news-bot/history.json
+            git commit -m "chore(news-bot): update execution history [skip ci]"
+            git push
+          fi
+```
+
+### 팁: `[skip ci]`
+커밋 메시지에 `[skip ci]`를 포함시키면, 이 커밋으로 인해 또 다른 CI/CD 파이프라인(예: 블로그 배포)이 불필요하게 트리거되는 것을 방지할 수 있습니다.
+
+---
+
+## 4. 결과 및 활용
+
+이제 매시간 정각이 되면 봇이 깨어나 뉴스를 확인합니다. 새로운 글이 있다면 슬랙 채널에 다음과 같이 예쁘게 알림이 옵니다.
+
+> **The Hacker News**
+> [Hackers Using Fake Google Meet Pages to Deliver Malware](...)
+> 2025-12-21 14:30
+
+### 얻은 것들
+1.  **비용 0원:** GitHub Actions 무료 티어 내에서 충분히 운용 가능합니다.
+2.  **자동화된 정보 습득:** 내가 찾으러 다니지 않아도 정보가 나를 찾아옵니다.
+3.  **확장성:** `RSS_FEED_LIST` 변수만 수정하면 구독 채널을 언제든 늘릴 수 있습니다.
+
+여러분도 잠자고 있는 GitHub Actions를 깨워 나만의 비서로 활용해 보세요!
+13:T139e,
 # [Tip] RSS란 무엇인가? 내 기술 블로그에 RSS 달고 Feedly로 구독하기
 
 기술 블로그를 운영하다 보면 "RSS 주소가 어떻게 되나요?"라는 질문을 받거나, 다른 개발자의 블로그를 효율적으로 구독하고 싶다는 생각이 들 때가 있습니다.
@@ -346,7 +476,7 @@ FOLLOW를 누르면 이 블로그를 어떤 폴더에 넣을지 묻습니다. �
 
 개발자에게 **최신 기술 트렌드 파악**과 **양질의 정보 습득**은 코딩 실력만큼이나 중요합니다. 오늘 당장 내 블로그에 RSS를 달아 독자들에게 편의를 제공하고, 나 또한 Feedly를 통해 나만의 지식 큐레이션 시스템을 만들어보는 건 어떨까요?
 
-*Happy Coding & Happy Reading!*13:T169c,
+*Happy Coding & Happy Reading!*14:T169c,
 개발팀이 성장하고 서비스 규모가 커지면 필연적으로 **'모니터링(Monitoring)'**에 대한 니즈가 발생합니다. 시장에는 수많은 툴이 있지만, 가장 대표적인 두 가지를 꼽자면 단연 **Datadog(데이터독)**과 **Sentry(센트리)**일 것입니다.
 
 흔히 "둘 다 모니터링 툴 아니야?"라고 생각하기 쉽지만, 두 서비스는 **태생과 지향점**이 완전히 다릅니다. 이번 포스팅에서는 클라이언트, 서버 로깅, APM, RUM, 대시보드 구성 등을 기준으로 두 툴을 상세 비교하고, 어떤 상황에서 무엇을 선택해야 할지 정리해 보았습니다.
@@ -421,7 +551,7 @@ FOLLOW를 누르면 이 블로그를 어떤 폴더에 넣을지 묻습니다. �
 * **Backend & Infra:** Datadog (서버 상태, APM, 대량 로그)
 
 각 툴의 강점이 명확한 만큼, 팀의 상황과 목적에 맞춰 적절한 도구를 선택하시길 바랍니다.
-14:T29be,
+15:T29be,
 1. 서론: 끝나지 않는 로딩의 미스터리
 
 Next.js App Router는 서버 컴포넌트와 클라이언트 컴포넌트의 유연한 조합을 통해 강력한 웹 애플리케이션 구축을 가능하게 합니다. 하지만 이 새로운 렌더링 패러다임은 강력한 만큼, 기존의 클라이언트 중심 멘탈 모델과 충돌하며 흔한 함정을 만들어냅니다. 그 대표적인 사례가 바로 @tanstack/react-query의 useSuspenseQuery를 클라이언트 컴포넌트에서 사용했을 때 발생하는 '서버 행(Hanging)' 현상, 즉 페이지 응답이 멈추고 무한 로딩에 빠지는 문제입니다.
@@ -548,7 +678,7 @@ useSuspenseQuery와 클라이언트 컴포넌트 조합 사용 시 발생한 서
 * 핵심 교훈 1: 'use client'는 서버 렌더링을 배제하는 지시어가 아닙니다. 이는 서버에서 사전 렌더링 후 클라이언트에서 하이드레이션하는, 즉 SSR과 CSR이 결합된 App Router의 기본 모델을 의미합니다.
 * 핵심 교훈 2: 만약 컴포넌트가 서버 환경에서는 실행되어서는 안 되는 클라이언트 전용 데이터 페칭 로직이나 API를 포함하고 있다면, next/dynamic과 ssr: false 옵션을 사용하는 것은 단순한 문제 해결이 아닌, 필수적인 아키텍처 결정입니다. 이를 통해 명확한 CSR 경계를 설정해야 합니다.
 
-이제 여러분은 Next.js의 렌더링 전략을 더 효과적으로 활용할 준비가 되었습니다. 이 글에서 다룬 원리와 해결책을 바탕으로 유사한 문제를 예방하고, 더욱 견고하고 안정적인 애플리케이션을 구축하시기를 바랍니다.15:T18cd,
+이제 여러분은 Next.js의 렌더링 전략을 더 효과적으로 활용할 준비가 되었습니다. 이 글에서 다룬 원리와 해결책을 바탕으로 유사한 문제를 예방하고, 더욱 견고하고 안정적인 애플리케이션을 구축하시기를 바랍니다.16:T18cd,
 # 프론트엔드 개발, OOP와 FP의 완벽한 조화: 실무 적용 가이드
 
 프론트엔드 개발 생태계는 빠르게 변화했습니다. 과거 UI를 클래스로 제어하던 시절을 지나, React Hooks와 Redux의 등장으로 함수형 프로그래밍(FP)의 개념이 깊숙이 자리 잡았습니다.
@@ -693,7 +823,7 @@ const UserList = () => {
 프론트엔드 개발자로서 한 가지 패러다임에 갇히기보다, 각 패러다임이 가진 장점을 이해하고 상황에 맞게 골라 쓰는 유연함이 필요합니다. 
 
 **"상태 관리는 OOP처럼, 데이터 처리는 FP처럼."** 이 원칙을 기억하면 더 견고한 애플리케이션을 설계할 수 있을 것입니다.
-16:T13dd,
+17:T13dd,
 # 무조건적인 가상화(Virtualization) 도입, 과연 정답일까? (feat. content-visibility)
 
 프론트엔드 개발자라면 긴 리스트를 다룰 때 습관적으로 **"가상화(Virtualization)를 도입해야겠다"**고 생각합니다. `react-window`나 `tanstack-virtual` 같은 라이브러리를 설치하는 것이 일종의 'Best Practice'처럼 여겨지죠.
@@ -761,7 +891,7 @@ const UserList = () => {
 }
 
 ```
-17:T1f43,
+18:T1f43,
 # [Architecture] NPM 패키지 분리 환경에서 싱글톤(Singleton) 유지하기: globalThis와 Symbol.for의 활용
 
 최근 사내 패키지 배포 구조를 개선하면서 마주친 문제와 그 해결 과정을 공유합니다.
@@ -894,7 +1024,7 @@ export namespace SingletonRegistry {
 NPM 패키지 배포 시 번들링 전략에 따라 싱글톤 패턴이 깨지는 문제는 흔히 발생할 수 있습니다. 가장 정석적인 방법은 `peerDependencies`를 사용하여 호스트가 단일 버전을 설치하게 하는 것이지만, 배포 및 사용 편의성을 위해 번들링이 필수적인 상황이라면 **`globalThis`와 `Symbol.for`를 활용한 전역 레지스트리 패턴**이 훌륭한 해결책이 될 수 있습니다.
 
 이 패턴은 React, Styled-components 등 유명 라이브러리들에서도 런타임 환경의 제약을 극복하기 위해 내부적으로 사용하는 검증된 방식입니다. 다만, 사용 시 발생할 수 있는 사이드 이펙트(버전, 타입 체크)를 충분히 인지하고 적용해야 합니다.
-3:["$","$Lf",null,{"posts":[{"title":"🚀 Gemini CLI 완벽 가이드: 터미널에서 Gemini 모델 활용하기","summary":"Gemini CLI를 설치하고 설정하는 방법부터 Slash, At, Shell 명령어 사용법, 팁과 활용 예시까지 완벽하게 안내합니다.","tags":["Gemini","CLI","AI","터미널","개발"],"date":"2025-12-21","id":"gemini-cli-get-started","content":"$10"},{"title":"Giscus: 광고 없는 무료 댓글 시스템, 5분 만에 적용하기","summary":"Giscus는 GitHub Discussions API를 활용하여 광고 없이 깔끔한 디자인과 마크다운을 지원하는 무료 댓글 시스템으로, 개발 블로그에 쉽게 적용할 수 있습니다.","tags":["Giscus","댓글 시스템","GitHub Discussions","개발 블로그","무료"],"date":"2025-12-21","id":"giscus","content":"$11"},{"title":"[Tip] RSS란 무엇인가? 내 기술 블로그에 RSS 달고 Feedly로 구독하기","date":"2025-12-21","tags":["RSS","Blog","Tip"],"summary":"RSS의 개념과 GitHub Pages 블로그에 RSS를 적용하는 방법, Feedly 사용법을 알아봅니다.","id":"rss","content":"$12"},{"title":"Datadog vs Sentry: 우리 팀에 맞는 모니터링 툴은 무엇일까?","summary":"Datadog과 Sentry의 특징과 장단점을 비교하여 팀의 상황에 맞는 최적의 모니터링 도구를 선택하는 방법을 알아봅니다.","tags":["Datadog","Sentry","Monitoring","APM","RUM"],"date":"2025-12-21","id":"sentry-vs-datadog","content":"$13"},{"title":"Next.js App Router: useSuspenseQuery 서버 행(Hanging) 이슈 해결","date":"2025-12-20","tags":["Next.js","React Query","App Router"],"summary":"App Router에서 useSuspenseQuery 사용 시 발생하는 서버 행 현상의 원인을 파헤치고 next/dynamic을 통한 해결책을 제시합니다.","id":"app-router-useSuspenseQuery","content":"$14"},{"title":"프론트엔드 OOP와 FP 조화: 실무 적용 완벽 가이드","summary":"프론트엔드 개발에서 객체 지향 프로그래밍(OOP)과 함수형 프로그래밍(FP)을 조화롭게 사용하여 효율적인 아키텍처를 구축하는 방법을 알아봅니다.","tags":["frontend","OOP","FP","architecture","javascript"],"date":"2025-12-20","id":"frontend-oop-fp","content":"$15"},{"title":"가상화(Virtualization) 도입, 과연 정답일까? (feat. content-visibility)","summary":"가상화의 성능상 이점과 UX상의 단점을 살펴보고, content-visibility를 이용한 대안을 제시합니다.","tags":["virtualization","performance","css","content-visibility","frontend"],"date":"2025-12-20","id":"scroll-virtualization","content":"$16"},{"title":"NPM 패키지 분리 환경에서 싱글톤(Singleton) 유지하기: globalThis와 Symbol.for의 활용","summary":"물리적으로 분리된 번들 환경에서 globalThis와 Symbol.for를 활용하여 싱글톤 인스턴스를 안전하게 공유하는 방법을 설명합니다.","tags":["NPM","Singleton","globalThis","Symbol.for","JavaScript"],"date":"2025-12-20","id":"singleton-in-package","content":"$17"},{"title":"Folder Structure Test Post","date":"2020-12-21","tags":["Test","Structure"],"summary":"This is a test post to verify folder-based structure and image loading.","id":"folder-test-post","content":"\nThis is a post inside a folder.\n\nHere is an image:\n![Test Image](./image.png)\n\nAnd some text below.\n\n"}]}]
+3:["$","$Lf",null,{"posts":[{"title":"🚀 Gemini CLI 완벽 가이드: 터미널에서 Gemini 모델 활용하기","summary":"Gemini CLI를 설치하고 설정하는 방법부터 Slash, At, Shell 명령어 사용법, 팁과 활용 예시까지 완벽하게 안내합니다.","tags":["Gemini","CLI","AI","터미널","개발"],"date":"2025-12-21","id":"gemini-cli-get-started","content":"$10"},{"title":"Giscus: 광고 없는 무료 댓글 시스템, 5분 만에 적용하기","summary":"Giscus는 GitHub Discussions API를 활용하여 광고 없이 깔끔한 디자인과 마크다운을 지원하는 무료 댓글 시스템으로, 개발 블로그에 쉽게 적용할 수 있습니다.","tags":["Giscus","댓글 시스템","GitHub Discussions","개발 블로그","무료"],"date":"2025-12-21","id":"giscus","content":"$11"},{"title":"GitHub Actions로 나만의 뉴스 브리핑 봇 만들기 (서버비 0원)","date":"2025-12-21","tags":["GitHub Actions","Automation","Slack Bot","RSS","Node.js"],"summary":"GitHub Actions의 Cron 스케줄러를 활용해 RSS 피드를 주기적으로 크롤링하고, 새로운 소식을 슬랙으로 전송하는 봇을 만드는 과정을 소개합니다.","id":"rss-news-bot-automation","content":"$12"},{"title":"[Tip] RSS란 무엇인가? 내 기술 블로그에 RSS 달고 Feedly로 구독하기","date":"2025-12-21","tags":["RSS","Blog","Tip"],"summary":"RSS의 개념과 GitHub Pages 블로그에 RSS를 적용하는 방법, Feedly 사용법을 알아봅니다.","id":"rss","content":"$13"},{"title":"Datadog vs Sentry: 우리 팀에 맞는 모니터링 툴은 무엇일까?","summary":"Datadog과 Sentry의 특징과 장단점을 비교하여 팀의 상황에 맞는 최적의 모니터링 도구를 선택하는 방법을 알아봅니다.","tags":["Datadog","Sentry","Monitoring","APM","RUM"],"date":"2025-12-21","id":"sentry-vs-datadog","content":"$14"},{"title":"Next.js App Router: useSuspenseQuery 서버 행(Hanging) 이슈 해결","date":"2025-12-20","tags":["Next.js","React Query","App Router"],"summary":"App Router에서 useSuspenseQuery 사용 시 발생하는 서버 행 현상의 원인을 파헤치고 next/dynamic을 통한 해결책을 제시합니다.","id":"app-router-useSuspenseQuery","content":"$15"},{"title":"프론트엔드 OOP와 FP 조화: 실무 적용 완벽 가이드","summary":"프론트엔드 개발에서 객체 지향 프로그래밍(OOP)과 함수형 프로그래밍(FP)을 조화롭게 사용하여 효율적인 아키텍처를 구축하는 방법을 알아봅니다.","tags":["frontend","OOP","FP","architecture","javascript"],"date":"2025-12-20","id":"frontend-oop-fp","content":"$16"},{"title":"가상화(Virtualization) 도입, 과연 정답일까? (feat. content-visibility)","summary":"가상화의 성능상 이점과 UX상의 단점을 살펴보고, content-visibility를 이용한 대안을 제시합니다.","tags":["virtualization","performance","css","content-visibility","frontend"],"date":"2025-12-20","id":"scroll-virtualization","content":"$17"},{"title":"NPM 패키지 분리 환경에서 싱글톤(Singleton) 유지하기: globalThis와 Symbol.for의 활용","summary":"물리적으로 분리된 번들 환경에서 globalThis와 Symbol.for를 활용하여 싱글톤 인스턴스를 안전하게 공유하는 방법을 설명합니다.","tags":["NPM","Singleton","globalThis","Symbol.for","JavaScript"],"date":"2025-12-20","id":"singleton-in-package","content":"$18"},{"title":"Folder Structure Test Post","date":"2020-12-21","tags":["Test","Structure"],"summary":"This is a test post to verify folder-based structure and image loading.","id":"folder-test-post","content":"\nThis is a post inside a folder.\n\nHere is an image:\n![Test Image](./image.png)\n\nAnd some text below.\n\n"}]}]
 8:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
 6:null
 a:[["$","title","0",{"children":"Dev-Holic Blog"}],["$","meta","1",{"name":"description","content":"Dev-Holic Blog - Tech, Development, and more"}],["$","meta","2",{"property":"og:title","content":"Dev-Holic Blog"}],["$","meta","3",{"property":"og:description","content":"Tech, Development, and more"}],["$","meta","4",{"property":"og:url","content":"https://dev-holic.github.io"}],["$","meta","5",{"property":"og:site_name","content":"Dev-Holic Blog"}],["$","meta","6",{"property":"og:locale","content":"ko_KR"}],["$","meta","7",{"property":"og:image:alt","content":"Dev-Holic Blog"}],["$","meta","8",{"property":"og:image:type","content":"image/png"}],["$","meta","9",{"property":"og:image","content":"https://dev-holic.github.io/opengraph-image?3ae57bf970b1b170"}],["$","meta","10",{"property":"og:image:width","content":"1200"}],["$","meta","11",{"property":"og:image:height","content":"630"}],["$","meta","12",{"property":"og:type","content":"website"}],["$","meta","13",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","14",{"name":"twitter:title","content":"Dev-Holic Blog"}],["$","meta","15",{"name":"twitter:description","content":"Tech, Development, and more"}],["$","meta","16",{"name":"twitter:image:alt","content":"Dev-Holic Blog"}],["$","meta","17",{"name":"twitter:image:type","content":"image/png"}],["$","meta","18",{"name":"twitter:image","content":"https://dev-holic.github.io/opengraph-image?3ae57bf970b1b170"}],["$","meta","19",{"name":"twitter:image:width","content":"1200"}],["$","meta","20",{"name":"twitter:image:height","content":"630"}]]
