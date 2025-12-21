@@ -15,7 +15,7 @@ export async function getAllPosts(includeContent: boolean = false): Promise<Post
   }
 
   const entries = fs.readdirSync(contentDir, { withFileTypes: true });
-  const posts: PostMetadata[] = entries
+  const posts = entries
     .map((entry) => {
       let filePath = '';
       let id = '';
@@ -45,7 +45,7 @@ export async function getAllPosts(includeContent: boolean = false): Promise<Post
           tags: data.tags || [],
           summary: data.summary || '',
           content: includeContent ? content : undefined,
-        };
+        } as PostMetadata;
       } catch (e) {
         console.warn(`Failed to parse post: ${filePath}`, e);
         return null;

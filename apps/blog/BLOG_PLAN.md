@@ -51,6 +51,22 @@ src/
 ### Phase 2: 기능 고도화
 1.  **카테고리/태그 시스템:** Frontmatter의 태그 정보를 기반으로 필터링 기능 구현.
 2.  **SEO 최적화:** `react-helmet-async`를 사용하여 게시글별 Title, Description 동적 변경.
+    * Open Graph (OG) Image 및 Twitter Card:
+       * 소셜 미디어(카톡, 슬랙, 트위터 등) 공유 시 보여질 미리보기 이미지를 설정합니다.
+       * 방법: opengraph-image.tsx 파일을 src/app 또는 src/app/blog/[id] 폴더에 추가하여 동적으로
+         이미지를 생성(Image Response)할 수 있습니다. 각 포스트 제목이 들어간 썸네일을 자동으로 만들 때
+         유용합니다.
+   * JSON-LD (Structured Data):
+       * 검색 엔진이 콘텐츠의 구조(제목, 저자, 발행일 등)를 더 잘 이해하도록 돕습니다. 구글 검색 결과에
+         리치 스니펫(Rich Snippets)으로 노출될 확률을 높여줍니다.
+       * 방법: layout.tsx나 page.tsx에 <script type="application/ld+json"> 태그를 추가하여 Article 또는
+         BlogPosting 스키마를 정의합니다.
+   * Canonical URL:
+       * 중복 콘텐츠 문제를 방지하기 위해 원본 URL을 명시합니다.
+       * 방법: generateMetadata 함수 내에 alternates: { canonical: '...' } 속성을 추가합니다.
+   * Semantic HTML:
+       * <h1>, <article>, <time>, <section> 등의 시멘틱 태그를 적절히 사용하여 문서 구조를 명확히
+         합니다. (현재 코드에서도 어느 정도 사용되고 있습니다.)
 3.  **스타일링:** Tailwind CSS Typography 플러그인(`@tailwindcss/typography`)을 적용하여 마크다운 스타일 일괄 적용.
 
 ### Phase 3: 소통 및 확장
