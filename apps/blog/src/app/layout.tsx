@@ -27,11 +27,11 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const posts = await getAllPosts();
-  
+
   // Extract unique tags
   const tagsSet = new Set<string>();
-  posts.forEach(post => {
-    post.tags?.forEach(tag => tagsSet.add(tag));
+  posts.forEach((post) => {
+    post.tags?.forEach((tag) => tagsSet.add(tag));
   });
   const tags = Array.from(tagsSet).sort();
 
@@ -45,15 +45,15 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   return (
     <html lang='en'>
       <link rel='icon' type='image/svg+xml' href='/vite.svg' />
-      <body className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+      <meta name='google-site-verification' content='sXxEHSK4sTx3BrDha-kpJpFaszf3wxeSU5ojx8sqq1A' />
+
+      <body className='bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100'>
         <script
-          type="application/ld+json"
+          type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <div className="flex flex-col md:flex-row h-screen w-full max-w-7xl mx-auto overflow-hidden relative">
-          <main className="flex-1 overflow-y-auto h-full w-full">
-            {children}
-          </main>
+        <div className='relative mx-auto flex h-screen w-full max-w-7xl flex-col overflow-hidden md:flex-row'>
+          <main className='h-full w-full flex-1 overflow-y-auto'>{children}</main>
           <Sidebar tags={tags} />
         </div>
       </body>
