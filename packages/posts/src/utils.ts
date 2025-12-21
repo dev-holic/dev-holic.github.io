@@ -6,7 +6,7 @@ import { Post, PostMetadata } from './types';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const contentDir = path.join(__dirname, 'content');
+const contentDir = path.resolve(__dirname, '../../../posts');
 
 export async function getAllPosts(includeContent: boolean = false): Promise<PostMetadata[]> {
   // Ensure the directory exists

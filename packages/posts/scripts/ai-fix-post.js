@@ -4,7 +4,7 @@ const matter = require('gray-matter');
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
 const API_KEY = process.env.GEMINI_API_KEY;
-const contentDir = path.join(__dirname, '../src/content');
+const contentDir = path.resolve(__dirname, '../../../posts');
 
 // Simple args parsing
 const args = process.argv.slice(2);

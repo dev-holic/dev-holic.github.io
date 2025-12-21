@@ -1,4 +1,15 @@
 {
+    "general": {
+      "sessionRetention": {
+        "enabled": true,
+        "maxAge": "30d",
+        "maxCount": 50
+      },
+      "previewFeatures": true
+    },
+    "ui": {
+      "showStatusInTitle": true
+    },
     "tools": {
         "allowed":  [
             "run_shell_command(git)",
@@ -9,7 +20,13 @@
             "run_shell_command(mkdir)",
             "run_shell_command(cp)",
             "run_shell_command(echo)",
-            "run_shell_command(curl)"
+            "run_shell_command(curl)",
+            "run_shell_command(wc)",
+            "run_shell_command(find)",
+            "run_shell_command(grep)",
+            "run_shell_command(awk)",
+            "run_shell_command(sort)",
+            "run_shell_command(uniq)"
         ]
     }
 }

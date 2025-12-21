@@ -50,7 +50,7 @@ jobs:
           echo "Comparing changes from $BASE_COMMIT to ${{ github.sha }}"
           
           # Get changed markdown files
-          CHANGED_FILES=$(git diff --name-only $BASE_COMMIT ${{ github.sha }} | grep 'packages/posts/src/content/.*\.md$' || true)
+          CHANGED_FILES=$(git diff --name-only $BASE_COMMIT ${{ github.sha }} | grep 'posts/.*\.md$' || true)
 
           if [ -z "$CHANGED_FILES" ]; then
             echo "No markdown files changed. Skipping fix."
@@ -72,7 +72,7 @@ jobs:
               echo "Changes detected. Committing and pushing..."
               git config --global user.name 'github-actions[bot]'
               git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-              git add packages/posts/src/content/*.md
+              git add posts
               git commit -m "chore: auto-fix post format and metadata [skip ci]"
               git push
               echo "pushed=true" >> $GITHUB_OUTPUT

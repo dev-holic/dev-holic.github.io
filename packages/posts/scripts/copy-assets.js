@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Configuration
-const postsDir = path.join(__dirname, '../src/content');
+const postsDir = path.resolve(__dirname, '../../../posts');
 // Target: apps/blog/public/posts
 // We need to resolve relative to this script location (packages/posts/scripts)
 const targetBaseDir = path.resolve(__dirname, '../../../apps/blog/public/posts');

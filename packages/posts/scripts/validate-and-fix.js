@@ -7,7 +7,7 @@ const args = process.argv.slice(2);
 const shouldFix = args.includes('--fix');
 const targetFiles = args.filter(arg => !arg.startsWith('--'));
 
-const contentDir = path.join(__dirname, '../src/content');
+const contentDir = path.resolve(__dirname, '../../../posts');
 
 let hasError = false;
 let fixedCount = 0;
