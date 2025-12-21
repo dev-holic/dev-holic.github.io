@@ -26,4 +26,5 @@ dist-ssr
 .turbo
 
 .next
+next-env.d.ts
 out
