@@ -1,7 +1,7 @@
 1:"$Sreact.fragment"
 2:I[91320,["/_next/static/chunks/c6311bd1204a06f2.js","/_next/static/chunks/5ec360913fe0c25f.js","/_next/static/chunks/c8696c5ee1a86c19.js"],"PostList"]
-b:I[97990,["/_next/static/chunks/28ff6a04602448ba.js","/_next/static/chunks/64c697a3cb51cd07.js"],"OutletBoundary"]
-c:"$Sreact.suspense"
+c:I[97990,["/_next/static/chunks/28ff6a04602448ba.js","/_next/static/chunks/64c697a3cb51cd07.js"],"OutletBoundary"]
+d:"$Sreact.suspense"
 3:T14d5,
 # 🚀 Gemini CLI 완벽 가이드
 
@@ -122,7 +122,131 @@ Gemini는 단순 텍스트 생성 외에도 실제 작업을 수행할 수 있�
 
 ### 🧪 테스트 코드 자동 생성
 > **User:** "`@login.ts` 파일을 읽고 이에 대한 Jest 유닛 테스트 코드를 작성해서 `login.test.ts` 파일로 만들어줘."
-4:T169c,
+4:T1aeb,
+# [가이드] Giscus: 광고 없는 무료 댓글 시스템, 5분 만에 적용하기
+
+개발 블로그를 운영하다 보면 독자와의 소통을 위해 댓글 기능이 필요합니다. Disqus는 무겁고 광고가 많고, Utterances는 GitHub Issues를 사용해서 댓글이 이슈로 등록되는 부담이 있습니다.
+
+이때 가장 좋은 대안이 바로 **Giscus**입니다. GitHub Discussions API를 활용하기 때문에 관리가 편하고, 디자인이 깔끔하며, 마크다운을 지원합니다.
+
+## 1. 사전 준비 (GitHub 설정)
+
+Giscus를 사용하려면 먼저 GitHub 저장소(Repository)가 준비되어 있어야 합니다.
+
+1.  **Public Repository 생성**: 댓글을 저장할 저장소는 반드시 **Public**이어야 합니다. (블로그 소스 코드 저장소를 그대로 써도 되고, 댓글용 저장소를 따로 파도 됩니다.)
+2.  **Giscus 앱 설치**: [GitHub Apps - Giscus](https://github.com/apps/giscus) 링크로 이동하여 `Install`을 클릭합니다. 위에서 준비한 저장소에 접근 권한을 허용해주세요.
+3.  **Discussions 활성화**:
+    * 해당 저장소의 **Settings** > **General** 탭으로 이동합니다.
+    * `Features` 섹션에서 **Discussions** 체크박스를 켜서 활성화합니다.
+
+## 2. 스크립트 생성 (설정값 추출)
+
+[Giscus 공식 홈페이지](https://giscus.app/ko)로 이동하여 저장소 정보를 입력하면 자동으로 설정 코드를 만들어줍니다.
+
+1.  **저장소(Repository) 입력**: `username/repo-name` 형식으로 입력합니다. (예: `my-id/my-blog-comments`)
+    * *입력 후 로딩이 끝나면 아래 '페이지와 discussion 연결' 단계로 넘어갑니다.*
+2.  **연결 방식 선택 (Page ↔ Discussion Mapping)**:
+    * `pathname`: URL 경로를 기준으로 매칭 (추천, URL이 바뀌면 댓글도 새로 시작됨)
+    * `og:title`: `<meta property="og:title">` 태그 내용 기준
+    * 보통 블로그라면 `pathname`이 가장 무난합니다.
+3.  **Discussion 카테고리 선택**:
+    * 보통 `General`이나 `Announcements`를 선택합니다.
+    * **주의**: 선택한 카테고리는 GitHub Discussions 탭에서 **누구나 글을 쓸 수 있는 권한**이 있어야 합니다. ("Announcements"는 관리자만 쓸 수 있는 경우가 많으니 권한 설정을 확인하거나 `General`을 추천합니다.)
+4.  **기능 및 테마 선택**:
+    * **메타데이터 전송**: 댓글 위에 페이지 정보를 표시할지 선택.
+    * **테마**: 사이트 분위기에 맞춰 선택 (Light/Dark/Preferred Color Scheme 등).
+
+## 3. 코드 적용하기
+
+위 설정을 마치면 하단에 `<script>` 태그가 생성됩니다. 개발 환경에 맞춰 적용하세요.
+
+### 방법 A: 일반 HTML / 정적 사이트 (Jekyll, Hugo 등)
+
+생성된 스크립트 태그를 댓글이 표시될 위치(보통 포스트 하단)에 붙여넣기만 하면 됩니다.
+
+```html
+<script src="[https://giscus.app/client.js](https://giscus.app/client.js)"
+        data-repo="[ENTER REPO HERE]"
+        data-repo-id="[ENTER REPO ID HERE]"
+        data-category="[ENTER CATEGORY NAME HERE]"
+        data-category-id="[ENTER CATEGORY ID HERE]"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="ko"
+        crossorigin="anonymous"
+        async>
+</script>
+```
+
+### 방법 B: React / Next.js (컴포넌트화)
+
+React 환경에서는 `script` 태그를 직접 넣기보다 `useEffect`를 활용하거나 전용 컴포넌트를 만드는 것이 좋습니다. Next.js 등에서 라우팅 이동 시 댓글이 제대로 다시 로드되게 하려면 아래와 같이 작성합니다.
+
+```tsx
+// components/Giscus.tsx
+import { useEffect, useRef } from 'react';
+
+export default function Giscus() {
+  const ref = useRef<HTMLDivElement>(null);
+
+  // 테마가 바뀔 때 giscus 테마도 업데이트하려면 이 로직이 추가로 필요합니다.
+  // const theme = useTheme(); // (프로젝트의 테마 hook 사용)
+
+  useEffect(() => {
+    if (!ref.current || ref.current.hasChildNodes()) return;
+
+    const scriptElem = document.createElement('script');
+    scriptElem.src = '[https://giscus.app/client.js](https://giscus.app/client.js)';
+    scriptElem.async = true;
+    scriptElem.crossOrigin = 'anonymous';
+
+    // 설정값 주입 (giscus 웹사이트에서 생성된 값 복사)
+    scriptElem.setAttribute('data-repo', '사용자명/저장소명');
+    scriptElem.setAttribute('data-repo-id', 'R_kgDO...'); // ⚠️ 직접 생성된 값 확인 필수
+    scriptElem.setAttribute('data-category', 'General');
+    scriptElem.setAttribute('data-category-id', 'DIC_kwDO...'); // ⚠️ 직접 생성된 값 확인 필수
+    scriptElem.setAttribute('data-mapping', 'pathname');
+    scriptElem.setAttribute('data-strict', '0');
+    scriptElem.setAttribute('data-reactions-enabled', '1');
+    scriptElem.setAttribute('data-emit-metadata', '0');
+    scriptElem.setAttribute('data-input-position', 'bottom');
+    scriptElem.setAttribute('data-theme', 'preferred_color_scheme');
+    scriptElem.setAttribute('data-lang', 'ko');
+
+    ref.current.appendChild(scriptElem);
+  }, []);
+
+  // 테마 변경 동적 반영을 위한 postMessage (선택사항)
+  // useEffect(() => {
+  //   const iframe = document.querySelector<HTMLIFrameElement>('iframe.giscus-frame');
+  //   iframe?.contentWindow?.postMessage({ giscus: { setConfig: { theme } } }, '[https://giscus.app](https://giscus.app)');
+  // }, [theme]);
+
+  return <section ref={ref} />;
+}
+```
+
+## 4. 트러블 슈팅 & 꿀팁
+
+1.  **403 Forbidden / Not Found 오류**:
+    * `data-repo-id`와 `data-category-id`가 정확한지 확인하세요. (단순히 텍스트 이름이 아니라 GitHub API에서 할당된 고유 ID 값이어야 합니다. 공식 사이트 생성기에서 복사하는 것이 가장 확실합니다.)
+    * Giscus 앱이 해당 저장소에 설치(Install)되어 있는지 확인하세요.
+2.  **댓글이 안 보일 때**:
+    * `giscus.json` 파일이 필요하지 않습니다. 저장소의 Discussions 탭에 실제로 'Giscus'라는 봇이 만든 discussion이 생성되는지 확인해보세요.
+3.  **다크모드 대응**:
+    * `data-theme="preferred_color_scheme"`을 사용하면 OS 설정에 따라 자동으로 변합니다.
+    * 블로그 자체에 다크모드 토글이 있다면, 토글 이벤트 발생 시 `postMessage`를 보내 테마를 즉시 변경해 주는 것이 사용자 경험(UX)에 좋습니다.
+
+---
+
+**마무리하며**
+
+Giscus는 GitHub 아이디만 있다면 누구나 쉽게 댓글을 남길 수 있고, 개발자 입장에서는 DB 관리 부담 없이 무료로 사용할 수 있는 최고의 솔루션입니다. 지금 바로 적용해 보세요!
+5:T169c,
 개발팀이 성장하고 서비스 규모가 커지면 필연적으로 **'모니터링(Monitoring)'**에 대한 니즈가 발생합니다. 시장에는 수많은 툴이 있지만, 가장 대표적인 두 가지를 꼽자면 단연 **Datadog(데이터독)**과 **Sentry(센트리)**일 것입니다.
 
 흔히 "둘 다 모니터링 툴 아니야?"라고 생각하기 쉽지만, 두 서비스는 **태생과 지향점**이 완전히 다릅니다. 이번 포스팅에서는 클라이언트, 서버 로깅, APM, RUM, 대시보드 구성 등을 기준으로 두 툴을 상세 비교하고, 어떤 상황에서 무엇을 선택해야 할지 정리해 보았습니다.
@@ -197,7 +321,7 @@ Gemini는 단순 텍스트 생성 외에도 실제 작업을 수행할 수 있�
 * **Backend & Infra:** Datadog (서버 상태, APM, 대량 로그)
 
 각 툴의 강점이 명확한 만큼, 팀의 상황과 목적에 맞춰 적절한 도구를 선택하시길 바랍니다.
-5:T29be,
+6:T29be,
 1. 서론: 끝나지 않는 로딩의 미스터리
 
 Next.js App Router는 서버 컴포넌트와 클라이언트 컴포넌트의 유연한 조합을 통해 강력한 웹 애플리케이션 구축을 가능하게 합니다. 하지만 이 새로운 렌더링 패러다임은 강력한 만큼, 기존의 클라이언트 중심 멘탈 모델과 충돌하며 흔한 함정을 만들어냅니다. 그 대표적인 사례가 바로 @tanstack/react-query의 useSuspenseQuery를 클라이언트 컴포넌트에서 사용했을 때 발생하는 '서버 행(Hanging)' 현상, 즉 페이지 응답이 멈추고 무한 로딩에 빠지는 문제입니다.
@@ -324,7 +448,7 @@ useSuspenseQuery와 클라이언트 컴포넌트 조합 사용 시 발생한 서
 * 핵심 교훈 1: 'use client'는 서버 렌더링을 배제하는 지시어가 아닙니다. 이는 서버에서 사전 렌더링 후 클라이언트에서 하이드레이션하는, 즉 SSR과 CSR이 결합된 App Router의 기본 모델을 의미합니다.
 * 핵심 교훈 2: 만약 컴포넌트가 서버 환경에서는 실행되어서는 안 되는 클라이언트 전용 데이터 페칭 로직이나 API를 포함하고 있다면, next/dynamic과 ssr: false 옵션을 사용하는 것은 단순한 문제 해결이 아닌, 필수적인 아키텍처 결정입니다. 이를 통해 명확한 CSR 경계를 설정해야 합니다.
 
-이제 여러분은 Next.js의 렌더링 전략을 더 효과적으로 활용할 준비가 되었습니다. 이 글에서 다룬 원리와 해결책을 바탕으로 유사한 문제를 예방하고, 더욱 견고하고 안정적인 애플리케이션을 구축하시기를 바랍니다.6:T18cd,
+이제 여러분은 Next.js의 렌더링 전략을 더 효과적으로 활용할 준비가 되었습니다. 이 글에서 다룬 원리와 해결책을 바탕으로 유사한 문제를 예방하고, 더욱 견고하고 안정적인 애플리케이션을 구축하시기를 바랍니다.7:T18cd,
 # 프론트엔드 개발, OOP와 FP의 완벽한 조화: 실무 적용 가이드
 
 프론트엔드 개발 생태계는 빠르게 변화했습니다. 과거 UI를 클래스로 제어하던 시절을 지나, React Hooks와 Redux의 등장으로 함수형 프로그래밍(FP)의 개념이 깊숙이 자리 잡았습니다.
@@ -469,7 +593,7 @@ const UserList = () => {
 프론트엔드 개발자로서 한 가지 패러다임에 갇히기보다, 각 패러다임이 가진 장점을 이해하고 상황에 맞게 골라 쓰는 유연함이 필요합니다. 
 
 **"상태 관리는 OOP처럼, 데이터 처리는 FP처럼."** 이 원칙을 기억하면 더 견고한 애플리케이션을 설계할 수 있을 것입니다.
-7:T13dd,
+8:T13dd,
 # 무조건적인 가상화(Virtualization) 도입, 과연 정답일까? (feat. content-visibility)
 
 프론트엔드 개발자라면 긴 리스트를 다룰 때 습관적으로 **"가상화(Virtualization)를 도입해야겠다"**고 생각합니다. `react-window`나 `tanstack-virtual` 같은 라이브러리를 설치하는 것이 일종의 'Best Practice'처럼 여겨지죠.
@@ -537,7 +661,7 @@ const UserList = () => {
 }
 
 ```
-8:T1f43,
+9:T1f43,
 # [Architecture] NPM 패키지 분리 환경에서 싱글톤(Singleton) 유지하기: globalThis와 Symbol.for의 활용
 
 최근 사내 패키지 배포 구조를 개선하면서 마주친 문제와 그 해결 과정을 공유합니다.
@@ -670,7 +794,7 @@ export namespace SingletonRegistry {
 NPM 패키지 배포 시 번들링 전략에 따라 싱글톤 패턴이 깨지는 문제는 흔히 발생할 수 있습니다. 가장 정석적인 방법은 `peerDependencies`를 사용하여 호스트가 단일 버전을 설치하게 하는 것이지만, 배포 및 사용 편의성을 위해 번들링이 필수적인 상황이라면 **`globalThis`와 `Symbol.for`를 활용한 전역 레지스트리 패턴**이 훌륭한 해결책이 될 수 있습니다.
 
 이 패턴은 React, Styled-components 등 유명 라이브러리들에서도 런타임 환경의 제약을 극복하기 위해 내부적으로 사용하는 검증된 방식입니다. 다만, 사용 시 발생할 수 있는 사이드 이펙트(버전, 타입 체크)를 충분히 인지하고 적용해야 합니다.
-0:{"buildId":"4wBL2wVC7-TEQSjWhhddV","rsc":["$","$1","c",{"children":[["$","$L2",null,{"posts":[{"title":"🚀 Gemini CLI 완벽 가이드: 터미널에서 Gemini 모델 활용하기","summary":"Gemini CLI를 설치하고 설정하는 방법부터 Slash, At, Shell 명령어 사용법, 팁과 활용 예시까지 완벽하게 안내합니다.","tags":["Gemini","CLI","AI","터미널","개발"],"date":"2025-12-21","id":"gemini-cli-get-started","content":"$3"},{"title":"Datadog vs Sentry: 우리 팀에 맞는 모니터링 툴은 무엇일까?","summary":"Datadog과 Sentry의 특징과 장단점을 비교하여 팀의 상황에 맞는 최적의 모니터링 도구를 선택하는 방법을 알아봅니다.","tags":["Datadog","Sentry","Monitoring","APM","RUM"],"date":"2025-12-21","id":"sentry-vs-datadog","content":"$4"},{"title":"Next.js App Router: useSuspenseQuery 서버 행(Hanging) 이슈 해결","date":"2025-12-20","tags":["Next.js","React Query","App Router"],"summary":"App Router에서 useSuspenseQuery 사용 시 발생하는 서버 행 현상의 원인을 파헤치고 next/dynamic을 통한 해결책을 제시합니다.","id":"app-router-useSuspenseQuery","content":"$5"},{"title":"프론트엔드 OOP와 FP 조화: 실무 적용 완벽 가이드","summary":"프론트엔드 개발에서 객체 지향 프로그래밍(OOP)과 함수형 프로그래밍(FP)을 조화롭게 사용하여 효율적인 아키텍처를 구축하는 방법을 알아봅니다.","tags":["frontend","OOP","FP","architecture","javascript"],"date":"2025-12-20","id":"frontend-oop-fp","content":"$6"},{"title":"가상화(Virtualization) 도입, 과연 정답일까? (feat. content-visibility)","summary":"가상화의 성능상 이점과 UX상의 단점을 살펴보고, content-visibility를 이용한 대안을 제시합니다.","tags":["virtualization","performance","css","content-visibility","frontend"],"date":"2025-12-20","id":"scroll-virtualization","content":"$7"},{"title":"NPM 패키지 분리 환경에서 싱글톤(Singleton) 유지하기: globalThis와 Symbol.for의 활용","summary":"물리적으로 분리된 번들 환경에서 globalThis와 Symbol.for를 활용하여 싱글톤 인스턴스를 안전하게 공유하는 방법을 설명합니다.","tags":["NPM","Singleton","globalThis","Symbol.for","JavaScript"],"date":"2025-12-20","id":"singleton-in-package","content":"$8"},{"title":"Folder Structure Test Post","date":"2020-12-21","tags":["Test","Structure"],"summary":"This is a test post to verify folder-based structure and image loading.","id":"folder-test-post","content":"\nThis is a post inside a folder.\n\nHere is an image:\n![Test Image](./image.png)\n\nAnd some text below.\n\n"}]}],["$L9"],"$La"]}],"loading":null,"isPartial":false}
-9:["$","script","script-0",{"src":"/_next/static/chunks/c8696c5ee1a86c19.js","async":true}]
-a:["$","$Lb",null,{"children":["$","$c",null,{"name":"Next.MetadataOutlet","children":"$@d"}]}]
-d:null
+0:{"buildId":"dFClYjR9gFFUdfOpiOuXG","rsc":["$","$1","c",{"children":[["$","$L2",null,{"posts":[{"title":"🚀 Gemini CLI 완벽 가이드: 터미널에서 Gemini 모델 활용하기","summary":"Gemini CLI를 설치하고 설정하는 방법부터 Slash, At, Shell 명령어 사용법, 팁과 활용 예시까지 완벽하게 안내합니다.","tags":["Gemini","CLI","AI","터미널","개발"],"date":"2025-12-21","id":"gemini-cli-get-started","content":"$3"},{"title":"Giscus: 광고 없는 무료 댓글 시스템, 5분 만에 적용하기","summary":"Giscus는 GitHub Discussions API를 활용하여 광고 없이 깔끔한 디자인과 마크다운을 지원하는 무료 댓글 시스템으로, 개발 블로그에 쉽게 적용할 수 있습니다.","tags":["Giscus","댓글 시스템","GitHub Discussions","개발 블로그","무료"],"date":"2025-12-21","id":"giscus","content":"$4"},{"title":"Datadog vs Sentry: 우리 팀에 맞는 모니터링 툴은 무엇일까?","summary":"Datadog과 Sentry의 특징과 장단점을 비교하여 팀의 상황에 맞는 최적의 모니터링 도구를 선택하는 방법을 알아봅니다.","tags":["Datadog","Sentry","Monitoring","APM","RUM"],"date":"2025-12-21","id":"sentry-vs-datadog","content":"$5"},{"title":"Next.js App Router: useSuspenseQuery 서버 행(Hanging) 이슈 해결","date":"2025-12-20","tags":["Next.js","React Query","App Router"],"summary":"App Router에서 useSuspenseQuery 사용 시 발생하는 서버 행 현상의 원인을 파헤치고 next/dynamic을 통한 해결책을 제시합니다.","id":"app-router-useSuspenseQuery","content":"$6"},{"title":"프론트엔드 OOP와 FP 조화: 실무 적용 완벽 가이드","summary":"프론트엔드 개발에서 객체 지향 프로그래밍(OOP)과 함수형 프로그래밍(FP)을 조화롭게 사용하여 효율적인 아키텍처를 구축하는 방법을 알아봅니다.","tags":["frontend","OOP","FP","architecture","javascript"],"date":"2025-12-20","id":"frontend-oop-fp","content":"$7"},{"title":"가상화(Virtualization) 도입, 과연 정답일까? (feat. content-visibility)","summary":"가상화의 성능상 이점과 UX상의 단점을 살펴보고, content-visibility를 이용한 대안을 제시합니다.","tags":["virtualization","performance","css","content-visibility","frontend"],"date":"2025-12-20","id":"scroll-virtualization","content":"$8"},{"title":"NPM 패키지 분리 환경에서 싱글톤(Singleton) 유지하기: globalThis와 Symbol.for의 활용","summary":"물리적으로 분리된 번들 환경에서 globalThis와 Symbol.for를 활용하여 싱글톤 인스턴스를 안전하게 공유하는 방법을 설명합니다.","tags":["NPM","Singleton","globalThis","Symbol.for","JavaScript"],"date":"2025-12-20","id":"singleton-in-package","content":"$9"},{"title":"Folder Structure Test Post","date":"2020-12-21","tags":["Test","Structure"],"summary":"This is a test post to verify folder-based structure and image loading.","id":"folder-test-post","content":"\nThis is a post inside a folder.\n\nHere is an image:\n![Test Image](./image.png)\n\nAnd some text below.\n\n"}]}],["$La"],"$Lb"]}],"loading":null,"isPartial":false}
+a:["$","script","script-0",{"src":"/_next/static/chunks/c8696c5ee1a86c19.js","async":true}]
+b:["$","$Lc",null,{"children":["$","$d",null,{"name":"Next.MetadataOutlet","children":"$@e"}]}]
+e:null
