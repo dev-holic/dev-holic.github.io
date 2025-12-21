@@ -1,3 +1,17 @@
+---
+title: 'Giscus: 광고 없는 무료 댓글 시스템, 5분 만에 적용하기'
+summary: >-
+  Giscus는 GitHub Discussions API를 활용하여 광고 없이 깔끔한 디자인과 마크다운을 지원하는 무료 댓글 시스템으로, 개발
+  블로그에 쉽게 적용할 수 있습니다.
+tags:
+  - Giscus
+  - 댓글 시스템
+  - GitHub Discussions
+  - 개발 블로그
+  - 무료
+date: 2025-12-21T00:00:00.000Z
+---
+
 # [가이드] Giscus: 광고 없는 무료 댓글 시스템, 5분 만에 적용하기
 
 개발 블로그를 운영하다 보면 독자와의 소통을 위해 댓글 기능이 필요합니다. Disqus는 무겁고 광고가 많고, Utterances는 GitHub Issues를 사용해서 댓글이 이슈로 등록되는 부담이 있습니다.
