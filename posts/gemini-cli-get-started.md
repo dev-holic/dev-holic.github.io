@@ -1,3 +1,15 @@
+---
+title: "\U0001F680 Gemini CLI 완벽 가이드: 터미널에서 Gemini 모델 활용하기"
+summary: 'Gemini CLI를 설치하고 설정하는 방법부터 Slash, At, Shell 명령어 사용법, 팁과 활용 예시까지 완벽하게 안내합니다.'
+tags:
+  - Gemini
+  - CLI
+  - AI
+  - 터미널
+  - 개발
+date: 2025-12-21T00:00:00.000Z
+---
+
 # 🚀 Gemini CLI 완벽 가이드
 
 Gemini CLI는 터미널에서 Google의 Gemini 모델과 직접 상호작용하며 코딩, 문서 작업, 시스템 관리 등을 수행할 수 있는 강력한 도구입니다.
