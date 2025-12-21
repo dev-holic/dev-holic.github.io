@@ -1,0 +1,64 @@
+name: News Bot
+
+on:
+  schedule:
+    - cron: '0 * * * *' # Run every hour
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  run-news-bot:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Required to push changes to history.json
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 9
+          run_install: false
+
+      - name: Get pnpm store directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - name: Setup pnpm cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run News Bot
+        env:
+          RSS_FEED_LIST: ${{ vars.RSS_FEED_LIST }}
+          SLACK_RSS_WEBHOOK_URL: ${{ secrets.SLACK_RSS_WEBHOOK_URL }}
+        run: |
+          pnpm --filter @dev-holic/news-bot start
+
+      - name: Commit and Push History
+        run: |
+          git config user.name "News Bot"
+          git config user.email "bot@dev-holic.com"
+          
+          # Check if history.json has changed
+          if [[ -n $(git status --porcelain packages/news-bot/history.json) ]]; then
+            git add packages/news-bot/history.json
+            git commit -m "chore(news-bot): update execution history [skip ci]"
+            git push
+          else
+            echo "No changes to history.json"
+          fi
