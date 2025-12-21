@@ -4,8 +4,10 @@ import { getAllPosts } from '@dev-holic/posts';
 export const dynamic = 'force-static';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const posts = await getAllPosts();
+  const allPosts = await getAllPosts();
   const baseUrl = 'https://dev-holic.github.io';
+
+  const posts = allPosts.filter((post) => !isNaN(new Date(post.date).getTime()));
 
   const postUrls = posts.map((post) => ({
     url: `${baseUrl}/blog/${post.id}`,

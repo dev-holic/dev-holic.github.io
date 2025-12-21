@@ -20,13 +20,15 @@
     "react-markdown": "^10.1.0",
     "react-syntax-highlighter": "^16.1.0",
     "rehype-raw": "^7.0.0",
-    "remark-gfm": "^4.0.1"
+    "remark-gfm": "^4.0.1",
+    "rss": "^1.2.2"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.19",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@types/react-syntax-highlighter": "^15.5.13",
+    "@types/rss": "^0.0.32",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.2.0",
     "autoprefixer": "^10.4.20",
