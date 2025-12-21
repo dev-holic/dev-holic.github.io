@@ -1,0 +1,136 @@
+---
+title: "GitHub Actions로 나만의 뉴스 브리핑 봇 만들기 (서버비 0원)"
+date: "2025-12-21"
+tags: ["GitHub Actions", "Automation", "Slack Bot", "RSS", "Node.js"]
+summary: "GitHub Actions의 Cron 스케줄러를 활용해 RSS 피드를 주기적으로 크롤링하고, 새로운 소식을 슬랙으로 전송하는 봇을 만드는 과정을 소개합니다."
+---
+
+# GitHub Actions로 나만의 뉴스 브리핑 봇 만들기 (서버비 0원)
+
+개발자라면 누구나 "최신 기술 트렌드를 놓치고 싶지 않다"는 욕망이 있습니다. 저 역시 여러 기술 블로그와 뉴스 사이트의 RSS를 구독하고 있습니다. 하지만 바쁜 일상 속에서 매번 RSS 리더기를 켜서 확인하는 것은 꽤나 번거로운 일입니다.
+
+**"내가 가장 자주 보는 곳인 슬랙(Slack)으로, 새로운 뉴스가 뜰 때마다 알아서 배달해 준다면 어떨까?"**
+
+이 아이디어를 실현하기 위해 별도의 서버 구축 없이, **GitHub Actions**만으로 동작하는 뉴스 브리핑 봇을 만들어 보았습니다.
+
+---
+
+## 1. 아키텍처 설계: 서버 없이 어떻게?
+
+봇을 운영하려면 보통 24시간 돌아가는 서버가 필요하다고 생각하기 쉽습니다. 하지만 우리가 필요한 건 "1시간에 한 번" 정도의 주기적인 실행입니다. 이럴 때 **GitHub Actions**의 **Schedule(Cron)** 기능이 완벽한 대안이 됩니다.
+
+### 핵심 도전 과제: "상태(State)" 저장
+GitHub Actions는 실행될 때마다 환경이 초기화되는 "Stateless"한 특성을 가집니다. 즉, **"어디까지 뉴스를 읽었는지"** 기억할 방법이 필요합니다. 이를 위해 데이터베이스를 쓴다면 배보다 배꼽이 더 커지겠죠.
+
+### 해결책: Git 저장소를 DB로 활용하기
+저는 **파일 시스템(JSON)에 마지막 실행 시간을 기록하고, 이를 다시 Git에 커밋(Commit)하는 방식**을 선택했습니다.
+
+1.  **Read:** `history.json` 파일을 읽어 마지막 실행 시간을 확인합니다.
+2.  **Fetch:** RSS 피드에서 뉴스들을 가져옵니다.
+3.  **Filter:** 마지막 실행 시간 이후에 발행된 글만 필터링합니다.
+4.  **Notify:** 새로운 글을 슬랙으로 전송합니다.
+5.  **Write & Commit:** 현재 시간을 `history.json`에 업데이트하고 저장소에 Push 합니다.
+
+---
+
+## 2. 구현하기 (Node.js)
+
+### 패키지 구조
+프로젝트의 모노레포 구조 내에 `packages/news-bot`이라는 별도 패키지를 만들었습니다.
+필요한 라이브러리는 다음과 같습니다.
+*   `rss-parser`: RSS XML 파싱
+*   `axios`: 슬랙 웹훅 전송
+*   `dayjs`: 날짜 계산
+
+### 핵심 로직 (`index.ts`)
+
+```typescript
+// 핵심 로직 요약
+async function main() {
+  // 1. 마지막 실행 시간 로드
+  const history = await getHistory(); // history.json 읽기
+  const lastRun = dayjs(history.lastRun);
+
+  // 2. RSS 피드 순회
+  for (const feed of feeds) {
+    const parsedFeed = await parser.parseURL(feed.url);
+    
+    // 3. 새로운 글 필터링
+    const newItems = parsedFeed.items.filter(item => {
+      return dayjs(item.pubDate).isAfter(lastRun);
+    });
+
+    // 4. 슬랙 전송
+    for (const item of newItems) {
+      await sendToSlack(feed.title, item);
+    }
+  }
+
+  // 5. 상태 업데이트
+  await saveHistory({ lastRun: dayjs().toISOString() });
+}
+```
+
+---
+
+## 3. GitHub Actions 설정 (Cron)
+
+이제 이 스크립트를 주기적으로 실행해 줄 워크플로우(`news-bot.yml`)를 작성합니다.
+
+```yaml
+name: News Bot
+
+on:
+  schedule:
+    - cron: '0 * * * *' # 매 시간 정각마다 실행
+  workflow_dispatch: # 수동 실행 가능
+
+jobs:
+  run-news-bot:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # 저장소에 커밋하기 위해 쓰기 권한 필요
+
+    steps:
+      # ... (Node.js 설정 및 의존성 설치) ...
+
+      - name: Run News Bot
+        env:
+          # GitHub Secrets & Variables 활용
+          RSS_FEED_LIST: ${{ vars.RSS_FEED_LIST }}
+          SLACK_RSS_WEBHOOK_URL: ${{ secrets.SLACK_RSS_WEBHOOK_URL }}
+        run: |
+          pnpm --filter @dev-holic/news-bot start
+
+      - name: Commit and Push History
+        run: |
+          git config user.name "News Bot"
+          git config user.email "bot@dev-holic.com"
+          
+          # history.json이 변경되었을 때만 커밋
+          if [[ -n $(git status --porcelain packages/news-bot/history.json) ]]; then
+            git add packages/news-bot/history.json
+            git commit -m "chore(news-bot): update execution history [skip ci]"
+            git push
+          fi
+```
+
+### 팁: `[skip ci]`
+커밋 메시지에 `[skip ci]`를 포함시키면, 이 커밋으로 인해 또 다른 CI/CD 파이프라인(예: 블로그 배포)이 불필요하게 트리거되는 것을 방지할 수 있습니다.
+
+---
+
+## 4. 결과 및 활용
+
+이제 매시간 정각이 되면 봇이 깨어나 뉴스를 확인합니다. 새로운 글이 있다면 슬랙 채널에 다음과 같이 예쁘게 알림이 옵니다.
+
+> **The Hacker News**
+> [Hackers Using Fake Google Meet Pages to Deliver Malware](...)
+> 2025-12-21 14:30
+
+### 얻은 것들
+1.  **비용 0원:** GitHub Actions 무료 티어 내에서 충분히 운용 가능합니다.
+2.  **자동화된 정보 습득:** 내가 찾으러 다니지 않아도 정보가 나를 찾아옵니다.
+3.  **확장성:** `RSS_FEED_LIST` 변수만 수정하면 구독 채널을 언제든 늘릴 수 있습니다.
+
+여러분도 잠자고 있는 GitHub Actions를 깨워 나만의 비서로 활용해 보세요!
