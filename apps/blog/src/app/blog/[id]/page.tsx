@@ -45,7 +45,7 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
       '@type': 'Person',
       name: 'Dev-Holic', // You might want to make this dynamic if multiple authors exist
     },
-    url: `https://dev-holic.github.io/dev-holic.github.io/blog/${post.metadata.id}`,
+    url: `https://dev-holic.github.io/blog/${post.metadata.id}`,
     keywords: post.metadata.tags,
   };
 

@@ -4,7 +4,7 @@ import { getAllPosts } from '@dev-holic/posts';
 import { Sidebar } from '../components/Sidebar';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://dev-holic.github.io/dev-holic.github.io'),
+  metadataBase: new URL('https://dev-holic.github.io'),
   title: {
     template: '%s | Dev-Holic Blog',
     default: 'Dev-Holic Blog',
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Dev-Holic Blog',
     description: 'Tech, Development, and more',
-    url: 'https://dev-holic.github.io/dev-holic.github.io',
+    url: 'https://dev-holic.github.io',
     siteName: 'Dev-Holic Blog',
     locale: 'ko_KR',
     type: 'website',
@@ -39,7 +39,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'Dev-Holic Blog',
-    url: 'https://dev-holic.github.io/dev-holic.github.io',
+    url: 'https://dev-holic.github.io',
   };
 
   return (
