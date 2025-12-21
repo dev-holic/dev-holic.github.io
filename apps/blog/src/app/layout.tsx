@@ -44,7 +44,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 
   return (
     <html lang='en'>
-      <link rel='icon' type='image/svg+xml' href='/vite.svg' />
+      <link rel='shortcut icon' href='/favicon.ico' type='image/x-icon' />
+      <link rel='icon' href='/favicon.png' type='image/png' />
       <meta name='google-site-verification' content='sXxEHSK4sTx3BrDha-kpJpFaszf3wxeSU5ojx8sqq1A' />
 
       <body className='bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100'>
