@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[Dev Holic Blog]]></title>
+        <description><![CDATA[Dev Holic Blog Posts]]></description>
+        <link>https://dev-holic.github.io</link>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Sun, 21 Dec 2025 11:46:26 GMT</lastBuildDate>
+        <atom:link href="https://dev-holic.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+        <pubDate>Sun, 21 Dec 2025 11:46:26 GMT</pubDate>
+        <copyright><![CDATA[2025 Dev Holic]]></copyright>
+        <language><![CDATA[ko]]></language>
+        <item>
+            <title><![CDATA[🚀 Gemini CLI 완벽 가이드: 터미널에서 Gemini 모델 활용하기]]></title>
+            <description><![CDATA[Gemini CLI를 설치하고 설정하는 방법부터 Slash, At, Shell 명령어 사용법, 팁과 활용 예시까지 완벽하게 안내합니다.]]></description>
+            <link>https://dev-holic.github.io/blog/gemini-cli-get-started</link>
+            <guid isPermaLink="false">https://dev-holic.github.io/blog/gemini-cli-get-started</guid>
+            <pubDate>Sun, 21 Dec 2025 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Giscus: 광고 없는 무료 댓글 시스템, 5분 만에 적용하기]]></title>
+            <description><![CDATA[Giscus는 GitHub Discussions API를 활용하여 광고 없이 깔끔한 디자인과 마크다운을 지원하는 무료 댓글 시스템으로, 개발 블로그에 쉽게 적용할 수 있습니다.]]></description>
+            <link>https://dev-holic.github.io/blog/giscus</link>
+            <guid isPermaLink="false">https://dev-holic.github.io/blog/giscus</guid>
+            <pubDate>Sun, 21 Dec 2025 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[[Tip] RSS란 무엇인가? 내 기술 블로그에 RSS 달고 Feedly로 구독하기]]></title>
+            <description><![CDATA[RSS의 개념과 GitHub Pages 블로그에 RSS를 적용하는 방법, Feedly 사용법을 알아봅니다.]]></description>
+            <link>https://dev-holic.github.io/blog/rss</link>
+            <guid isPermaLink="false">https://dev-holic.github.io/blog/rss</guid>
+            <pubDate>Sun, 21 Dec 2025 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Datadog vs Sentry: 우리 팀에 맞는 모니터링 툴은 무엇일까?]]></title>
+            <description><![CDATA[Datadog과 Sentry의 특징과 장단점을 비교하여 팀의 상황에 맞는 최적의 모니터링 도구를 선택하는 방법을 알아봅니다.]]></description>
+            <link>https://dev-holic.github.io/blog/sentry-vs-datadog</link>
+            <guid isPermaLink="false">https://dev-holic.github.io/blog/sentry-vs-datadog</guid>
+            <pubDate>Sun, 21 Dec 2025 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Next.js App Router: useSuspenseQuery 서버 행(Hanging) 이슈 해결]]></title>
+            <description><![CDATA[App Router에서 useSuspenseQuery 사용 시 발생하는 서버 행 현상의 원인을 파헤치고 next/dynamic을 통한 해결책을 제시합니다.]]></description>
+            <link>https://dev-holic.github.io/blog/app-router-useSuspenseQuery</link>
+            <guid isPermaLink="false">https://dev-holic.github.io/blog/app-router-useSuspenseQuery</guid>
+            <pubDate>Sat, 20 Dec 2025 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[프론트엔드 OOP와 FP 조화: 실무 적용 완벽 가이드]]></title>
+            <description><![CDATA[프론트엔드 개발에서 객체 지향 프로그래밍(OOP)과 함수형 프로그래밍(FP)을 조화롭게 사용하여 효율적인 아키텍처를 구축하는 방법을 알아봅니다.]]></description>
+            <link>https://dev-holic.github.io/blog/frontend-oop-fp</link>
+            <guid isPermaLink="false">https://dev-holic.github.io/blog/frontend-oop-fp</guid>
+            <pubDate>Sat, 20 Dec 2025 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[가상화(Virtualization) 도입, 과연 정답일까? (feat. content-visibility)]]></title>
+            <description><![CDATA[가상화의 성능상 이점과 UX상의 단점을 살펴보고, content-visibility를 이용한 대안을 제시합니다.]]></description>
+            <link>https://dev-holic.github.io/blog/scroll-virtualization</link>
+            <guid isPermaLink="false">https://dev-holic.github.io/blog/scroll-virtualization</guid>
+            <pubDate>Sat, 20 Dec 2025 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[NPM 패키지 분리 환경에서 싱글톤(Singleton) 유지하기: globalThis와 Symbol.for의 활용]]></title>
+            <description><![CDATA[물리적으로 분리된 번들 환경에서 globalThis와 Symbol.for를 활용하여 싱글톤 인스턴스를 안전하게 공유하는 방법을 설명합니다.]]></description>
+            <link>https://dev-holic.github.io/blog/singleton-in-package</link>
+            <guid isPermaLink="false">https://dev-holic.github.io/blog/singleton-in-package</guid>
+            <pubDate>Sat, 20 Dec 2025 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Folder Structure Test Post]]></title>
+            <description><![CDATA[This is a test post to verify folder-based structure and image loading.]]></description>
+            <link>https://dev-holic.github.io/blog/folder-test-post</link>
+            <guid isPermaLink="false">https://dev-holic.github.io/blog/folder-test-post</guid>
+            <pubDate>Mon, 21 Dec 2020 00:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>
