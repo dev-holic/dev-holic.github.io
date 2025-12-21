@@ -2,21 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://dev-holic.github.io</loc>
-<lastmod>2025-12-21T07:55:52.773Z</lastmod>
+<lastmod>2025-12-21T07:58:04.317Z</lastmod>
 <changefreq>daily</changefreq>
 <priority>1</priority>
 </url>
 <url>
 <loc>https://dev-holic.github.io/blog</loc>
-<lastmod>2025-12-21T07:55:52.773Z</lastmod>
+<lastmod>2025-12-21T07:58:04.317Z</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.8</priority>
-</url>
-<url>
-<loc>https://dev-holic.github.io/blog/folder-test-post</loc>
-<lastmod>2025-12-21T00:00:00.000Z</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.7</priority>
 </url>
 <url>
 <loc>https://dev-holic.github.io/blog/gemini-cli-get-started</loc>
@@ -51,6 +45,12 @@
 <url>
 <loc>https://dev-holic.github.io/blog/singleton-in-package</loc>
 <lastmod>2025-12-20T00:00:00.000Z</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://dev-holic.github.io/blog/folder-test-post</loc>
+<lastmod>2020-12-21T00:00:00.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.7</priority>
 </url>
