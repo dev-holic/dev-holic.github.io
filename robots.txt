@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://dev-holic.github.io/dev-holic.github.io/sitemap.xml
