@@ -54,7 +54,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <div className='relative mx-auto flex h-screen w-full max-w-7xl flex-col overflow-hidden md:flex-row'>
-          <main className='h-full w-full flex-1 overflow-y-auto'>{children}</main>
+          <main className='h-full w-full flex-1 overflow-hidden'>{children}</main>
           <Sidebar tags={tags} />
         </div>
       </body>

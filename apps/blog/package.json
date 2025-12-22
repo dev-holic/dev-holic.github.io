@@ -19,6 +19,7 @@
     "react-dom": "^18.2.0",
     "react-markdown": "^10.1.0",
     "react-syntax-highlighter": "^16.1.0",
+    "react-virtuoso": "^4.17.0",
     "rehype-raw": "^7.0.0",
     "remark-gfm": "^4.0.1",
     "rss": "^1.2.2"

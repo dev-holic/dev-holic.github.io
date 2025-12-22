@@ -51,7 +51,7 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
   };
 
   return (
-    <div className='mx-auto p-8'>
+    <div className='h-full overflow-y-auto mx-auto p-8'>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
