@@ -1,8 +1,13 @@
 ---
-title: "E2E 테스트 vs 통합 테스트: 택일이 아닌 상호보완의 관계"
-date: 2023-12-XX
-categories: [Testing, QA, Development]
-tags: [E2E, IntegrationTest, TDD, TestingStrategy]
+title: 'E2E 테스트 vs 통합 테스트: 택일이 아닌 상호보완적 관계'
+date: 2023-12-22T00:00:00.000Z
+summary: 'E2E 테스트와 통합 테스트의 차이점을 명확히 정리하고, 두 테스트를 어떻게 조합해야 효율적인 테스트 전략을 수립할 수 있는지 설명합니다.'
+tags:
+  - E2E
+  - IntegrationTest
+  - Testing
+  - TestStrategy
+  - 상호보완
 ---
 
 # E2E 테스트 vs 통합 테스트: 무엇이 다르고 어떻게 섞어 써야 할까?
