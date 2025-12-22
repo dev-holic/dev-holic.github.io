@@ -4,9 +4,9 @@
         <description><![CDATA[Dev Holic Blog Posts]]></description>
         <link>https://dev-holic.github.io</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 22 Dec 2025 16:07:43 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 22 Dec 2025 16:08:04 GMT</lastBuildDate>
         <atom:link href="https://dev-holic.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Mon, 22 Dec 2025 16:07:43 GMT</pubDate>
+        <pubDate>Mon, 22 Dec 2025 16:08:04 GMT</pubDate>
         <copyright><![CDATA[2025 Dev Holic]]></copyright>
         <language><![CDATA[ko]]></language>
         <item>
@@ -14,6 +14,13 @@
             <description><![CDATA[AI 생성 및 슬랙 버튼을 활용하여 E2E 테스트 자동화 파이프라인을 구축하고, 기술 장벽 없이 테스트에 기여할 수 있는 환경을 만드는 방법을 소개합니다.]]></description>
             <link>https://dev-holic.github.io/blog/e2e-pipeline</link>
             <guid isPermaLink="false">https://dev-holic.github.io/blog/e2e-pipeline</guid>
+            <pubDate>Mon, 22 Dec 2025 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[10만 개 번역 키, 수동 분류 없이 빌드 타임 최적화 (Auto Chunking)]]></title>
+            <description><![CDATA[빌드 타임 정적 분석을 통해 10만 개의 번역 키를 자동으로 최적화된 JSON 청크로 생성하여 초기 로딩 속도를 개선하고 관리 포인트를 최소화하는 방법을 소개합니다.]]></description>
+            <link>https://dev-holic.github.io/blog/i18n-auto-chunking</link>
+            <guid isPermaLink="false">https://dev-holic.github.io/blog/i18n-auto-chunking</guid>
             <pubDate>Mon, 22 Dec 2025 00:00:00 GMT</pubDate>
         </item>
         <item>
