@@ -1,7 +1,7 @@
 1:"$Sreact.fragment"
 2:I[91320,["/_next/static/chunks/c6311bd1204a06f2.js","/_next/static/chunks/5ec360913fe0c25f.js","/_next/static/chunks/c8696c5ee1a86c19.js"],"PostList"]
-e:I[97990,["/_next/static/chunks/28ff6a04602448ba.js","/_next/static/chunks/64c697a3cb51cd07.js"],"OutletBoundary"]
-f:"$Sreact.suspense"
+f:I[97990,["/_next/static/chunks/28ff6a04602448ba.js","/_next/static/chunks/64c697a3cb51cd07.js"],"OutletBoundary"]
+10:"$Sreact.suspense"
 3:T14d5,
 # 🚀 Gemini CLI 완벽 가이드
 
@@ -1015,7 +1015,66 @@ export namespace SingletonRegistry {
 NPM 패키지 배포 시 번들링 전략에 따라 싱글톤 패턴이 깨지는 문제는 흔히 발생할 수 있습니다. 가장 정석적인 방법은 `peerDependencies`를 사용하여 호스트가 단일 버전을 설치하게 하는 것이지만, 배포 및 사용 편의성을 위해 번들링이 필수적인 상황이라면 **`globalThis`와 `Symbol.for`를 활용한 전역 레지스트리 패턴**이 훌륭한 해결책이 될 수 있습니다.
 
 이 패턴은 React, Styled-components 등 유명 라이브러리들에서도 런타임 환경의 제약을 극복하기 위해 내부적으로 사용하는 검증된 방식입니다. 다만, 사용 시 발생할 수 있는 사이드 이펙트(버전, 타입 체크)를 충분히 인지하고 적용해야 합니다.
-0:{"buildId":"7OjWt45b3r4DWylnVhpV8","rsc":["$","$1","c",{"children":[["$","$L2",null,{"posts":[{"title":"🚀 Gemini CLI 완벽 가이드: 터미널에서 Gemini 모델 활용하기","summary":"Gemini CLI를 설치하고 설정하는 방법부터 Slash, At, Shell 명령어 사용법, 팁과 활용 예시까지 완벽하게 안내합니다.","tags":["Gemini","CLI","AI","터미널","개발"],"date":"2025-12-21","id":"gemini-cli-get-started","content":"$3"},{"title":"Giscus: 광고 없는 무료 댓글 시스템, 5분 만에 적용하기","summary":"Giscus는 GitHub Discussions API를 활용하여 광고 없이 깔끔한 디자인과 마크다운을 지원하는 무료 댓글 시스템으로, 개발 블로그에 쉽게 적용할 수 있습니다.","tags":["Giscus","댓글 시스템","GitHub Discussions","개발 블로그","무료"],"date":"2025-12-21","id":"giscus","content":"$4"},{"title":"GitHub Actions로 나만의 뉴스 브리핑 봇 만들기 (서버비 0원)","date":"2025-12-21","tags":["GitHub Actions","Automation","Slack Bot","RSS","Node.js"],"summary":"GitHub Actions의 Cron 스케줄러를 활용해 RSS 피드를 주기적으로 크롤링하고, 새로운 소식을 슬랙으로 전송하는 봇을 만드는 과정을 소개합니다.","id":"rss-news-bot-automation","content":"$5"},{"title":"[Tip] RSS란 무엇인가? 내 기술 블로그에 RSS 달고 Feedly로 구독하기","date":"2025-12-21","tags":["RSS","Blog","Tip"],"summary":"RSS의 개념과 GitHub Pages 블로그에 RSS를 적용하는 방법, Feedly 사용법을 알아봅니다.","id":"rss","content":"$6"},{"title":"Datadog vs Sentry: 우리 팀에 맞는 모니터링 툴은 무엇일까?","summary":"Datadog과 Sentry의 특징과 장단점을 비교하여 팀의 상황에 맞는 최적의 모니터링 도구를 선택하는 방법을 알아봅니다.","tags":["Datadog","Sentry","Monitoring","APM","RUM"],"date":"2025-12-21","id":"sentry-vs-datadog","content":"$7"},{"title":"Next.js App Router: useSuspenseQuery 서버 행(Hanging) 이슈 해결","date":"2025-12-20","tags":["Next.js","React Query","App Router"],"summary":"App Router에서 useSuspenseQuery 사용 시 발생하는 서버 행 현상의 원인을 파헤치고 next/dynamic을 통한 해결책을 제시합니다.","id":"app-router-useSuspenseQuery","content":"$8"},{"title":"프론트엔드 OOP와 FP 조화: 실무 적용 완벽 가이드","summary":"프론트엔드 개발에서 객체 지향 프로그래밍(OOP)과 함수형 프로그래밍(FP)을 조화롭게 사용하여 효율적인 아키텍처를 구축하는 방법을 알아봅니다.","tags":["frontend","OOP","FP","architecture","javascript"],"date":"2025-12-20","id":"frontend-oop-fp","content":"$9"},{"title":"가상화(Virtualization) 도입, 과연 정답일까? (feat. content-visibility)","summary":"가상화의 성능상 이점과 UX상의 단점을 살펴보고, content-visibility를 이용한 대안을 제시합니다.","tags":["virtualization","performance","css","content-visibility","frontend"],"date":"2025-12-20","id":"scroll-virtualization","content":"$a"},{"title":"NPM 패키지 분리 환경에서 싱글톤(Singleton) 유지하기: globalThis와 Symbol.for의 활용","summary":"물리적으로 분리된 번들 환경에서 globalThis와 Symbol.for를 활용하여 싱글톤 인스턴스를 안전하게 공유하는 방법을 설명합니다.","tags":["NPM","Singleton","globalThis","Symbol.for","JavaScript"],"date":"2025-12-20","id":"singleton-in-package","content":"$b"},{"title":"Folder Structure Test Post","date":"2020-12-21","tags":["Test","Structure"],"summary":"This is a test post to verify folder-based structure and image loading.","id":"folder-test-post","content":"\nThis is a post inside a folder.\n\nHere is an image:\n![Test Image](./image.png)\n\nAnd some text below.\n\n"}]}],["$Lc"],"$Ld"]}],"loading":null,"isPartial":false}
-c:["$","script","script-0",{"src":"/_next/static/chunks/c8696c5ee1a86c19.js","async":true}]
-d:["$","$Le",null,{"children":["$","$f",null,{"name":"Next.MetadataOutlet","children":"$@10"}]}]
-10:null
+c:Tfcc,
+# E2E 테스트 vs 통합 테스트: 무엇이 다르고 어떻게 섞어 써야 할까?
+
+테스트 코드를 작성하다 보면 항상 마주치는 고민이 있습니다.
+*"이 기능을 통합 테스트로 짜야 할까, 아니면 E2E 테스트로 돌려야 할까?"*
+
+결론부터 말하자면, 이 둘은 **양자택일(OR)의 문제가 아니라 상호 보완(AND)의 관계**입니다. 두 테스트는 검증하려는 '목적'과 바라보는 '관점' 자체가 다르기 때문입니다.
+
+이번 포스팅에서는 헷갈리기 쉬운 두 테스트의 차이점을 명확히 정리하고, 어떻게 조합해야 효율적인지 이야기해 봅니다.
+
+---
+
+## 1. 통합 테스트 (Integration Test)
+> **"모듈들이 합쳐졌을 때, 서로 대화가 잘 통하는가?"**
+
+**통합 테스트**는 단위(Unit) 테스트보다 넓은 범위로, 개별적으로 잘 작동하는 컴포넌트나 모듈이 연결되었을 때 발생하는 인터페이스 문제를 잡아내는 것이 목적입니다.
+
+* **관점:** **개발자(Developer)** 관점. 시스템 '내부'의 논리적 연결을 확인합니다.
+* **특징:**
+    * DB나 외부 API 같은 무거운 의존성은 **Mocking(가짜 데이터)** 처리를 하여 테스트 속도와 안정성을 확보하는 경우가 많습니다.
+    * 단위 테스트보다는 느리지만, E2E보다는 훨씬 빠르고 비용이 저렴합니다.
+* **주요 도구:** Jest, React Testing Library, Supertest, SpringBootTest 등
+
+## 2. E2E 테스트 (End-to-End Test)
+> **"실제 사용자가 사용하는 환경과 똑같이 작동하는가?"**
+
+**E2E 테스트**는 말 그대로 '끝에서 끝까지', 사용자가 시스템을 사용하는 전체 흐름(Workflow)을 검증하는 단계입니다. 내부 코드가 어떻게 짜여 있는지는 신경 쓰지 않는 블랙박스(Black-box) 테스트입니다.
+
+* **관점:** **최종 사용자(User)** 관점. 비즈니스 요구사항의 실제 동작 여부를 확인합니다.
+* **특징:**
+    * 실제 브라우저, 실제 DB, 네트워크 환경에서 테스트합니다. (Mocking 최소화)
+    * 사용자에게 치명적인 버그(로그인 불가, 결제 실패 등)를 막는 최후의 보루입니다.
+    * 실행 속도가 느리고, UI 변경에 민감하여 유지보수 비용이 높습니다.
+* **주요 도구:** Cypress, Playwright, Selenium 등
+
+---
+
+## 3. 한눈에 보는 비교
+
+| 구분 | 통합 테스트 (Integration Test) | E2E 테스트 (End-to-End Test) |
+| :--- | :--- | :--- |
+| **핵심 질문** | "모듈 간 데이터가 잘 흐르는가?" | "사용자가 목적을 달성할 수 있는가?" |
+| **범위** | 여러 모듈의 집합 (외부 의존성 Mocking) | 시스템 전체 (프론트+백엔드+DB+인프라) |
+| **신뢰도** | 논리적 연결성 보장 | 실제 사용자 경험(UX) 보장 |
+| **속도** | 빠름 ~ 중간 | 느림 |
+| **비용** | 중간 (작성/유지보수 용이) | 높음 (깨지기 쉬움) |
+
+---
+
+## 4. 결론: 어떻게 섞어 써야 할까? (Testing Pyramid)
+
+모든 테스트를 E2E로 작성하면 신뢰도는 높겠지만, 배포 시간이 기하급수적으로 늘어나고 테스트가 자주 깨져 관리하기 힘들어집니다. 반대로 통합 테스트만 믿다가는 실제 환경에서의 예기치 못한 에러를 놓칠 수 있습니다.
+
+따라서 일반적으로 권장되는 **'테스트 피라미드'** 전략을 따르는 것이 효율적입니다.
+
+1.  **통합 테스트 (중간 비중):** 비즈니스 로직의 핵심 연결 고리를 검증하는 데 집중합니다. 다양한 예외 케이스는 주로 여기서 잡습니다.
+2.  **E2E 테스트 (적은 비중):** 모든 것을 테스트하려 하지 말고, **가장 핵심적인 사용자 시나리오(Happy Path)**나 매출과 직결되는 기능(로그인, 결제, 장바구니 등) 위주로 구성합니다.
+
+결국 좋은 테스트 전략이란 **"빠른 피드백(통합 테스트)"**과 **"확실한 안전망(E2E 테스트)"** 사이의 균형을 맞추는 것입니다.
+0:{"buildId":"b-urvokBaJpyYiht6YXRu","rsc":["$","$1","c",{"children":[["$","$L2",null,{"posts":[{"title":"🚀 Gemini CLI 완벽 가이드: 터미널에서 Gemini 모델 활용하기","summary":"Gemini CLI를 설치하고 설정하는 방법부터 Slash, At, Shell 명령어 사용법, 팁과 활용 예시까지 완벽하게 안내합니다.","tags":["Gemini","CLI","AI","터미널","개발"],"date":"2025-12-21","id":"gemini-cli-get-started","content":"$3"},{"title":"Giscus: 광고 없는 무료 댓글 시스템, 5분 만에 적용하기","summary":"Giscus는 GitHub Discussions API를 활용하여 광고 없이 깔끔한 디자인과 마크다운을 지원하는 무료 댓글 시스템으로, 개발 블로그에 쉽게 적용할 수 있습니다.","tags":["Giscus","댓글 시스템","GitHub Discussions","개발 블로그","무료"],"date":"2025-12-21","id":"giscus","content":"$4"},{"title":"GitHub Actions로 나만의 뉴스 브리핑 봇 만들기 (서버비 0원)","date":"2025-12-21","tags":["GitHub Actions","Automation","Slack Bot","RSS","Node.js"],"summary":"GitHub Actions의 Cron 스케줄러를 활용해 RSS 피드를 주기적으로 크롤링하고, 새로운 소식을 슬랙으로 전송하는 봇을 만드는 과정을 소개합니다.","id":"rss-news-bot-automation","content":"$5"},{"title":"[Tip] RSS란 무엇인가? 내 기술 블로그에 RSS 달고 Feedly로 구독하기","date":"2025-12-21","tags":["RSS","Blog","Tip"],"summary":"RSS의 개념과 GitHub Pages 블로그에 RSS를 적용하는 방법, Feedly 사용법을 알아봅니다.","id":"rss","content":"$6"},{"title":"Datadog vs Sentry: 우리 팀에 맞는 모니터링 툴은 무엇일까?","summary":"Datadog과 Sentry의 특징과 장단점을 비교하여 팀의 상황에 맞는 최적의 모니터링 도구를 선택하는 방법을 알아봅니다.","tags":["Datadog","Sentry","Monitoring","APM","RUM"],"date":"2025-12-21","id":"sentry-vs-datadog","content":"$7"},{"title":"Next.js App Router: useSuspenseQuery 서버 행(Hanging) 이슈 해결","date":"2025-12-20","tags":["Next.js","React Query","App Router"],"summary":"App Router에서 useSuspenseQuery 사용 시 발생하는 서버 행 현상의 원인을 파헤치고 next/dynamic을 통한 해결책을 제시합니다.","id":"app-router-useSuspenseQuery","content":"$8"},{"title":"프론트엔드 OOP와 FP 조화: 실무 적용 완벽 가이드","summary":"프론트엔드 개발에서 객체 지향 프로그래밍(OOP)과 함수형 프로그래밍(FP)을 조화롭게 사용하여 효율적인 아키텍처를 구축하는 방법을 알아봅니다.","tags":["frontend","OOP","FP","architecture","javascript"],"date":"2025-12-20","id":"frontend-oop-fp","content":"$9"},{"title":"가상화(Virtualization) 도입, 과연 정답일까? (feat. content-visibility)","summary":"가상화의 성능상 이점과 UX상의 단점을 살펴보고, content-visibility를 이용한 대안을 제시합니다.","tags":["virtualization","performance","css","content-visibility","frontend"],"date":"2025-12-20","id":"scroll-virtualization","content":"$a"},{"title":"NPM 패키지 분리 환경에서 싱글톤(Singleton) 유지하기: globalThis와 Symbol.for의 활용","summary":"물리적으로 분리된 번들 환경에서 globalThis와 Symbol.for를 활용하여 싱글톤 인스턴스를 안전하게 공유하는 방법을 설명합니다.","tags":["NPM","Singleton","globalThis","Symbol.for","JavaScript"],"date":"2025-12-20","id":"singleton-in-package","content":"$b"},{"title":"E2E 테스트 vs 통합 테스트: 택일이 아닌 상호보완적 관계","date":"2023-12-22","summary":"E2E 테스트와 통합 테스트의 차이점을 명확히 정리하고, 두 테스트를 어떻게 조합해야 효율적인 테스트 전략을 수립할 수 있는지 설명합니다.","tags":["E2E","IntegrationTest","Testing","TestStrategy","상호보완"],"id":"integration-vs-e2e","content":"$c"},{"title":"Folder Structure Test Post","date":"2020-12-21","tags":["Test","Structure"],"summary":"This is a test post to verify folder-based structure and image loading.","id":"folder-test-post","content":"\nThis is a post inside a folder.\n\nHere is an image:\n![Test Image](./image.png)\n\nAnd some text below.\n\n"}]}],["$Ld"],"$Le"]}],"loading":null,"isPartial":false}
+d:["$","script","script-0",{"src":"/_next/static/chunks/c8696c5ee1a86c19.js","async":true}]
+e:["$","$Lf",null,{"children":["$","$10",null,{"name":"Next.MetadataOutlet","children":"$@11"}]}]
+11:null
