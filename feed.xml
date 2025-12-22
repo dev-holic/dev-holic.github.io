@@ -4,11 +4,18 @@
         <description><![CDATA[Dev Holic Blog Posts]]></description>
         <link>https://dev-holic.github.io</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 22 Dec 2025 14:42:11 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 22 Dec 2025 14:45:03 GMT</lastBuildDate>
         <atom:link href="https://dev-holic.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Mon, 22 Dec 2025 14:42:11 GMT</pubDate>
+        <pubDate>Mon, 22 Dec 2025 14:45:03 GMT</pubDate>
         <copyright><![CDATA[2025 Dev Holic]]></copyright>
         <language><![CDATA[ko]]></language>
+        <item>
+            <title><![CDATA[E2E 테스트 vs 통합 테스트: 택일이 아닌 상호보완적 관계]]></title>
+            <description><![CDATA[E2E 테스트와 통합 테스트의 차이점을 명확히 정리하고, 두 테스트를 어떻게 조합해야 효율적인 테스트 전략을 수립할 수 있는지 설명합니다.]]></description>
+            <link>https://dev-holic.github.io/blog/integration-vs-e2e</link>
+            <guid isPermaLink="false">https://dev-holic.github.io/blog/integration-vs-e2e</guid>
+            <pubDate>Mon, 22 Dec 2025 00:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[🚀 Gemini CLI 완벽 가이드: 터미널에서 Gemini 모델 활용하기]]></title>
             <description><![CDATA[Gemini CLI를 설치하고 설정하는 방법부터 Slash, At, Shell 명령어 사용법, 팁과 활용 예시까지 완벽하게 안내합니다.]]></description>
@@ -71,13 +78,6 @@
             <link>https://dev-holic.github.io/blog/singleton-in-package</link>
             <guid isPermaLink="false">https://dev-holic.github.io/blog/singleton-in-package</guid>
             <pubDate>Sat, 20 Dec 2025 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[E2E 테스트 vs 통합 테스트: 택일이 아닌 상호보완적 관계]]></title>
-            <description><![CDATA[E2E 테스트와 통합 테스트의 차이점을 명확히 정리하고, 두 테스트를 어떻게 조합해야 효율적인 테스트 전략을 수립할 수 있는지 설명합니다.]]></description>
-            <link>https://dev-holic.github.io/blog/integration-vs-e2e</link>
-            <guid isPermaLink="false">https://dev-holic.github.io/blog/integration-vs-e2e</guid>
-            <pubDate>Fri, 22 Dec 2023 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Folder Structure Test Post]]></title>
