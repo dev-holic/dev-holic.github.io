@@ -4,11 +4,18 @@
         <description><![CDATA[Dev Holic Blog Posts]]></description>
         <link>https://dev-holic.github.io</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 22 Dec 2025 14:45:03 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 22 Dec 2025 15:15:24 GMT</lastBuildDate>
         <atom:link href="https://dev-holic.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Mon, 22 Dec 2025 14:45:03 GMT</pubDate>
+        <pubDate>Mon, 22 Dec 2025 15:15:24 GMT</pubDate>
         <copyright><![CDATA[2025 Dev Holic]]></copyright>
         <language><![CDATA[ko]]></language>
+        <item>
+            <title><![CDATA[기획자도 할 수 있다: AI 생성 & 슬랙 버튼으로 완성하는 E2E 테스트 자동화 파이프라인]]></title>
+            <description><![CDATA[AI 생성 및 슬랙 버튼을 활용하여 E2E 테스트 자동화 파이프라인을 구축하고, 기술 장벽 없이 테스트에 기여할 수 있는 환경을 만드는 방법을 소개합니다.]]></description>
+            <link>https://dev-holic.github.io/blog/e2e-pipeline</link>
+            <guid isPermaLink="false">https://dev-holic.github.io/blog/e2e-pipeline</guid>
+            <pubDate>Mon, 22 Dec 2025 00:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[E2E 테스트 vs 통합 테스트: 택일이 아닌 상호보완적 관계]]></title>
             <description><![CDATA[E2E 테스트와 통합 테스트의 차이점을 명확히 정리하고, 두 테스트를 어떻게 조합해야 효율적인 테스트 전략을 수립할 수 있는지 설명합니다.]]></description>

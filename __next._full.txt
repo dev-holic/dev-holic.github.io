@@ -5,13 +5,330 @@
 9:I[97990,["/_next/static/chunks/28ff6a04602448ba.js","/_next/static/chunks/64c697a3cb51cd07.js"],"MetadataBoundary"]
 b:I[60740,[],"default"]
 :HL["/_next/static/chunks/abdb394ac1358659.css","style"]
-0:{"P":null,"b":"SIhf9sNk90HASBJIH3Sim","c":["",""],"q":"","i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/abdb394ac1358659.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/c6311bd1204a06f2.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/5ec360913fe0c25f.js","async":true,"nonce":"$undefined"}]],"$L2"]}],{"children":[["$","$1","c",{"children":["$L3",[["$","script","script-0",{"src":"/_next/static/chunks/c8696c5ee1a86c19.js","async":true,"nonce":"$undefined"}]],["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],{},null,false,false]},null,false,false],["$","$1","h",{"children":[null,["$","$L7",null,{"children":"$L8"}],["$","div",null,{"hidden":true,"children":["$","$L9",null,{"children":["$","$5",null,{"name":"Next.Metadata","children":"$La"}]}]}],null]}],false]],"m":"$undefined","G":["$b",[]],"S":true}
+0:{"P":null,"b":"bF2pid8ciPt2af7hE5bV6","c":["",""],"q":"","i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/abdb394ac1358659.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/c6311bd1204a06f2.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/5ec360913fe0c25f.js","async":true,"nonce":"$undefined"}]],"$L2"]}],{"children":[["$","$1","c",{"children":["$L3",[["$","script","script-0",{"src":"/_next/static/chunks/c8696c5ee1a86c19.js","async":true,"nonce":"$undefined"}]],["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],{},null,false,false]},null,false,false],["$","$1","h",{"children":[null,["$","$L7",null,{"children":"$L8"}],["$","div",null,{"hidden":true,"children":["$","$L9",null,{"children":["$","$5",null,{"name":"Next.Metadata","children":"$La"}]}]}],null]}],false]],"m":"$undefined","G":["$b",[]],"S":true}
 c:I[27531,["/_next/static/chunks/28ff6a04602448ba.js","/_next/static/chunks/64c697a3cb51cd07.js"],"default"]
 d:I[44600,["/_next/static/chunks/28ff6a04602448ba.js","/_next/static/chunks/64c697a3cb51cd07.js"],"default"]
 e:I[71695,["/_next/static/chunks/c6311bd1204a06f2.js","/_next/static/chunks/5ec360913fe0c25f.js"],"Sidebar"]
 f:I[91320,["/_next/static/chunks/c6311bd1204a06f2.js","/_next/static/chunks/5ec360913fe0c25f.js","/_next/static/chunks/c8696c5ee1a86c19.js"],"PostList"]
-2:["$","html",null,{"lang":"en","children":[["$","link",null,{"rel":"shortcut icon","href":"/favicon.ico","type":"image/x-icon"}],["$","link",null,{"rel":"icon","href":"/favicon.png","type":"image/png"}],["$","meta",null,{"name":"google-site-verification","content":"sXxEHSK4sTx3BrDha-kpJpFaszf3wxeSU5ojx8sqq1A"}],["$","body",null,{"className":"bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"name\":\"Dev-Holic Blog\",\"url\":\"https://dev-holic.github.io\"}"}}],["$","div",null,{"className":"relative mx-auto flex h-screen w-full max-w-7xl flex-col overflow-hidden md:flex-row","children":[["$","main",null,{"className":"h-full w-full flex-1 overflow-y-auto","children":["$","$Lc",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Ld",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","$Le",null,{"tags":["AI","APM","App Router","Automation","Blog","CLI","Datadog","E2E","FP","Gemini","Giscus","GitHub Actions","GitHub Discussions","IntegrationTest","JavaScript","Monitoring","NPM","Next.js","Node.js","OOP","RSS","RUM","React Query","Sentry","Singleton","Slack Bot","Structure","Symbol.for","Test","TestStrategy","Testing","Tip","architecture","content-visibility","css","frontend","globalThis","javascript","performance","virtualization","개발","개발 블로그","댓글 시스템","무료","상호보완","터미널"]}]]}]]}]]}]
-10:Tfcc,
+2:["$","html",null,{"lang":"en","children":[["$","link",null,{"rel":"shortcut icon","href":"/favicon.ico","type":"image/x-icon"}],["$","link",null,{"rel":"icon","href":"/favicon.png","type":"image/png"}],["$","meta",null,{"name":"google-site-verification","content":"sXxEHSK4sTx3BrDha-kpJpFaszf3wxeSU5ojx8sqq1A"}],["$","body",null,{"className":"bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"name\":\"Dev-Holic Blog\",\"url\":\"https://dev-holic.github.io\"}"}}],["$","div",null,{"className":"relative mx-auto flex h-screen w-full max-w-7xl flex-col overflow-hidden md:flex-row","children":[["$","main",null,{"className":"h-full w-full flex-1 overflow-y-auto","children":["$","$Lc",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Ld",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","$Le",null,{"tags":["AI","APM","App Router","Automation","Blog","CLI","ChatOps","Datadog","E2E","E2E 테스트","FP","Gemini","Giscus","GitHub Actions","GitHub Discussions","IntegrationTest","JavaScript","Monitoring","NPM","Next.js","Node.js","OOP","RSS","RUM","React Query","Sentry","Singleton","Slack Bot","Structure","Symbol.for","Test","TestStrategy","Testing","Tip","architecture","content-visibility","css","frontend","globalThis","javascript","performance","virtualization","개발","개발 블로그","댓글 시스템","무료","상호보완","슬랙","자동화","터미널"]}]]}]]}]]}]
+10:T29df,
+# 기획자도 할 수 있다: AI 생성 & 슬랙 버튼으로 완성하는 E2E 테스트 자동화 파이프라인
+
+프론트엔드 개발자로서 E2E(End-to-End) 테스트의 필요성은 절감하지만, 현실적인 장벽에 부딪힐 때가 많습니다.
+"테스트 코드를 짤 시간이 없다", "QA팀은 코드를 모른다", "로컬에서 돌리기 번거롭다" 같은 이유들입니다.
+
+오늘은 이 문제를 기술적으로 해결하기 위해 구축한 **"No-Code 생성 & ChatOps 실행"** 파이프라인을 소개합니다.
+
+---
+
+## 🏗️ 전체 시스템 아키텍처
+
+우리가 만들 시스템의 흐름은 다음과 같습니다.
+
+1.  **Creation (생성):**
+    * **Method A (AI):** "로그인 후 메인으로 이동"이라고 적으면 GPT-4가 코드를 짜줍니다.
+    * **Method B (Recorder):** 크롬 익스텐션을 켜고 클릭하면, 행동이 코드로 변환됩니다.
+    * 결과물은 자동으로 GitHub PR로 등록됩니다.
+2.  **Trigger (실행):** 슬랙의 "테스트 실행" 버튼을 누르면 AWS Lambda가 GitHub Actions를 깨웁니다.
+3.  **Feedback (보고):** 테스트 결과가 **버튼을 눌렀던 그 스레드**에 답글로 달립니다.
+
+---
+
+## Part 1. 테스트 케이스 생성기 구축 (Server-side)
+
+먼저 비개발자의 입력을 받아 Playwright 코드로 변환하고 PR을 날려주는 백엔드 API가 필요합니다. (Next.js API Route 기준 예시)
+
+### 1-1. AI 기반 생성기 (Text-to-Code)
+
+OpenAI API를 사용하여 자연어를 코드로 변환합니다.
+
+**`pages/api/generate-from-text.ts`**
+
+```typescript
+import OpenAI from 'openai';
+import { Octokit } from '@octokit/rest';
+
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
+
+export default async function handler(req, res) {
+  const { scenario, title } = req.body; // 예: "장바구니 담기 테스트"
+
+  // 1. GPT-4에게 Playwright 코드 요청
+  const completion = await openai.chat.completions.create({
+    messages: [
+      { 
+        role: "system", 
+        content: `You are a QA Engineer. Write a Playwright test script in TypeScript. 
+                  Target URL is '[https://my-service.com](https://my-service.com)'. 
+                  Use 'data-testid' selectors if possible. 
+                  Only return the code block without markdown.` 
+      },
+      { role: "user", content: `Create a test for: ${scenario}` }
+    ],
+    model: "gpt-4-turbo",
+  });
+  
+  const code = completion.choices[0].message.content;
+  const branchName = `test/ai-${Date.now()}`;
+  const fileName = `tests/${title}.spec.ts`;
+
+  // 2. GitHub PR 생성 로직 (createPR 함수는 공통 모듈로 분리 권장)
+  await createPullRequest(octokit, branchName, fileName, code, title);
+  
+  res.status(200).json({ success: true });
+}
+
+// GitHub PR 생성 헬퍼 함수
+async function createPullRequest(octokit, branch, path, content, title) {
+  const owner = "MY_ORG";
+  const repo = "MY_REPO";
+
+  // 메인 브랜치 SHA 조회
+  const { data: refData } = await octokit.git.getRef({ owner, repo, ref: 'heads/main' });
+  
+  // 새 브랜치 생성
+  await octokit.git.createRef({ owner, repo, ref: `refs/heads/${branch}`, sha: refData.object.sha });
+
+  // 파일 커밋
+  await octokit.repos.createOrUpdateFileContents({
+    owner, repo, path, branch,
+    message: `feat: add test case - ${title}`,
+    content: Buffer.from(content).toString('base64')
+  });
+
+  // PR 생성
+  await octokit.pulls.create({
+    owner, repo, head: branch, base: 'main',
+    title: `✅ [Auto-Gen] ${title}`
+  });
+}
+```
+
+### 1-2. Chrome Extension 기반 생성기 (Record & Push)
+
+말로 설명하기 힘든 복잡한 시나리오는 직접 녹화하는 것이 빠릅니다.
+
+#### A. 익스텐션 구조 (`manifest.json`)
+```json
+{
+  "manifest_version": 3,
+  "name": "E2E Recorder",
+  "permissions": ["activeTab", "scripting"],
+  "action": { "default_popup": "popup.html" },
+  "content_scripts": [{ "matches": ["<all_urls>"], "js": ["content.js"] }]
+}
+```
+
+#### B. 이벤트 수집기 (`content.js`)
+웹페이지에 주입되어 클릭과 입력을 감지합니다.
+
+```javascript
+let events = [];
+
+function getSelector(el) {
+  if (el.getAttribute('data-testid')) return `[data-testid="${el.getAttribute('data-testid')}"]`;
+  if (el.id) return `#${el.id}`;
+  return el.tagName.toLowerCase(); // 실제론 더 정교한 path 로직 필요
+}
+
+document.addEventListener('click', (e) => {
+  events.push({ type: 'click', selector: getSelector(e.target) });
+}, true);
+
+document.addEventListener('change', (e) => {
+  events.push({ type: 'fill', selector: getSelector(e.target), value: e.target.value });
+}, true);
+
+chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
+  if (msg.action === "GET_EVENTS") sendResponse({ events });
+});
+```
+
+#### C. 전송 및 변환 (`popup.js` & Backend)
+팝업에서 '전송'을 누르면 백엔드로 이벤트를 보냅니다. 백엔드는 이를 코드로 바꿉니다.
+
+**`pages/api/generate-from-record.ts`**
+
+```typescript
+export default async function handler(req, res) {
+  const { events, title } = req.body;
+
+  // JSON Events -> Playwright Code 변환
+  let code = `import { test, expect } from '@playwright/test';\n\n`;
+  code += `test('${title}', async ({ page }) => {\n`;
+  
+  events.forEach(evt => {
+    if (evt.type === 'click') code += `  await page.click('${evt.selector}');\n`;
+    if (evt.type === 'fill') code += `  await page.fill('${evt.selector}', '${evt.value}');\n`;
+  });
+  
+  code += `});`;
+
+  // GitHub PR 생성 (위와 동일한 로직)
+  await createPullRequest(octokit, `test/record-${Date.now()}`, `tests/${title}.spec.ts`, code, title);
+  
+  res.status(200).json({ success: true });
+}
+```
+
+---
+
+## Part 2. 슬랙 트리거 & 중계 서버 (AWS Lambda)
+
+이제 테스트 케이스가 준비되었습니다. 슬랙 버튼을 눌러 실행하는 환경을 만듭니다.
+슬랙 인터랙션은 `application/x-www-form-urlencoded` 페이로드를 보내므로, 이를 받아 GitHub API(`application/json`)로 변환해줄 **중계 서버(Lambda)**가 필수적입니다.
+
+**`index.js` (AWS Lambda Handler)**
+
+```javascript
+const { Octokit } = require("@octokit/rest");
+
+exports.handler = async (event) => {
+  // 1. 슬랙 Payload 파싱 (URL Decoding 필수)
+  const bodyParams = new URLSearchParams(event.body);
+  const payload = JSON.parse(bodyParams.get('payload'));
+
+  // 2. 버튼 클릭 액션 감지
+  if (payload.actions && payload.actions[0].action_id === "run_e2e_test") {
+    const octokit = new Octokit({ auth: process.env.GITHUB_PAT });
+    
+    // 3. 핵심: 결과 리포팅을 위해 channel_id와 thread_ts 추출
+    const channelId = payload.channel.id;
+    const threadTs = payload.message.ts; // 메시지의 ts가 곧 스레드 ID가 됨
+
+    try {
+      // 4. GitHub Actions 트리거 (workflow_dispatch)
+      await octokit.actions.createWorkflowDispatch({
+        owner: "MY_ORG",
+        repo: "MY_REPO",
+        workflow_id: "e2e.yml",
+        ref: "main",
+        inputs: {
+          slack_channel: channelId,
+          slack_thread: threadTs, // 이 값을 GitHub로 넘겨주는 것이 제일 중요함!
+        },
+      });
+
+      // 5. 슬랙 사용자 피드백 (즉시 응답)
+      return {
+        statusCode: 200,
+        body: JSON.stringify({
+          replace_original: false, // 기존 버튼 메시지 유지
+          text: `🚀 테스트 요청이 접수되었습니다! (스레드를 확인하세요)`
+        }),
+      };
+    } catch (error) {
+      console.error(error);
+      return { statusCode: 500, body: "GitHub API Error" };
+    }
+  }
+
+  return { statusCode: 200, body: "OK" };
+};
+```
+
+---
+
+## Part 3. CI 실행 및 리포팅 (GitHub Actions)
+
+마지막으로 GitHub Actions가 테스트를 수행하고, 넘겨받은 `slack_thread` 정보를 이용해 결과를 배달합니다.
+
+### 3-1. 워크플로우 설정 (`.github/workflows/e2e.yml`)
+
+```yaml
+name: Playwright E2E
+on:
+  workflow_dispatch:
+    inputs:
+      slack_channel:
+        required: true
+      slack_thread:
+        required: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      
+      - name: Install Dependencies
+        run: npm ci && npx playwright install --with-deps
+
+      - name: Run Playwright
+        run: npx playwright test
+        continue-on-error: true # 테스트 실패해도 리포트는 보내야 하므로
+
+      # 결과 전송 단계
+      - name: Report to Slack
+        if: always()
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL: ${{ inputs.slack_channel }}
+          SLACK_THREAD: ${{ inputs.slack_thread }}
+          JOB_STATUS: ${{ job.status }}
+        run: node scripts/report-to-slack.js
+```
+
+### 3-2. 리포팅 스크립트 (`scripts/report-to-slack.js`)
+
+Webhook URL 방식은 스레드 답글이 불가능하므로, `slack-web-api`를 사용해야 합니다.
+
+```javascript
+const { WebClient } = require('@slack/web-api');
+const web = new WebClient(process.env.SLACK_BOT_TOKEN);
+
+async function report() {
+  const channel = process.env.SLACK_CHANNEL;
+  const thread_ts = process.env.SLACK_THREAD;
+  const status = process.env.JOB_STATUS; // 'success' or 'failure'
+  
+  const isSuccess = status === 'success';
+  const color = isSuccess ? '#36a64f' : '#ff0000';
+  const icon = isSuccess ? '✅' : '❌';
+
+  await web.chat.postMessage({
+    channel: channel,
+    thread_ts: thread_ts, // 람다 -> GitHub -> 여기까지 전달된 스레드 ID
+    text: `E2E 테스트 결과: ${status}`,
+    attachments: [
+      {
+        color: color,
+        blocks: [
+          {
+            type: "section",
+            text: {
+              type: "mrkdwn",
+              text: `${icon} *Playwright Test Completed*\nResult: *${status.toUpperCase()}*`
+            }
+          },
+          {
+            type: "context",
+            elements: [{ type: "mrkdwn", text: "상세 로그는 GitHub Actions 탭을 확인하세요." }]
+          }
+        ]
+      }
+    ]
+  });
+}
+
+report();
+```
+
+---
+
+## 🎯 마치며
+
+이렇게 구축된 환경에서 팀원들은 다음과 같이 일합니다.
+
+1.  **생성:** 기획자가 "결제 페이지 테스트"를 입력하면 AI가 코드를 짜서 PR을 올립니다.
+2.  **실행:** 슬랙 채널에 상주하는 "테스트 실행" 버튼을 누릅니다.
+3.  **확인:** 커피 한 잔 하고 오면 **해당 스레드**에 초록색 체크(✅) 알림이 와 있습니다.
+
+개발 환경 구축 없이 누구나 테스트에 기여할 수 있는 환경, 여러분의 팀에도 도입해 보세요.
+11:Tfcc,
 # E2E 테스트 vs 통합 테스트: 무엇이 다르고 어떻게 섞어 써야 할까?
 
 테스트 코드를 작성하다 보면 항상 마주치는 고민이 있습니다.
@@ -70,7 +387,7 @@ f:I[91320,["/_next/static/chunks/c6311bd1204a06f2.js","/_next/static/chunks/5ec3
 2.  **E2E 테스트 (적은 비중):** 모든 것을 테스트하려 하지 말고, **가장 핵심적인 사용자 시나리오(Happy Path)**나 매출과 직결되는 기능(로그인, 결제, 장바구니 등) 위주로 구성합니다.
 
 결국 좋은 테스트 전략이란 **"빠른 피드백(통합 테스트)"**과 **"확실한 안전망(E2E 테스트)"** 사이의 균형을 맞추는 것입니다.
-11:T14d5,
+12:T14d5,
 # 🚀 Gemini CLI 완벽 가이드
 
 Gemini CLI는 터미널에서 Google의 Gemini 모델과 직접 상호작용하며 코딩, 문서 작업, 시스템 관리 등을 수행할 수 있는 강력한 도구입니다.
@@ -190,7 +507,7 @@ Gemini는 단순 텍스트 생성 외에도 실제 작업을 수행할 수 있�
 
 ### 🧪 테스트 코드 자동 생성
 > **User:** "`@login.ts` 파일을 읽고 이에 대한 Jest 유닛 테스트 코드를 작성해서 `login.test.ts` 파일로 만들어줘."
-12:T1aeb,
+13:T1aeb,
 # [가이드] Giscus: 광고 없는 무료 댓글 시스템, 5분 만에 적용하기
 
 개발 블로그를 운영하다 보면 독자와의 소통을 위해 댓글 기능이 필요합니다. Disqus는 무겁고 광고가 많고, Utterances는 GitHub Issues를 사용해서 댓글이 이슈로 등록되는 부담이 있습니다.
@@ -314,7 +631,7 @@ export default function Giscus() {
 **마무리하며**
 
 Giscus는 GitHub 아이디만 있다면 누구나 쉽게 댓글을 남길 수 있고, 개발자 입장에서는 DB 관리 부담 없이 무료로 사용할 수 있는 최고의 솔루션입니다. 지금 바로 적용해 보세요!
-13:T1460,
+14:T1460,
 # GitHub Actions로 나만의 뉴스 브리핑 봇 만들기 (서버비 0원)
 
 개발자라면 누구나 "최신 기술 트렌드를 놓치고 싶지 않다"는 욕망이 있습니다. 저 역시 여러 기술 블로그와 뉴스 사이트의 RSS를 구독하고 있습니다. 하지만 바쁜 일상 속에서 매번 RSS 리더기를 켜서 확인하는 것은 꽤나 번거로운 일입니다.
@@ -444,7 +761,7 @@ jobs:
 3.  **확장성:** `RSS_FEED_LIST` 변수만 수정하면 구독 채널을 언제든 늘릴 수 있습니다.
 
 여러분도 잠자고 있는 GitHub Actions를 깨워 나만의 비서로 활용해 보세요!
-14:T139e,
+15:T139e,
 # [Tip] RSS란 무엇인가? 내 기술 블로그에 RSS 달고 Feedly로 구독하기
 
 기술 블로그를 운영하다 보면 "RSS 주소가 어떻게 되나요?"라는 질문을 받거나, 다른 개발자의 블로그를 효율적으로 구독하고 싶다는 생각이 들 때가 있습니다.
@@ -535,7 +852,7 @@ FOLLOW를 누르면 이 블로그를 어떤 폴더에 넣을지 묻습니다. �
 
 개발자에게 **최신 기술 트렌드 파악**과 **양질의 정보 습득**은 코딩 실력만큼이나 중요합니다. 오늘 당장 내 블로그에 RSS를 달아 독자들에게 편의를 제공하고, 나 또한 Feedly를 통해 나만의 지식 큐레이션 시스템을 만들어보는 건 어떨까요?
 
-*Happy Coding & Happy Reading!*15:T169c,
+*Happy Coding & Happy Reading!*16:T169c,
 개발팀이 성장하고 서비스 규모가 커지면 필연적으로 **'모니터링(Monitoring)'**에 대한 니즈가 발생합니다. 시장에는 수많은 툴이 있지만, 가장 대표적인 두 가지를 꼽자면 단연 **Datadog(데이터독)**과 **Sentry(센트리)**일 것입니다.
 
 흔히 "둘 다 모니터링 툴 아니야?"라고 생각하기 쉽지만, 두 서비스는 **태생과 지향점**이 완전히 다릅니다. 이번 포스팅에서는 클라이언트, 서버 로깅, APM, RUM, 대시보드 구성 등을 기준으로 두 툴을 상세 비교하고, 어떤 상황에서 무엇을 선택해야 할지 정리해 보았습니다.
@@ -610,7 +927,7 @@ FOLLOW를 누르면 이 블로그를 어떤 폴더에 넣을지 묻습니다. �
 * **Backend & Infra:** Datadog (서버 상태, APM, 대량 로그)
 
 각 툴의 강점이 명확한 만큼, 팀의 상황과 목적에 맞춰 적절한 도구를 선택하시길 바랍니다.
-16:T29be,
+17:T29be,
 1. 서론: 끝나지 않는 로딩의 미스터리
 
 Next.js App Router는 서버 컴포넌트와 클라이언트 컴포넌트의 유연한 조합을 통해 강력한 웹 애플리케이션 구축을 가능하게 합니다. 하지만 이 새로운 렌더링 패러다임은 강력한 만큼, 기존의 클라이언트 중심 멘탈 모델과 충돌하며 흔한 함정을 만들어냅니다. 그 대표적인 사례가 바로 @tanstack/react-query의 useSuspenseQuery를 클라이언트 컴포넌트에서 사용했을 때 발생하는 '서버 행(Hanging)' 현상, 즉 페이지 응답이 멈추고 무한 로딩에 빠지는 문제입니다.
@@ -737,7 +1054,7 @@ useSuspenseQuery와 클라이언트 컴포넌트 조합 사용 시 발생한 서
 * 핵심 교훈 1: 'use client'는 서버 렌더링을 배제하는 지시어가 아닙니다. 이는 서버에서 사전 렌더링 후 클라이언트에서 하이드레이션하는, 즉 SSR과 CSR이 결합된 App Router의 기본 모델을 의미합니다.
 * 핵심 교훈 2: 만약 컴포넌트가 서버 환경에서는 실행되어서는 안 되는 클라이언트 전용 데이터 페칭 로직이나 API를 포함하고 있다면, next/dynamic과 ssr: false 옵션을 사용하는 것은 단순한 문제 해결이 아닌, 필수적인 아키텍처 결정입니다. 이를 통해 명확한 CSR 경계를 설정해야 합니다.
 
-이제 여러분은 Next.js의 렌더링 전략을 더 효과적으로 활용할 준비가 되었습니다. 이 글에서 다룬 원리와 해결책을 바탕으로 유사한 문제를 예방하고, 더욱 견고하고 안정적인 애플리케이션을 구축하시기를 바랍니다.17:T18cd,
+이제 여러분은 Next.js의 렌더링 전략을 더 효과적으로 활용할 준비가 되었습니다. 이 글에서 다룬 원리와 해결책을 바탕으로 유사한 문제를 예방하고, 더욱 견고하고 안정적인 애플리케이션을 구축하시기를 바랍니다.18:T18cd,
 # 프론트엔드 개발, OOP와 FP의 완벽한 조화: 실무 적용 가이드
 
 프론트엔드 개발 생태계는 빠르게 변화했습니다. 과거 UI를 클래스로 제어하던 시절을 지나, React Hooks와 Redux의 등장으로 함수형 프로그래밍(FP)의 개념이 깊숙이 자리 잡았습니다.
@@ -882,7 +1199,7 @@ const UserList = () => {
 프론트엔드 개발자로서 한 가지 패러다임에 갇히기보다, 각 패러다임이 가진 장점을 이해하고 상황에 맞게 골라 쓰는 유연함이 필요합니다. 
 
 **"상태 관리는 OOP처럼, 데이터 처리는 FP처럼."** 이 원칙을 기억하면 더 견고한 애플리케이션을 설계할 수 있을 것입니다.
-18:T13dd,
+19:T13dd,
 # 무조건적인 가상화(Virtualization) 도입, 과연 정답일까? (feat. content-visibility)
 
 프론트엔드 개발자라면 긴 리스트를 다룰 때 습관적으로 **"가상화(Virtualization)를 도입해야겠다"**고 생각합니다. `react-window`나 `tanstack-virtual` 같은 라이브러리를 설치하는 것이 일종의 'Best Practice'처럼 여겨지죠.
@@ -950,7 +1267,7 @@ const UserList = () => {
 }
 
 ```
-19:T1f43,
+1a:T1f43,
 # [Architecture] NPM 패키지 분리 환경에서 싱글톤(Singleton) 유지하기: globalThis와 Symbol.for의 활용
 
 최근 사내 패키지 배포 구조를 개선하면서 마주친 문제와 그 해결 과정을 공유합니다.
@@ -1083,7 +1400,7 @@ export namespace SingletonRegistry {
 NPM 패키지 배포 시 번들링 전략에 따라 싱글톤 패턴이 깨지는 문제는 흔히 발생할 수 있습니다. 가장 정석적인 방법은 `peerDependencies`를 사용하여 호스트가 단일 버전을 설치하게 하는 것이지만, 배포 및 사용 편의성을 위해 번들링이 필수적인 상황이라면 **`globalThis`와 `Symbol.for`를 활용한 전역 레지스트리 패턴**이 훌륭한 해결책이 될 수 있습니다.
 
 이 패턴은 React, Styled-components 등 유명 라이브러리들에서도 런타임 환경의 제약을 극복하기 위해 내부적으로 사용하는 검증된 방식입니다. 다만, 사용 시 발생할 수 있는 사이드 이펙트(버전, 타입 체크)를 충분히 인지하고 적용해야 합니다.
-3:["$","$Lf",null,{"posts":[{"title":"E2E 테스트 vs 통합 테스트: 택일이 아닌 상호보완적 관계","date":"2025-12-22","summary":"E2E 테스트와 통합 테스트의 차이점을 명확히 정리하고, 두 테스트를 어떻게 조합해야 효율적인 테스트 전략을 수립할 수 있는지 설명합니다.","tags":["E2E","IntegrationTest","Testing","TestStrategy","상호보완"],"id":"integration-vs-e2e","content":"$10"},{"title":"🚀 Gemini CLI 완벽 가이드: 터미널에서 Gemini 모델 활용하기","summary":"Gemini CLI를 설치하고 설정하는 방법부터 Slash, At, Shell 명령어 사용법, 팁과 활용 예시까지 완벽하게 안내합니다.","tags":["Gemini","CLI","AI","터미널","개발"],"date":"2025-12-21","id":"gemini-cli-get-started","content":"$11"},{"title":"Giscus: 광고 없는 무료 댓글 시스템, 5분 만에 적용하기","summary":"Giscus는 GitHub Discussions API를 활용하여 광고 없이 깔끔한 디자인과 마크다운을 지원하는 무료 댓글 시스템으로, 개발 블로그에 쉽게 적용할 수 있습니다.","tags":["Giscus","댓글 시스템","GitHub Discussions","개발 블로그","무료"],"date":"2025-12-21","id":"giscus","content":"$12"},{"title":"GitHub Actions로 나만의 뉴스 브리핑 봇 만들기 (서버비 0원)","date":"2025-12-21","tags":["GitHub Actions","Automation","Slack Bot","RSS","Node.js"],"summary":"GitHub Actions의 Cron 스케줄러를 활용해 RSS 피드를 주기적으로 크롤링하고, 새로운 소식을 슬랙으로 전송하는 봇을 만드는 과정을 소개합니다.","id":"rss-news-bot-automation","content":"$13"},{"title":"[Tip] RSS란 무엇인가? 내 기술 블로그에 RSS 달고 Feedly로 구독하기","date":"2025-12-21","tags":["RSS","Blog","Tip"],"summary":"RSS의 개념과 GitHub Pages 블로그에 RSS를 적용하는 방법, Feedly 사용법을 알아봅니다.","id":"rss","content":"$14"},{"title":"Datadog vs Sentry: 우리 팀에 맞는 모니터링 툴은 무엇일까?","summary":"Datadog과 Sentry의 특징과 장단점을 비교하여 팀의 상황에 맞는 최적의 모니터링 도구를 선택하는 방법을 알아봅니다.","tags":["Datadog","Sentry","Monitoring","APM","RUM"],"date":"2025-12-21","id":"sentry-vs-datadog","content":"$15"},{"title":"Next.js App Router: useSuspenseQuery 서버 행(Hanging) 이슈 해결","date":"2025-12-20","tags":["Next.js","React Query","App Router"],"summary":"App Router에서 useSuspenseQuery 사용 시 발생하는 서버 행 현상의 원인을 파헤치고 next/dynamic을 통한 해결책을 제시합니다.","id":"app-router-useSuspenseQuery","content":"$16"},{"title":"프론트엔드 OOP와 FP 조화: 실무 적용 완벽 가이드","summary":"프론트엔드 개발에서 객체 지향 프로그래밍(OOP)과 함수형 프로그래밍(FP)을 조화롭게 사용하여 효율적인 아키텍처를 구축하는 방법을 알아봅니다.","tags":["frontend","OOP","FP","architecture","javascript"],"date":"2025-12-20","id":"frontend-oop-fp","content":"$17"},{"title":"가상화(Virtualization) 도입, 과연 정답일까? (feat. content-visibility)","summary":"가상화의 성능상 이점과 UX상의 단점을 살펴보고, content-visibility를 이용한 대안을 제시합니다.","tags":["virtualization","performance","css","content-visibility","frontend"],"date":"2025-12-20","id":"scroll-virtualization","content":"$18"},{"title":"NPM 패키지 분리 환경에서 싱글톤(Singleton) 유지하기: globalThis와 Symbol.for의 활용","summary":"물리적으로 분리된 번들 환경에서 globalThis와 Symbol.for를 활용하여 싱글톤 인스턴스를 안전하게 공유하는 방법을 설명합니다.","tags":["NPM","Singleton","globalThis","Symbol.for","JavaScript"],"date":"2025-12-20","id":"singleton-in-package","content":"$19"},{"title":"Folder Structure Test Post","date":"2020-12-21","tags":["Test","Structure"],"summary":"This is a test post to verify folder-based structure and image loading.","id":"folder-test-post","content":"\nThis is a post inside a folder.\n\nHere is an image:\n![Test Image](./image.png)\n\nAnd some text below.\n\n"}]}]
+3:["$","$Lf",null,{"posts":[{"title":"기획자도 할 수 있다: AI 생성 & 슬랙 버튼으로 완성하는 E2E 테스트 자동화 파이프라인","summary":"AI 생성 및 슬랙 버튼을 활용하여 E2E 테스트 자동화 파이프라인을 구축하고, 기술 장벽 없이 테스트에 기여할 수 있는 환경을 만드는 방법을 소개합니다.","tags":["E2E 테스트","자동화","AI","슬랙","ChatOps"],"date":"2025-12-22","id":"e2e-pipeline","content":"$10"},{"title":"E2E 테스트 vs 통합 테스트: 택일이 아닌 상호보완적 관계","date":"2025-12-22","summary":"E2E 테스트와 통합 테스트의 차이점을 명확히 정리하고, 두 테스트를 어떻게 조합해야 효율적인 테스트 전략을 수립할 수 있는지 설명합니다.","tags":["E2E","IntegrationTest","Testing","TestStrategy","상호보완"],"id":"integration-vs-e2e","content":"$11"},{"title":"🚀 Gemini CLI 완벽 가이드: 터미널에서 Gemini 모델 활용하기","summary":"Gemini CLI를 설치하고 설정하는 방법부터 Slash, At, Shell 명령어 사용법, 팁과 활용 예시까지 완벽하게 안내합니다.","tags":["Gemini","CLI","AI","터미널","개발"],"date":"2025-12-21","id":"gemini-cli-get-started","content":"$12"},{"title":"Giscus: 광고 없는 무료 댓글 시스템, 5분 만에 적용하기","summary":"Giscus는 GitHub Discussions API를 활용하여 광고 없이 깔끔한 디자인과 마크다운을 지원하는 무료 댓글 시스템으로, 개발 블로그에 쉽게 적용할 수 있습니다.","tags":["Giscus","댓글 시스템","GitHub Discussions","개발 블로그","무료"],"date":"2025-12-21","id":"giscus","content":"$13"},{"title":"GitHub Actions로 나만의 뉴스 브리핑 봇 만들기 (서버비 0원)","date":"2025-12-21","tags":["GitHub Actions","Automation","Slack Bot","RSS","Node.js"],"summary":"GitHub Actions의 Cron 스케줄러를 활용해 RSS 피드를 주기적으로 크롤링하고, 새로운 소식을 슬랙으로 전송하는 봇을 만드는 과정을 소개합니다.","id":"rss-news-bot-automation","content":"$14"},{"title":"[Tip] RSS란 무엇인가? 내 기술 블로그에 RSS 달고 Feedly로 구독하기","date":"2025-12-21","tags":["RSS","Blog","Tip"],"summary":"RSS의 개념과 GitHub Pages 블로그에 RSS를 적용하는 방법, Feedly 사용법을 알아봅니다.","id":"rss","content":"$15"},{"title":"Datadog vs Sentry: 우리 팀에 맞는 모니터링 툴은 무엇일까?","summary":"Datadog과 Sentry의 특징과 장단점을 비교하여 팀의 상황에 맞는 최적의 모니터링 도구를 선택하는 방법을 알아봅니다.","tags":["Datadog","Sentry","Monitoring","APM","RUM"],"date":"2025-12-21","id":"sentry-vs-datadog","content":"$16"},{"title":"Next.js App Router: useSuspenseQuery 서버 행(Hanging) 이슈 해결","date":"2025-12-20","tags":["Next.js","React Query","App Router"],"summary":"App Router에서 useSuspenseQuery 사용 시 발생하는 서버 행 현상의 원인을 파헤치고 next/dynamic을 통한 해결책을 제시합니다.","id":"app-router-useSuspenseQuery","content":"$17"},{"title":"프론트엔드 OOP와 FP 조화: 실무 적용 완벽 가이드","summary":"프론트엔드 개발에서 객체 지향 프로그래밍(OOP)과 함수형 프로그래밍(FP)을 조화롭게 사용하여 효율적인 아키텍처를 구축하는 방법을 알아봅니다.","tags":["frontend","OOP","FP","architecture","javascript"],"date":"2025-12-20","id":"frontend-oop-fp","content":"$18"},{"title":"가상화(Virtualization) 도입, 과연 정답일까? (feat. content-visibility)","summary":"가상화의 성능상 이점과 UX상의 단점을 살펴보고, content-visibility를 이용한 대안을 제시합니다.","tags":["virtualization","performance","css","content-visibility","frontend"],"date":"2025-12-20","id":"scroll-virtualization","content":"$19"},{"title":"NPM 패키지 분리 환경에서 싱글톤(Singleton) 유지하기: globalThis와 Symbol.for의 활용","summary":"물리적으로 분리된 번들 환경에서 globalThis와 Symbol.for를 활용하여 싱글톤 인스턴스를 안전하게 공유하는 방법을 설명합니다.","tags":["NPM","Singleton","globalThis","Symbol.for","JavaScript"],"date":"2025-12-20","id":"singleton-in-package","content":"$1a"},{"title":"Folder Structure Test Post","date":"2020-12-21","tags":["Test","Structure"],"summary":"This is a test post to verify folder-based structure and image loading.","id":"folder-test-post","content":"\nThis is a post inside a folder.\n\nHere is an image:\n![Test Image](./image.png)\n\nAnd some text below.\n\n"}]}]
 8:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
 6:null
 a:[["$","title","0",{"children":"Dev-Holic Blog"}],["$","meta","1",{"name":"description","content":"Dev-Holic Blog - Tech, Development, and more"}],["$","meta","2",{"property":"og:title","content":"Dev-Holic Blog"}],["$","meta","3",{"property":"og:description","content":"Tech, Development, and more"}],["$","meta","4",{"property":"og:url","content":"https://dev-holic.github.io"}],["$","meta","5",{"property":"og:site_name","content":"Dev-Holic Blog"}],["$","meta","6",{"property":"og:locale","content":"ko_KR"}],["$","meta","7",{"property":"og:image:alt","content":"Dev-Holic Blog"}],["$","meta","8",{"property":"og:image:type","content":"image/png"}],["$","meta","9",{"property":"og:image","content":"https://dev-holic.github.io/opengraph-image?3ae57bf970b1b170"}],["$","meta","10",{"property":"og:image:width","content":"1200"}],["$","meta","11",{"property":"og:image:height","content":"630"}],["$","meta","12",{"property":"og:type","content":"website"}],["$","meta","13",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","14",{"name":"twitter:title","content":"Dev-Holic Blog"}],["$","meta","15",{"name":"twitter:description","content":"Tech, Development, and more"}],["$","meta","16",{"name":"twitter:image:alt","content":"Dev-Holic Blog"}],["$","meta","17",{"name":"twitter:image:type","content":"image/png"}],["$","meta","18",{"name":"twitter:image","content":"https://dev-holic.github.io/opengraph-image?3ae57bf970b1b170"}],["$","meta","19",{"name":"twitter:image:width","content":"1200"}],["$","meta","20",{"name":"twitter:image:height","content":"630"}]]
