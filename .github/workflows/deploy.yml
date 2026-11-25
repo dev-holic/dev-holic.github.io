@@ -4,8 +4,19 @@ on:
   push:
     branches: [ "main" ]
 
+  workflow_dispatch:
+  schedule:
+    - cron: '17 21 * * *'
+
+concurrency:
+  group: deploy-blog
+  cancel-in-progress: false
+
 jobs:
   deploy:
+    if: github.event_name != 'schedule' || vars.GOATCOUNTER_CODE != ''
+    env:
+      GOATCOUNTER_CODE: ${{ vars.GOATCOUNTER_CODE }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -18,8 +29,6 @@ jobs:
 
       - name: Install pnpm
         uses: pnpm/action-setup@v3
-        with:
-          version: 10
 
       - name: Node.js
         uses: actions/setup-node@v3
@@ -28,59 +37,7 @@ jobs:
           cache: 'pnpm'
 
       - name: Install Dependencies
-        run: pnpm install
-
-      - name: Check and Fix Posts (AI Powered)
-        id: check_fix
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: |
-          # Debugging info
-          echo "GITHUB_EVENT_BEFORE: ${{ github.event.before }}"
-          echo "GITHUB_SHA: ${{ github.sha }}"
-          
-          # Determine the comparison range
-          BASE_COMMIT=${{ github.event.before }}
-          
-          # Handle new branches or force pushes where 'before' might be 0000...
-          if [ -z "$BASE_COMMIT" ] || [ "$BASE_COMMIT" == "0000000000000000000000000000000000000000" ]; then
-            BASE_COMMIT="HEAD^"
-          fi
-          
-          echo "Comparing changes from $BASE_COMMIT to ${{ github.sha }}"
-          
-          # Get changed markdown files
-          CHANGED_FILES=$(git diff --name-only $BASE_COMMIT ${{ github.sha }} | grep 'posts/.*\.md$' || true)
-
-          if [ -z "$CHANGED_FILES" ]; then
-            echo "No markdown files changed. Skipping fix."
-          else
-            echo "Found changed markdown files: $CHANGED_FILES"
-            
-            # 2. Run fix script ONLY on changed files
-            # Use AI script if API key is present, otherwise fallback to simple regex fix
-            if [ -n "$GEMINI_API_KEY" ]; then
-              echo "Gemini API Key found. Running smart fix..."
-              pnpm --filter @dev-holic/posts ai-fix-posts $CHANGED_FILES
-            else
-              echo "Gemini API Key NOT found. Running basic regex fix..."
-              pnpm --filter @dev-holic/posts fix-posts $CHANGED_FILES
-            fi
-            
-            # 3. Commit changes if any
-            if [[ `git status --porcelain` ]]; then
-              echo "Changes detected. Committing and pushing..."
-              git config --global user.name 'github-actions[bot]'
-              git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-              git add posts
-              git commit -m "chore: auto-fix post format and metadata [skip ci]"
-              git push
-              echo "pushed=true" >> $GITHUB_OUTPUT
-            else
-              echo "No changes detected."
-              echo "pushed=false" >> $GITHUB_OUTPUT
-            fi
-          fi
+        run: pnpm install --frozen-lockfile
 
       - name: Build Docs
         run: pnpm build

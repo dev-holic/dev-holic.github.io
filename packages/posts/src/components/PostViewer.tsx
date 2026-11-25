@@ -13,7 +13,7 @@ interface PostViewerProps {
 
 export function PostViewer({ content, postId }: PostViewerProps) {
   return (
-    <div className="prose prose-lg dark:prose-invert max-w-none">
+    <div className="prose prose-lg max-w-none">
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[rehypeRaw]}

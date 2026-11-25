@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { getPostById, getAllPosts, PostViewer } from '@dev-holic/posts';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
+import { counterOrigin } from '@/lib/popularity';
 import Comments from '@/components/Comments';
 
 export async function generateStaticParams() {
@@ -35,6 +36,7 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
     notFound();
   }
 
+  const counter = counterOrigin();
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
@@ -51,19 +53,19 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
   };
 
   return (
-    <div className='h-full overflow-y-auto mx-auto p-8'>
+    <article className='reading'>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Link href='/' className='mb-4 inline-block text-blue-500 hover:underline'>
-        &larr; Back to List
+      <Link href='/' className='back'>
+        ← 글 목록
       </Link>
       <header className='mb-8'>
-        <h1 className='mb-4 text-4xl font-bold text-gray-900 dark:text-gray-100'>
+        <h1 className='reading-title'>
           {post.metadata.title}
         </h1>
-        <div className='text-gray-500 dark:text-gray-400'>
+        <div className='text-gray-500'>
           {post.metadata.date}
           {post.metadata.tags && (
             <span className='ml-2'>• {post.metadata.tags.map((tag) => `#${tag}`).join(' ')}</span>
@@ -72,6 +74,7 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
       </header>
       <PostViewer content={post.content} postId={post.metadata.id} />
       <Comments />
-    </div>
+      {counter && <img src={`${counter}/count?p=${encodeURIComponent('/blog/' + id)}`} width="1" height="1" alt="" />}
+    </article>
   );
 }

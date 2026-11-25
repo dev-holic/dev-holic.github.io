@@ -37,7 +37,7 @@ The blog is designed to be a high-performance, developer-friendly static site.
   - **Open Graph (OG)** images generated for social sharing previews.
 - **RSS Feed:** automatically generated at `/feed.xml` for subscribers.
 - **Comments:** Integrated **Giscus** (GitHub Discussions based) comment system.
-- **Dark Mode Support:** Styled with Tailwind's dark mode capabilities (e.g., `dark:text-gray-100`).
+- **Archive:** Light theme with recent posts, tag filters and optional GoatCounter rankings.
 
 ## 3. How to Add a Blog Post
 
@@ -65,23 +65,4 @@ The blog content is managed entirely via Git. No external CMS is required.
 4. **Commit & Push:**
    Commit your changes to the git repository.
 
-### Automated Checks (AI Fix)
-The repository includes a unique automated feature. On commit/push:
-- A script checks changed Markdown files.
-- If an **OpenAI/Gemini API Key** is configured in the environment, an AI agent can automatically fix typos or formatting issues in the post.
-- If no key is present, basic regex-based fixes are applied.
-- Changes are automatically committed back to the branch before deployment.
-
-## 4. Deployment Process
-
-Deployment is fully automated using **GitHub Actions**.
-
-### Workflow (`.github/workflows/deploy.yml`)
-1. **Trigger:** The workflow runs on every push to the `main` branch.
-2. **Setup:** Installs Node.js and `pnpm`.
-3. **Pre-processing (Auto-Fix):**
-   - Detects changed `.md` files in `posts/`.
-   - Runs `ai-fix-posts` (or fallback script) to validate and correct post content.
-   - If changes are made by the script, they are committed and pushed back to the repo.
-4. **Build:** Runs `pnpm build` to generate the static export of the Next.js app.
-5. **Deploy:** Uses `peaceiris/actions-gh-pages` to deploy the `apps/blog/out` directory to the `gh-pages` branch, which serves the site via GitHub Pages.
+For researched posts, use the repository skill at `.agents/skills/write-blog-post/SKILL.md`. See README.md for deployment and visitor ranking setup.

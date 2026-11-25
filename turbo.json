@@ -2,8 +2,19 @@
   "$schema": "https://turbo.build/schema.json",
   "tasks": {
     "build": {
-      "dependsOn": ["^build"],
-      "outputs": ["dist/**"]
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "dist/**",
+        ".next/**",
+        "!.next/cache/**",
+        "out/**"
+      ],
+      "env": [
+        "GOATCOUNTER_CODE"
+      ],
+      "cache": false
     },
     "lint": {},
     "dev": {
