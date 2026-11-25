@@ -14,9 +14,12 @@ export async function popularPosts(posts: PostMetadata[]) {
   const ranked: { id: string; title: string; count: number }[] = [];
   if (!origin) return ranked;
 
+  const start = new Date();
+  start.setUTCDate(start.getUTCDate() - 30);
+  const startDate = start.toISOString().slice(0, 10);
   for (const { id, title } of posts) {
     const path = encodeURIComponent(`/blog/${id}`);
-    const response = await fetch(`${origin}/counter/${path}.json?start=month`, {
+    const response = await fetch(`${origin}/counter/${path}.json?start=${startDate}`, {
       cache: 'force-cache',
       signal: AbortSignal.timeout(15000),
     });

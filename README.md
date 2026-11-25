@@ -8,6 +8,8 @@ Codex에서 예를 들어 “$write-blog-post React Query의 staleTime과 gcTime
 
 Node.js 22와 pnpm 10.26.1 환경에서 저장소 루트의 `pnpm install`, `pnpm dev`로 미리 봅니다. `pnpm build` 결과는 `apps/blog/out/`에 생성됩니다. `main`에 푸시하면 GitHub Actions가 빌드·배포합니다.
 
+로컬에서 `pnpm dev`로 실행하면 홈의 인기 글은 `dev-holic` 공개 카운터에서 가져옵니다. 개발 서버에서 글을 열 때는 방문을 기록하지 않습니다.
+
 ## 인기 글 집계 연결
 
 1. GoatCounter에서 호스팅 사이트를 만들고 설정에서 **Allow adding visitor counts on your website**를 켭니다.

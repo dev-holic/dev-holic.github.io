@@ -1,5 +1,6 @@
 import './globals.scss';
 import type { Metadata } from 'next';
+import { HeaderSearch } from '../components/HeaderSearch';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
@@ -45,7 +46,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         />
         <header className="masthead"><div className="wrap">
           <Link href="/" className="wordmark">Dev-Holic<span>.</span></Link>
-          <nav aria-label="사이트 메뉴"><Link href="/">글 목록</Link><a href="/feed.xml">RSS ↗</a></nav>
+          <nav aria-label="사이트 메뉴"><HeaderSearch /><a href="/feed.xml">RSS ↗</a></nav>
         </div></header>
         <main className="wrap">{children}</main>
       </body>

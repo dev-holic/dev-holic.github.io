@@ -3,6 +3,8 @@ import { getPostById, getAllPosts, PostViewer } from '@dev-holic/posts';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import { counterOrigin } from '@/lib/popularity';
+import { PopularPosts } from '@/components/PopularPosts';
+import { TableOfContents } from '@/components/TableOfContents';
 import Comments from '@/components/Comments';
 
 export async function generateStaticParams() {
@@ -12,7 +14,11 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
   const { id } = await params;
   const post = await getPostById(id);
 
@@ -28,7 +34,11 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   };
 }
 
-export default async function BlogPost({ params }: { params: Promise<{ id: string }> }) {
+export default async function BlogPost({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
   const { id } = await params;
   const post = await getPostById(id);
 
@@ -36,7 +46,8 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
     notFound();
   }
 
-  const counter = counterOrigin();
+  const counter =
+    process.env.NODE_ENV === 'production' ? counterOrigin() : null;
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
@@ -53,28 +64,41 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
   };
 
   return (
-    <article className='reading'>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <Link href='/' className='back'>
-        ← 글 목록
-      </Link>
-      <header className='mb-8'>
-        <h1 className='reading-title'>
-          {post.metadata.title}
-        </h1>
-        <div className='text-gray-500'>
-          {post.metadata.date}
-          {post.metadata.tags && (
-            <span className='ml-2'>• {post.metadata.tags.map((tag) => `#${tag}`).join(' ')}</span>
-          )}
+    <div className="reading-layout">
+      <TableOfContents key={id} />
+      <article className="reading">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <Link href="/" className="back">
+          ← 글 목록
+        </Link>
+        <header className="mb-8">
+          <h1 className="reading-title">{post.metadata.title}</h1>
+          <div className="text-gray-500">
+            {post.metadata.date}
+            {post.metadata.tags && (
+              <span className="ml-2">
+                • {post.metadata.tags.map((tag) => `#${tag}`).join(' ')}
+              </span>
+            )}
+          </div>
+        </header>
+        <div id="post-body">
+          <PostViewer content={post.content} postId={post.metadata.id} />
         </div>
-      </header>
-      <PostViewer content={post.content} postId={post.metadata.id} />
-      <Comments />
-      {counter && <img src={`${counter}/count?p=${encodeURIComponent('/blog/' + id)}`} width="1" height="1" alt="" />}
-    </article>
+        <Comments />
+        {counter && (
+          <img
+            src={`${counter}/count?p=${encodeURIComponent('/blog/' + id)}`}
+            width="1"
+            height="1"
+            alt=""
+          />
+        )}
+      </article>
+      <PopularPosts posts={await getAllPosts()} />
+    </div>
   );
 }

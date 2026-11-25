@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
-import { Suspense, useState } from 'react';
+import { Suspense } from 'react';
 import type { PostMetadata } from '@dev-holic/posts';
 
 interface Props {
@@ -14,8 +14,8 @@ function ArchiveList({
   posts,
   categories,
   tag,
-}: Props & { tag: string | null }) {
-  const [search, setSearch] = useState('');
+  search = '',
+}: Props & { tag: string | null; search?: string }) {
   const query = search.trim().toLowerCase();
   const visible = posts
     .filter((post) => !tag || post.tags?.includes(tag))
@@ -37,22 +37,21 @@ function ArchiveList({
 
   return (
     <section className="articles">
-      <div className="list-heading">
-        <h1>{tag ? tag : query ? '검색 결과' : '최근 글'}</h1>
-        <input
-          type="search"
-          aria-label="글 검색"
-          placeholder="제목, 태그, 본문 검색"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-        />
-      </div>
+      <h1 className={tag || query ? 'archive-title' : 'sr-only'}>
+        {tag || (query ? '검색 결과' : '글 목록')}
+      </h1>
       <nav aria-label="대표 태그" className="categories">
         {[null, ...labels].map((label) => (
           <Link
             key={label ?? ''}
             aria-current={label === tag ? 'page' : undefined}
-            href={label ? `/?tag=${encodeURIComponent(label)}` : '/'}
+            href={{
+              pathname: '/',
+              query: {
+                ...(label && { tag: label }),
+                ...(search && { q: search }),
+              },
+            }}
           >
             {label ?? '전체'}
           </Link>
@@ -83,7 +82,13 @@ function ArchiveList({
 
 function FilteredList(props: Props) {
   const params = useSearchParams();
-  return <ArchiveList {...props} tag={params.get('tag')} />;
+  return (
+    <ArchiveList
+      {...props}
+      tag={params.get('tag')}
+      search={params.get('q') || ''}
+    />
+  );
 }
 
 export function PostList(props: Props) {
