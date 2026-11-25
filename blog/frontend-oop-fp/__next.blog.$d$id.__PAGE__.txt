@@ -1,11 +1,12 @@
 1:"$Sreact.fragment"
-2:I[70451,["/_next/static/chunks/4401dea043656ace.js","/_next/static/chunks/2ba74a6498bb7e6e.js","/_next/static/chunks/e324a559abb624a1.js"],""]
-3:I[74553,["/_next/static/chunks/4401dea043656ace.js","/_next/static/chunks/2ba74a6498bb7e6e.js","/_next/static/chunks/e324a559abb624a1.js"],"PostViewer"]
-a:I[65126,["/_next/static/chunks/4401dea043656ace.js","/_next/static/chunks/2ba74a6498bb7e6e.js","/_next/static/chunks/e324a559abb624a1.js"],"default"]
-b:I[97990,["/_next/static/chunks/28ff6a04602448ba.js","/_next/static/chunks/64c697a3cb51cd07.js"],"OutletBoundary"]
-c:"$Sreact.suspense"
+2:I[23364,["/_next/static/chunks/9d610158ce7f2639.js","/_next/static/chunks/8aa01bf381e19ea6.js","/_next/static/chunks/e324a559abb624a1.js"],"TableOfContents"]
+3:I[70451,["/_next/static/chunks/9d610158ce7f2639.js","/_next/static/chunks/8aa01bf381e19ea6.js","/_next/static/chunks/e324a559abb624a1.js"],""]
+4:I[74553,["/_next/static/chunks/9d610158ce7f2639.js","/_next/static/chunks/8aa01bf381e19ea6.js","/_next/static/chunks/e324a559abb624a1.js"],"PostViewer"]
+c:I[65126,["/_next/static/chunks/9d610158ce7f2639.js","/_next/static/chunks/8aa01bf381e19ea6.js","/_next/static/chunks/e324a559abb624a1.js"],"default"]
+d:I[97990,["/_next/static/chunks/28ff6a04602448ba.js","/_next/static/chunks/64c697a3cb51cd07.js"],"OutletBoundary"]
+e:"$Sreact.suspense"
 :HL["https://dev-holic.goatcounter.com/count?p=%2Fblog%2Ffrontend-oop-fp","image"]
-4:T18cd,
+5:T18cd,
 # 프론트엔드 개발, OOP와 FP의 완벽한 조화: 실무 적용 가이드
 
 프론트엔드 개발 생태계는 빠르게 변화했습니다. 과거 UI를 클래스로 제어하던 시절을 지나, React Hooks와 Redux의 등장으로 함수형 프로그래밍(FP)의 개념이 깊숙이 자리 잡았습니다.
@@ -150,10 +151,11 @@ const UserList = () => {
 프론트엔드 개발자로서 한 가지 패러다임에 갇히기보다, 각 패러다임이 가진 장점을 이해하고 상황에 맞게 골라 쓰는 유연함이 필요합니다. 
 
 **"상태 관리는 OOP처럼, 데이터 처리는 FP처럼."** 이 원칙을 기억하면 더 견고한 애플리케이션을 설계할 수 있을 것입니다.
-0:{"buildId":"KTqhD8tHaoFMnXgJuUILp","rsc":["$","$1","c",{"children":[["$","article",null,{"className":"reading","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"프론트엔드 OOP와 FP 조화: 실무 적용 완벽 가이드\",\"datePublished\":\"2025-12-20\",\"dateModified\":\"2025-12-20\",\"description\":\"프론트엔드 개발에서 객체 지향 프로그래밍(OOP)과 함수형 프로그래밍(FP)을 조화롭게 사용하여 효율적인 아키텍처를 구축하는 방법을 알아봅니다.\",\"author\":{\"@type\":\"Person\",\"name\":\"Dev-Holic\"},\"url\":\"https://dev-holic.github.io/blog/frontend-oop-fp\",\"keywords\":[\"frontend\",\"OOP\",\"FP\",\"architecture\",\"javascript\"]}"}}],["$","$L2",null,{"href":"/","className":"back","children":"← 글 목록"}],["$","header",null,{"className":"mb-8","children":[["$","h1",null,{"className":"reading-title","children":"프론트엔드 OOP와 FP 조화: 실무 적용 완벽 가이드"}],["$","div",null,{"className":"text-gray-500","children":["2025-12-20",["$","span",null,{"className":"ml-2","children":["• ","#frontend #OOP #FP #architecture #javascript"]}]]}]]}],["$","$L3",null,{"content":"$4","postId":"frontend-oop-fp"}],"$L5","$L6"]}],["$L7","$L8"],"$L9"]}],"loading":null,"isPartial":false}
-5:["$","$La",null,{}]
-6:["$","img",null,{"src":"https://dev-holic.goatcounter.com/count?p=%2Fblog%2Ffrontend-oop-fp","width":"1","height":"1","alt":""}]
-7:["$","script","script-0",{"src":"/_next/static/chunks/2ba74a6498bb7e6e.js","async":true}]
-8:["$","script","script-1",{"src":"/_next/static/chunks/e324a559abb624a1.js","async":true}]
-9:["$","$Lb",null,{"children":["$","$c",null,{"name":"Next.MetadataOutlet","children":"$@d"}]}]
-d:null
+0:{"buildId":"MT3fHN-xEj9k5_Z5ZHmFj","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"reading-layout","children":[["$","$L2","frontend-oop-fp",{}],["$","article",null,{"className":"reading","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"프론트엔드 OOP와 FP 조화: 실무 적용 완벽 가이드\",\"datePublished\":\"2025-12-20\",\"dateModified\":\"2025-12-20\",\"description\":\"프론트엔드 개발에서 객체 지향 프로그래밍(OOP)과 함수형 프로그래밍(FP)을 조화롭게 사용하여 효율적인 아키텍처를 구축하는 방법을 알아봅니다.\",\"author\":{\"@type\":\"Person\",\"name\":\"Dev-Holic\"},\"url\":\"https://dev-holic.github.io/blog/frontend-oop-fp\",\"keywords\":[\"frontend\",\"OOP\",\"FP\",\"architecture\",\"javascript\"]}"}}],["$","$L3",null,{"href":"/","className":"back","children":"← 글 목록"}],["$","header",null,{"className":"mb-8","children":[["$","h1",null,{"className":"reading-title","children":"프론트엔드 OOP와 FP 조화: 실무 적용 완벽 가이드"}],["$","div",null,{"className":"text-gray-500","children":["2025-12-20",["$","span",null,{"className":"ml-2","children":["• ","#frontend #OOP #FP #architecture #javascript"]}]]}]]}],["$","div",null,{"id":"post-body","children":["$","$L4",null,{"content":"$5","postId":"frontend-oop-fp"}]}],"$L6","$L7"]}],"$L8"]}],["$L9","$La"],"$Lb"]}],"loading":null,"isPartial":false}
+6:["$","$Lc",null,{}]
+7:["$","img",null,{"src":"https://dev-holic.goatcounter.com/count?p=%2Fblog%2Ffrontend-oop-fp","width":"1","height":"1","alt":""}]
+8:["$","aside",null,{"className":"popular","children":[["$","h2",null,{"children":"인기 글"}],["$","p",null,{"className":"period","children":"최근 한 달"}],["$","ol",null,{"children":[["$","li","app-router-useSuspenseQuery",{"children":["$","$L3",null,{"href":"/blog/app-router-useSuspenseQuery","children":"Next.js App Router: useSuspenseQuery 서버 행(Hanging) 이슈 해결"}]}],["$","li","e2e-pipeline",{"children":["$","$L3",null,{"href":"/blog/e2e-pipeline","children":"기획자도 할 수 있다: AI 생성 & 슬랙 버튼으로 완성하는 E2E 테스트 자동화 파이프라인"}]}],["$","li","gemini-cli-get-started",{"children":["$","$L3",null,{"href":"/blog/gemini-cli-get-started","children":"🚀 Gemini CLI 완벽 가이드: 터미널에서 Gemini 모델 활용하기"}]}],["$","li","giscus",{"children":["$","$L3",null,{"href":"/blog/giscus","children":"Giscus: 광고 없는 무료 댓글 시스템, 5분 만에 적용하기"}]}],["$","li","i18n-auto-chunking",{"children":["$","$L3",null,{"href":"/blog/i18n-auto-chunking","children":"10만 개 번역 키, 수동 분류 없이 빌드 타임 최적화 (Auto Chunking)"}]}]]}]]}]
+9:["$","script","script-0",{"src":"/_next/static/chunks/8aa01bf381e19ea6.js","async":true}]
+a:["$","script","script-1",{"src":"/_next/static/chunks/e324a559abb624a1.js","async":true}]
+b:["$","$Ld",null,{"children":["$","$e",null,{"name":"Next.MetadataOutlet","children":"$@f"}]}]
+f:null

@@ -1,11 +1,12 @@
 1:"$Sreact.fragment"
-2:I[70451,["/_next/static/chunks/4401dea043656ace.js","/_next/static/chunks/2ba74a6498bb7e6e.js","/_next/static/chunks/e324a559abb624a1.js"],""]
-3:I[74553,["/_next/static/chunks/4401dea043656ace.js","/_next/static/chunks/2ba74a6498bb7e6e.js","/_next/static/chunks/e324a559abb624a1.js"],"PostViewer"]
-a:I[65126,["/_next/static/chunks/4401dea043656ace.js","/_next/static/chunks/2ba74a6498bb7e6e.js","/_next/static/chunks/e324a559abb624a1.js"],"default"]
-b:I[97990,["/_next/static/chunks/28ff6a04602448ba.js","/_next/static/chunks/64c697a3cb51cd07.js"],"OutletBoundary"]
-c:"$Sreact.suspense"
+2:I[23364,["/_next/static/chunks/9d610158ce7f2639.js","/_next/static/chunks/8aa01bf381e19ea6.js","/_next/static/chunks/e324a559abb624a1.js"],"TableOfContents"]
+3:I[70451,["/_next/static/chunks/9d610158ce7f2639.js","/_next/static/chunks/8aa01bf381e19ea6.js","/_next/static/chunks/e324a559abb624a1.js"],""]
+4:I[74553,["/_next/static/chunks/9d610158ce7f2639.js","/_next/static/chunks/8aa01bf381e19ea6.js","/_next/static/chunks/e324a559abb624a1.js"],"PostViewer"]
+c:I[65126,["/_next/static/chunks/9d610158ce7f2639.js","/_next/static/chunks/8aa01bf381e19ea6.js","/_next/static/chunks/e324a559abb624a1.js"],"default"]
+d:I[97990,["/_next/static/chunks/28ff6a04602448ba.js","/_next/static/chunks/64c697a3cb51cd07.js"],"OutletBoundary"]
+e:"$Sreact.suspense"
 :HL["https://dev-holic.goatcounter.com/count?p=%2Fblog%2Fgiscus","image"]
-4:T1aeb,
+5:T1aeb,
 # [가이드] Giscus: 광고 없는 무료 댓글 시스템, 5분 만에 적용하기
 
 개발 블로그를 운영하다 보면 독자와의 소통을 위해 댓글 기능이 필요합니다. Disqus는 무겁고 광고가 많고, Utterances는 GitHub Issues를 사용해서 댓글이 이슈로 등록되는 부담이 있습니다.
@@ -129,10 +130,11 @@ export default function Giscus() {
 **마무리하며**
 
 Giscus는 GitHub 아이디만 있다면 누구나 쉽게 댓글을 남길 수 있고, 개발자 입장에서는 DB 관리 부담 없이 무료로 사용할 수 있는 최고의 솔루션입니다. 지금 바로 적용해 보세요!
-0:{"buildId":"KTqhD8tHaoFMnXgJuUILp","rsc":["$","$1","c",{"children":[["$","article",null,{"className":"reading","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Giscus: 광고 없는 무료 댓글 시스템, 5분 만에 적용하기\",\"datePublished\":\"2025-12-21\",\"dateModified\":\"2025-12-21\",\"description\":\"Giscus는 GitHub Discussions API를 활용하여 광고 없이 깔끔한 디자인과 마크다운을 지원하는 무료 댓글 시스템으로, 개발 블로그에 쉽게 적용할 수 있습니다.\",\"author\":{\"@type\":\"Person\",\"name\":\"Dev-Holic\"},\"url\":\"https://dev-holic.github.io/blog/giscus\",\"keywords\":[\"Giscus\",\"댓글 시스템\",\"GitHub Discussions\",\"개발 블로그\",\"무료\"]}"}}],["$","$L2",null,{"href":"/","className":"back","children":"← 글 목록"}],["$","header",null,{"className":"mb-8","children":[["$","h1",null,{"className":"reading-title","children":"Giscus: 광고 없는 무료 댓글 시스템, 5분 만에 적용하기"}],["$","div",null,{"className":"text-gray-500","children":["2025-12-21",["$","span",null,{"className":"ml-2","children":["• ","#Giscus #댓글 시스템 #GitHub Discussions #개발 블로그 #무료"]}]]}]]}],["$","$L3",null,{"content":"$4","postId":"giscus"}],"$L5","$L6"]}],["$L7","$L8"],"$L9"]}],"loading":null,"isPartial":false}
-5:["$","$La",null,{}]
-6:["$","img",null,{"src":"https://dev-holic.goatcounter.com/count?p=%2Fblog%2Fgiscus","width":"1","height":"1","alt":""}]
-7:["$","script","script-0",{"src":"/_next/static/chunks/2ba74a6498bb7e6e.js","async":true}]
-8:["$","script","script-1",{"src":"/_next/static/chunks/e324a559abb624a1.js","async":true}]
-9:["$","$Lb",null,{"children":["$","$c",null,{"name":"Next.MetadataOutlet","children":"$@d"}]}]
-d:null
+0:{"buildId":"MT3fHN-xEj9k5_Z5ZHmFj","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"reading-layout","children":[["$","$L2","giscus",{}],["$","article",null,{"className":"reading","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Giscus: 광고 없는 무료 댓글 시스템, 5분 만에 적용하기\",\"datePublished\":\"2025-12-21\",\"dateModified\":\"2025-12-21\",\"description\":\"Giscus는 GitHub Discussions API를 활용하여 광고 없이 깔끔한 디자인과 마크다운을 지원하는 무료 댓글 시스템으로, 개발 블로그에 쉽게 적용할 수 있습니다.\",\"author\":{\"@type\":\"Person\",\"name\":\"Dev-Holic\"},\"url\":\"https://dev-holic.github.io/blog/giscus\",\"keywords\":[\"Giscus\",\"댓글 시스템\",\"GitHub Discussions\",\"개발 블로그\",\"무료\"]}"}}],["$","$L3",null,{"href":"/","className":"back","children":"← 글 목록"}],["$","header",null,{"className":"mb-8","children":[["$","h1",null,{"className":"reading-title","children":"Giscus: 광고 없는 무료 댓글 시스템, 5분 만에 적용하기"}],["$","div",null,{"className":"text-gray-500","children":["2025-12-21",["$","span",null,{"className":"ml-2","children":["• ","#Giscus #댓글 시스템 #GitHub Discussions #개발 블로그 #무료"]}]]}]]}],["$","div",null,{"id":"post-body","children":["$","$L4",null,{"content":"$5","postId":"giscus"}]}],"$L6","$L7"]}],"$L8"]}],["$L9","$La"],"$Lb"]}],"loading":null,"isPartial":false}
+6:["$","$Lc",null,{}]
+7:["$","img",null,{"src":"https://dev-holic.goatcounter.com/count?p=%2Fblog%2Fgiscus","width":"1","height":"1","alt":""}]
+8:["$","aside",null,{"className":"popular","children":[["$","h2",null,{"children":"인기 글"}],["$","p",null,{"className":"period","children":"최근 한 달"}],["$","ol",null,{"children":[["$","li","app-router-useSuspenseQuery",{"children":["$","$L3",null,{"href":"/blog/app-router-useSuspenseQuery","children":"Next.js App Router: useSuspenseQuery 서버 행(Hanging) 이슈 해결"}]}],["$","li","e2e-pipeline",{"children":["$","$L3",null,{"href":"/blog/e2e-pipeline","children":"기획자도 할 수 있다: AI 생성 & 슬랙 버튼으로 완성하는 E2E 테스트 자동화 파이프라인"}]}],["$","li","gemini-cli-get-started",{"children":["$","$L3",null,{"href":"/blog/gemini-cli-get-started","children":"🚀 Gemini CLI 완벽 가이드: 터미널에서 Gemini 모델 활용하기"}]}],["$","li","giscus",{"children":["$","$L3",null,{"href":"/blog/giscus","children":"Giscus: 광고 없는 무료 댓글 시스템, 5분 만에 적용하기"}]}],["$","li","i18n-auto-chunking",{"children":["$","$L3",null,{"href":"/blog/i18n-auto-chunking","children":"10만 개 번역 키, 수동 분류 없이 빌드 타임 최적화 (Auto Chunking)"}]}]]}]]}]
+9:["$","script","script-0",{"src":"/_next/static/chunks/8aa01bf381e19ea6.js","async":true}]
+a:["$","script","script-1",{"src":"/_next/static/chunks/e324a559abb624a1.js","async":true}]
+b:["$","$Ld",null,{"children":["$","$e",null,{"name":"Next.MetadataOutlet","children":"$@f"}]}]
+f:null

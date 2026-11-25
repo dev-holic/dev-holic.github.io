@@ -1,11 +1,12 @@
 1:"$Sreact.fragment"
-2:I[70451,["/_next/static/chunks/4401dea043656ace.js","/_next/static/chunks/2ba74a6498bb7e6e.js","/_next/static/chunks/e324a559abb624a1.js"],""]
-3:I[74553,["/_next/static/chunks/4401dea043656ace.js","/_next/static/chunks/2ba74a6498bb7e6e.js","/_next/static/chunks/e324a559abb624a1.js"],"PostViewer"]
-a:I[65126,["/_next/static/chunks/4401dea043656ace.js","/_next/static/chunks/2ba74a6498bb7e6e.js","/_next/static/chunks/e324a559abb624a1.js"],"default"]
-b:I[97990,["/_next/static/chunks/28ff6a04602448ba.js","/_next/static/chunks/64c697a3cb51cd07.js"],"OutletBoundary"]
-c:"$Sreact.suspense"
+2:I[23364,["/_next/static/chunks/9d610158ce7f2639.js","/_next/static/chunks/8aa01bf381e19ea6.js","/_next/static/chunks/e324a559abb624a1.js"],"TableOfContents"]
+3:I[70451,["/_next/static/chunks/9d610158ce7f2639.js","/_next/static/chunks/8aa01bf381e19ea6.js","/_next/static/chunks/e324a559abb624a1.js"],""]
+4:I[74553,["/_next/static/chunks/9d610158ce7f2639.js","/_next/static/chunks/8aa01bf381e19ea6.js","/_next/static/chunks/e324a559abb624a1.js"],"PostViewer"]
+c:I[65126,["/_next/static/chunks/9d610158ce7f2639.js","/_next/static/chunks/8aa01bf381e19ea6.js","/_next/static/chunks/e324a559abb624a1.js"],"default"]
+d:I[97990,["/_next/static/chunks/28ff6a04602448ba.js","/_next/static/chunks/64c697a3cb51cd07.js"],"OutletBoundary"]
+e:"$Sreact.suspense"
 :HL["https://dev-holic.goatcounter.com/count?p=%2Fblog%2Fi18n-auto-chunking","image"]
-4:T1e61,
+5:T1e61,
 # 10만 개의 번역 키, 수동 분류 없이 빌드 타임에 최적화하기 (Auto Chunking)
 
 프로젝트 규모가 커지다 보면 i18n 번역 파일 관리 자체가 거대한 기술 부채가 되곤 합니다.
@@ -213,10 +214,11 @@ t(`error.${code}`);
 3.  **자동화된 최적화:** 프로젝트가 커져도 `threshold` 값만 조절하면 언제든 최적의 청크 상태를 유지할 수 있습니다.
 
 대규모 i18n 데이터를 다루고 있다면, 무리한 수동 분리보다는 **빌드 파이프라인을 통한 자동화**를 먼저 고려해보시길 추천합니다.
-0:{"buildId":"KTqhD8tHaoFMnXgJuUILp","rsc":["$","$1","c",{"children":[["$","article",null,{"className":"reading","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"10만 개 번역 키, 수동 분류 없이 빌드 타임 최적화 (Auto Chunking)\",\"datePublished\":\"2025-12-22\",\"dateModified\":\"2025-12-22\",\"description\":\"빌드 타임 정적 분석을 통해 10만 개의 번역 키를 자동으로 최적화된 JSON 청크로 생성하여 초기 로딩 속도를 개선하고 관리 포인트를 최소화하는 방법을 소개합니다.\",\"author\":{\"@type\":\"Person\",\"name\":\"Dev-Holic\"},\"url\":\"https://dev-holic.github.io/blog/i18n-auto-chunking\",\"keywords\":[\"i18n\",\"번역\",\"자동화\",\"청크\",\"빌드 최적화\"]}"}}],["$","$L2",null,{"href":"/","className":"back","children":"← 글 목록"}],["$","header",null,{"className":"mb-8","children":[["$","h1",null,{"className":"reading-title","children":"10만 개 번역 키, 수동 분류 없이 빌드 타임 최적화 (Auto Chunking)"}],["$","div",null,{"className":"text-gray-500","children":["2025-12-22",["$","span",null,{"className":"ml-2","children":["• ","#i18n #번역 #자동화 #청크 #빌드 최적화"]}]]}]]}],["$","$L3",null,{"content":"$4","postId":"i18n-auto-chunking"}],"$L5","$L6"]}],["$L7","$L8"],"$L9"]}],"loading":null,"isPartial":false}
-5:["$","$La",null,{}]
-6:["$","img",null,{"src":"https://dev-holic.goatcounter.com/count?p=%2Fblog%2Fi18n-auto-chunking","width":"1","height":"1","alt":""}]
-7:["$","script","script-0",{"src":"/_next/static/chunks/2ba74a6498bb7e6e.js","async":true}]
-8:["$","script","script-1",{"src":"/_next/static/chunks/e324a559abb624a1.js","async":true}]
-9:["$","$Lb",null,{"children":["$","$c",null,{"name":"Next.MetadataOutlet","children":"$@d"}]}]
-d:null
+0:{"buildId":"MT3fHN-xEj9k5_Z5ZHmFj","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"reading-layout","children":[["$","$L2","i18n-auto-chunking",{}],["$","article",null,{"className":"reading","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"10만 개 번역 키, 수동 분류 없이 빌드 타임 최적화 (Auto Chunking)\",\"datePublished\":\"2025-12-22\",\"dateModified\":\"2025-12-22\",\"description\":\"빌드 타임 정적 분석을 통해 10만 개의 번역 키를 자동으로 최적화된 JSON 청크로 생성하여 초기 로딩 속도를 개선하고 관리 포인트를 최소화하는 방법을 소개합니다.\",\"author\":{\"@type\":\"Person\",\"name\":\"Dev-Holic\"},\"url\":\"https://dev-holic.github.io/blog/i18n-auto-chunking\",\"keywords\":[\"i18n\",\"번역\",\"자동화\",\"청크\",\"빌드 최적화\"]}"}}],["$","$L3",null,{"href":"/","className":"back","children":"← 글 목록"}],["$","header",null,{"className":"mb-8","children":[["$","h1",null,{"className":"reading-title","children":"10만 개 번역 키, 수동 분류 없이 빌드 타임 최적화 (Auto Chunking)"}],["$","div",null,{"className":"text-gray-500","children":["2025-12-22",["$","span",null,{"className":"ml-2","children":["• ","#i18n #번역 #자동화 #청크 #빌드 최적화"]}]]}]]}],["$","div",null,{"id":"post-body","children":["$","$L4",null,{"content":"$5","postId":"i18n-auto-chunking"}]}],"$L6","$L7"]}],"$L8"]}],["$L9","$La"],"$Lb"]}],"loading":null,"isPartial":false}
+6:["$","$Lc",null,{}]
+7:["$","img",null,{"src":"https://dev-holic.goatcounter.com/count?p=%2Fblog%2Fi18n-auto-chunking","width":"1","height":"1","alt":""}]
+8:["$","aside",null,{"className":"popular","children":[["$","h2",null,{"children":"인기 글"}],["$","p",null,{"className":"period","children":"최근 한 달"}],["$","ol",null,{"children":[["$","li","app-router-useSuspenseQuery",{"children":["$","$L3",null,{"href":"/blog/app-router-useSuspenseQuery","children":"Next.js App Router: useSuspenseQuery 서버 행(Hanging) 이슈 해결"}]}],["$","li","e2e-pipeline",{"children":["$","$L3",null,{"href":"/blog/e2e-pipeline","children":"기획자도 할 수 있다: AI 생성 & 슬랙 버튼으로 완성하는 E2E 테스트 자동화 파이프라인"}]}],["$","li","gemini-cli-get-started",{"children":["$","$L3",null,{"href":"/blog/gemini-cli-get-started","children":"🚀 Gemini CLI 완벽 가이드: 터미널에서 Gemini 모델 활용하기"}]}],["$","li","giscus",{"children":["$","$L3",null,{"href":"/blog/giscus","children":"Giscus: 광고 없는 무료 댓글 시스템, 5분 만에 적용하기"}]}],["$","li","i18n-auto-chunking",{"children":["$","$L3",null,{"href":"/blog/i18n-auto-chunking","children":"10만 개 번역 키, 수동 분류 없이 빌드 타임 최적화 (Auto Chunking)"}]}]]}]]}]
+9:["$","script","script-0",{"src":"/_next/static/chunks/8aa01bf381e19ea6.js","async":true}]
+a:["$","script","script-1",{"src":"/_next/static/chunks/e324a559abb624a1.js","async":true}]
+b:["$","$Ld",null,{"children":["$","$e",null,{"name":"Next.MetadataOutlet","children":"$@f"}]}]
+f:null
