@@ -1,9 +1,10 @@
 1:"$Sreact.fragment"
-2:I[70451,["/_next/static/chunks/7b6121c01d7aa4a6.js","/_next/static/chunks/5ec360913fe0c25f.js","/_next/static/chunks/c4f32ce4dfee61b6.js","/_next/static/chunks/c44bdab66bebb21f.js"],""]
-3:I[74553,["/_next/static/chunks/7b6121c01d7aa4a6.js","/_next/static/chunks/5ec360913fe0c25f.js","/_next/static/chunks/c4f32ce4dfee61b6.js","/_next/static/chunks/c44bdab66bebb21f.js"],"PostViewer"]
-8:I[65126,["/_next/static/chunks/7b6121c01d7aa4a6.js","/_next/static/chunks/5ec360913fe0c25f.js","/_next/static/chunks/c4f32ce4dfee61b6.js","/_next/static/chunks/c44bdab66bebb21f.js"],"default"]
-9:I[97990,["/_next/static/chunks/28ff6a04602448ba.js","/_next/static/chunks/64c697a3cb51cd07.js"],"OutletBoundary"]
-a:"$Sreact.suspense"
+2:I[70451,["/_next/static/chunks/4401dea043656ace.js","/_next/static/chunks/2ba74a6498bb7e6e.js","/_next/static/chunks/e324a559abb624a1.js"],""]
+3:I[74553,["/_next/static/chunks/4401dea043656ace.js","/_next/static/chunks/2ba74a6498bb7e6e.js","/_next/static/chunks/e324a559abb624a1.js"],"PostViewer"]
+a:I[65126,["/_next/static/chunks/4401dea043656ace.js","/_next/static/chunks/2ba74a6498bb7e6e.js","/_next/static/chunks/e324a559abb624a1.js"],"default"]
+b:I[97990,["/_next/static/chunks/28ff6a04602448ba.js","/_next/static/chunks/64c697a3cb51cd07.js"],"OutletBoundary"]
+c:"$Sreact.suspense"
+:HL["https://dev-holic.goatcounter.com/count?p=%2Fblog%2Fgemini-cli-get-started","image"]
 4:T14d5,
 # 🚀 Gemini CLI 완벽 가이드
 
@@ -124,8 +125,10 @@ Gemini는 단순 텍스트 생성 외에도 실제 작업을 수행할 수 있�
 
 ### 🧪 테스트 코드 자동 생성
 > **User:** "`@login.ts` 파일을 읽고 이에 대한 Jest 유닛 테스트 코드를 작성해서 `login.test.ts` 파일로 만들어줘."
-0:{"buildId":"d_S1jAyh88wqHZ2IUxNRv","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"h-full overflow-y-auto mx-auto p-8","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"🚀 Gemini CLI 완벽 가이드: 터미널에서 Gemini 모델 활용하기\",\"datePublished\":\"2025-12-21\",\"dateModified\":\"2025-12-21\",\"description\":\"Gemini CLI를 설치하고 설정하는 방법부터 Slash, At, Shell 명령어 사용법, 팁과 활용 예시까지 완벽하게 안내합니다.\",\"author\":{\"@type\":\"Person\",\"name\":\"Dev-Holic\"},\"url\":\"https://dev-holic.github.io/blog/gemini-cli-get-started\",\"keywords\":[\"Gemini\",\"CLI\",\"AI\",\"터미널\",\"개발\"]}"}}],["$","$L2",null,{"href":"/","className":"mb-4 inline-block text-blue-500 hover:underline","children":"← Back to List"}],["$","header",null,{"className":"mb-8","children":[["$","h1",null,{"className":"mb-4 text-4xl font-bold text-gray-900 dark:text-gray-100","children":"🚀 Gemini CLI 완벽 가이드: 터미널에서 Gemini 모델 활용하기"}],["$","div",null,{"className":"text-gray-500 dark:text-gray-400","children":["2025-12-21",["$","span",null,{"className":"ml-2","children":["• ","#Gemini #CLI #AI #터미널 #개발"]}]]}]]}],["$","$L3",null,{"content":"$4","postId":"gemini-cli-get-started"}],"$L5"]}],["$L6"],"$L7"]}],"loading":null,"isPartial":false}
-5:["$","$L8",null,{}]
-6:["$","script","script-0",{"src":"/_next/static/chunks/c44bdab66bebb21f.js","async":true}]
-7:["$","$L9",null,{"children":["$","$a",null,{"name":"Next.MetadataOutlet","children":"$@b"}]}]
-b:null
+0:{"buildId":"KTqhD8tHaoFMnXgJuUILp","rsc":["$","$1","c",{"children":[["$","article",null,{"className":"reading","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"🚀 Gemini CLI 완벽 가이드: 터미널에서 Gemini 모델 활용하기\",\"datePublished\":\"2025-12-21\",\"dateModified\":\"2025-12-21\",\"description\":\"Gemini CLI를 설치하고 설정하는 방법부터 Slash, At, Shell 명령어 사용법, 팁과 활용 예시까지 완벽하게 안내합니다.\",\"author\":{\"@type\":\"Person\",\"name\":\"Dev-Holic\"},\"url\":\"https://dev-holic.github.io/blog/gemini-cli-get-started\",\"keywords\":[\"Gemini\",\"CLI\",\"AI\",\"터미널\",\"개발\"]}"}}],["$","$L2",null,{"href":"/","className":"back","children":"← 글 목록"}],["$","header",null,{"className":"mb-8","children":[["$","h1",null,{"className":"reading-title","children":"🚀 Gemini CLI 완벽 가이드: 터미널에서 Gemini 모델 활용하기"}],["$","div",null,{"className":"text-gray-500","children":["2025-12-21",["$","span",null,{"className":"ml-2","children":["• ","#Gemini #CLI #AI #터미널 #개발"]}]]}]]}],["$","$L3",null,{"content":"$4","postId":"gemini-cli-get-started"}],"$L5","$L6"]}],["$L7","$L8"],"$L9"]}],"loading":null,"isPartial":false}
+5:["$","$La",null,{}]
+6:["$","img",null,{"src":"https://dev-holic.goatcounter.com/count?p=%2Fblog%2Fgemini-cli-get-started","width":"1","height":"1","alt":""}]
+7:["$","script","script-0",{"src":"/_next/static/chunks/2ba74a6498bb7e6e.js","async":true}]
+8:["$","script","script-1",{"src":"/_next/static/chunks/e324a559abb624a1.js","async":true}]
+9:["$","$Lb",null,{"children":["$","$c",null,{"name":"Next.MetadataOutlet","children":"$@d"}]}]
+d:null

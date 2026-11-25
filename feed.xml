@@ -4,10 +4,10 @@
         <description><![CDATA[Dev Holic Blog Posts]]></description>
         <link>https://dev-holic.github.io</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 22 Dec 2025 16:08:04 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 25 Nov 2026 08:31:24 GMT</lastBuildDate>
         <atom:link href="https://dev-holic.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Mon, 22 Dec 2025 16:08:04 GMT</pubDate>
-        <copyright><![CDATA[2025 Dev Holic]]></copyright>
+        <pubDate>Wed, 25 Nov 2026 08:31:24 GMT</pubDate>
+        <copyright><![CDATA[2026 Dev Holic]]></copyright>
         <language><![CDATA[ko]]></language>
         <item>
             <title><![CDATA[기획자도 할 수 있다: AI 생성 & 슬랙 버튼으로 완성하는 E2E 테스트 자동화 파이프라인]]></title>
