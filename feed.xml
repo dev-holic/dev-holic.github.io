@@ -4,11 +4,18 @@
         <description><![CDATA[Dev Holic Blog Posts]]></description>
         <link>https://dev-holic.github.io</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 26 Nov 2026 03:35:23 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 26 Nov 2026 14:08:57 GMT</lastBuildDate>
         <atom:link href="https://dev-holic.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Thu, 26 Nov 2026 03:35:23 GMT</pubDate>
+        <pubDate>Thu, 26 Nov 2026 14:08:57 GMT</pubDate>
         <copyright><![CDATA[2026 Dev Holic]]></copyright>
         <language><![CDATA[ko]]></language>
+        <item>
+            <title><![CDATA[GitHub Pages에서 인기 글 5개 뽑기: GoatCounter로 방문을 기록하고 Actions로 집계하기]]></title>
+            <description><![CDATA[글을 열 때 GoatCounter에 방문을 기록하고, 정적 빌드에서 최근 30일 상위 5개를 고릅니다. 대시보드에는 방문이 있는데 목록이 비어 있던 이유도 살펴봅니다.]]></description>
+            <link>https://dev-holic.github.io/blog/goatcounter-popular-posts</link>
+            <guid isPermaLink="false">https://dev-holic.github.io/blog/goatcounter-popular-posts</guid>
+            <pubDate>Thu, 26 Nov 2026 00:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[기획자도 할 수 있다: AI 생성 & 슬랙 버튼으로 완성하는 E2E 테스트 자동화 파이프라인]]></title>
             <description><![CDATA[AI 생성 및 슬랙 버튼을 활용하여 E2E 테스트 자동화 파이프라인을 구축하고, 기술 장벽 없이 테스트에 기여할 수 있는 환경을 만드는 방법을 소개합니다.]]></description>
