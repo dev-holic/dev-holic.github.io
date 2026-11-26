@@ -1,0 +1,101 @@
+---
+title: "GitHub Pages에서 인기 글 5개 뽑기: GoatCounter로 방문을 기록하고 Actions로 집계하기"
+date: "2026-11-26"
+tags: ["GoatCounter", "GitHub Actions", "Next.js", "개발 블로그"]
+summary: "글을 열 때 GoatCounter에 방문을 기록하고, 정적 빌드에서 최근 30일 상위 5개를 고릅니다. 대시보드에는 방문이 있는데 목록이 비어 있던 이유도 살펴봅니다."
+---
+
+블로그에 보여주고 싶은 건 각 글의 조회수보다 “다른 사람들이 많이 읽은 글” 다섯 편이었다. GitHub Pages에 올린 HTML은 방문할 때마다 바뀌지 않지만, 많이 읽힌 순서까지 실시간으로 바뀔 필요는 없다. 그래서 **방문은 글을 여는 순간 기록하고, 순위는 사이트를 빌드할 때 계산한다.** 독자가 인기 글 목록을 열면 이미 HTML에 들어 있는 제목과 링크를 바로 볼 수 있다.
+
+## 글을 열 때 경로 하나를 기록한다
+
+GoatCounter 가입 화면에서 계정 이름을 정하고, 사이트 도메인에는 방문을 집계할 블로그의 도메인을 입력한다. 가입 후 사이트 설정에서 **Allow adding visitor counts on your website**를 켠다. 이 옵션을 켜면 글별 카운터를 공개 주소에서 읽을 수 있으므로, 같은 방식을 적용할 때는 방문 수가 공개된다는 점도 고려하자. [GoatCounter 가입](https://www.goatcounter.com/signup) · [공개 카운터 설정](https://www.goatcounter.com/help/visitor-counter)
+
+Next.js 글 상세 페이지에는 1×1 픽셀 이미지를 둔다. 브라우저가 이미지를 요청하면 GoatCounter가 `p`에 담긴 경로로 방문을 기록한다. 예를 들어 글 ID가 `sample-post`라면 방문 기록에 쓸 경로는 `/blog/sample-post`다. 공유 링크에 쿼리 문자열이 붙어도 같은 글로 집계된다. [추적 픽셀 문서](https://www.goatcounter.com/help/pixel)
+
+```tsx
+function PostCounter({ id }: { id: string }) {
+  const code = process.env.GOATCOUNTER_CODE;
+  if (!code || process.env.NODE_ENV !== 'production') return null;
+
+  const path = encodeURIComponent(`/blog/${id}`);
+  return <img src={`https://${code}.goatcounter.com/count?p=${path}`}
+              width={1} height={1} alt="" />;
+}
+```
+
+글 상세 템플릿에 `<PostCounter id={id} />`를 한 번 넣는다. 홈이나 목록에도 같은 픽셀을 넣으면 글을 읽지 않은 방문까지 섞인다. 위 조건 덕분에 `pnpm dev`로 원고를 검토할 때는 운영 통계가 올라가지 않는다.
+
+## 같은 경로의 최근 30일 방문 수를 읽는다
+
+방문 기록에 쓴 경로를 그대로 인코딩해서 `/counter/{경로}.json`을 조회한다. 터미널에서 확인하려면 아래 계정 이름과 예시 글 경로를 자신의 값으로 바꾼다. `start=month`는 최근 30일을 가리킨다.
+
+```sh
+GOATCOUNTER_CODE='your-site-code'
+curl "https://${GOATCOUNTER_CODE}.goatcounter.com/counter/%2Fblog%2Fsample-post.json?start=month"
+```
+
+응답의 `count`는 문자열이다. 예를 들어 `"1,200"`을 그대로 정렬하면 숫자 크기를 비교할 수 없다. 아래 함수는 블로그의 글 목록을 받아 각 경로의 값을 숫자로 바꾸고, 방문이 있는 글만 남긴다. 아직 기록이 없는 경로는 404가 올 수 있다. 권한이나 서비스 오류까지 0회로 처리하면 실제로 인기 글이 없는 경우와 구분하기 어려워진다. [카운터 JSON 응답과 경로 형식](https://www.goatcounter.com/help/visitor-counter)
+
+```ts
+type Post = { id: string; title: string };
+
+async function popularPosts(posts: Post[], code: string) {
+  const start = new Date();
+  start.setUTCDate(start.getUTCDate() - 30);
+  const since = start.toISOString().slice(0, 10);
+  const ranked: (Post & { visits: number })[] = [];
+
+  for (const post of posts) {
+    const path = encodeURIComponent(`/blog/${post.id}`);
+    const url = `https://${code}.goatcounter.com/counter/${path}.json?start=${since}`;
+    const response = await fetch(url, {
+      cache: 'force-cache',
+      signal: AbortSignal.timeout(15_000),
+    });
+    if (response.status === 404) continue;
+    if (!response.ok) throw new Error(`GoatCounter: HTTP ${response.status}`);
+
+    const { count } = await response.json();
+    if (typeof count !== 'string' || !/^[\d,.\s]+$/.test(count)) {
+      throw new Error(`카운터 형식 확인 필요: ${post.id}`);
+    }
+    const visits = Number(count.replace(/\D/g, ''));
+    if (visits > 0) ranked.push({ ...post, visits });
+  }
+
+  return ranked
+    .sort((a, b) => b.visits - a.visits || a.id.localeCompare(b.id))
+    .slice(0, 5);
+}
+```
+
+동점이면 글 ID 순으로 정렬해 빌드마다 목록이 뒤섞이지 않게 했다. 화면에서는 반환된 배열을 순서대로 돌면서 `/blog/${id}` 링크와 제목만 출력한다. 방문이 기록된 글이 두 편이면 두 편만 보여준다.
+
+## GitHub Actions에서 순위를 갱신한다
+
+저장소의 **Settings → Secrets and variables → Actions → Variables**에서 `GOATCOUNTER_CODE`를 만들고 가입할 때 정한 GoatCounter 계정 이름을 값으로 입력한다. 기존 배포 워크플로에 아래처럼 실행 조건과 환경 변수를 연결한다. [GitHub Actions 변수 설정](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-variables)
+
+```yaml
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: '30 0 * * *'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      GOATCOUNTER_CODE: ${{ vars.GOATCOUNTER_CODE }}
+    # 기존 checkout, 의존성 설치, 빌드, Pages 배포 단계를 이어서 실행한다.
+```
+
+Turborepo를 사용한다면 `turbo.json`의 `tasks.build.env`에도 `GOATCOUNTER_CODE`를 등록한다. 빌드 작업의 캐시 재사용을 끄면 소스가 그대로인 날에도 순위를 다시 계산한다. Next.js는 `output: 'export'`로 페이지를 만들고, Actions는 Next.js 앱의 정적 출력 폴더(`out/`)를 배포한다. 예시 스케줄은 매일 한국 시간 오전 9시 30분에 해당한다. 새 글을 올리거나 워크플로를 수동 실행해도 같은 과정으로 갱신된다. [GitHub Actions 예약 실행](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule)
+
+## 대시보드에 방문이 찍혔는데 인기 글이 비어 있다면
+
+대시보드에는 새 방문이 표시돼도 같은 글의 공개 카운터에는 이전 404 응답과 `"count":"0"`이 남아 있을 수 있다. 이때는 대시보드에 표시된 경로를 기준으로 `start`에 30일 전 날짜를 지정해 두 응답을 비교해 본다. GoatCounter의 공개 카운터 응답은 최대 4시간 캐시될 수 있다. 날짜를 명시해도 같은 날짜의 응답에는 이 캐시가 적용된다. [공개 카운터의 캐시 안내](https://www.goatcounter.com/help/visitor-counter)
+
+이럴 때는 **글 하나만 골라** 대시보드의 경로, 그 경로의 공개 JSON, 마지막 배포 결과를 차례로 확인하면 된다. JSON이 아직 0이면 공개 카운터가 갱신될 시간을 두고 다시 읽는다. JSON이 이미 1인데 사이트에 보이지 않는다면 그 값을 읽은 뒤에 배포가 성공했는지, 다른 글에 밀려 상위 다섯 개 밖에 있는지 확인한다. 이렇게 보면 방문 기록과 인기 글 표시 사이의 어느 단계에서 차이가 생겼는지 좁힐 수 있다.
